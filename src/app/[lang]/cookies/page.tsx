@@ -73,7 +73,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ lang: 
                             <p>Denne hjemmeside drives og ejes af:</p>
                             <address className="not-italic">
                                 <strong>CW Red AI Transformation</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
                         </>
                     ) : (
@@ -124,7 +124,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ lang: 
                             <p>This website is operated and owned by:</p>
                             <address className="not-italic">
                                 <strong>CW Red AI Transformation</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
                         </>
                     )}

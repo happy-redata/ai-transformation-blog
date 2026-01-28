@@ -84,7 +84,7 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                             <p>Har du spørgsmål til disse vilkår, kontakt os på:</p>
                             <address className="not-italic">
                                 <strong>CW Red AI Transformation</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <p className="text-sm text-gray-500 mt-8">Sidst opdateret: Januar 2026</p>
@@ -149,7 +149,7 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                             <p>If you have questions about these terms, please contact us at:</p>
                             <address className="not-italic">
                                 <strong>CW Red AI Transformation</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <p className="text-sm text-gray-500 mt-8">Last updated: January 2026</p>

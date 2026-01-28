@@ -33,7 +33,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                             <p>Vi er dataansvarlige for behandlingen af de personoplysninger, som vi modtager om dig. Vores kontaktoplysninger er:</p>
                             <address className="not-italic">
                                 <strong>CW Red AI Transformation</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <h2>2. Formål med behandling af personoplysninger</h2>
@@ -89,7 +89,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                             <h2>9. Kontakt</h2>
                             <p>Har du spørgsmål til vores behandling af personoplysninger, kan du kontakte os på:</p>
                             <address className="not-italic">
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <p className="text-sm text-gray-500 mt-8">Sidst opdateret: Januar 2026</p>
@@ -103,7 +103,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                             <p>We are the data controller for the processing of personal data we receive about you. Our contact details are:</p>
                             <address className="not-italic">
                                 <strong>CW Red AI Transformation</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <h2>2. Purpose of Processing Personal Data</h2>
@@ -159,7 +159,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                             <h2>9. Contact</h2>
                             <p>If you have questions about our processing of personal data, please contact us at:</p>
                             <address className="not-italic">
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <p className="text-sm text-gray-500 mt-8">Last updated: January 2026</p>
