@@ -14,7 +14,7 @@ const config: Config = {
                 'zt-text-main': '#1a1a1a',
                 'zt-text-secondary': '#666',
                 'zt-text-muted': '#999',
-                'zt-accent-orange': '#ff5e00',
+                'zt-accent-orange': '#D32F2F',
                 'zt-border': '#e5e5e5',
             },
             fontFamily: {
