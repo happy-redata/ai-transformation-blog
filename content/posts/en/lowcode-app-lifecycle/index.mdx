@@ -1,0 +1,267 @@
+---
+title: "The App Lifecycle: When Apps Grow Up"
+excerpt: "Your app is live. Users love it. Now what? Development is just the beginning. Here's what nobody told you about maintaining low-code applications."
+date: 2026-02-20
+tags: ["Low Code", "ALM", "Application Lifecycle", "DevOps", "Governance"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep11-lifecycle.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 11
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+You built the app. It works. People are using it.
+
+**Congratulations. Now the real work begins.**
+
+For the next 5-10 years, you'll need to:
+- Fix bugs that users discover
+- Add features that users request
+- Update when platforms change
+- Maintain security
+- Train new users
+- Document everything
+- Eventually, retire it gracefully
+
+This is **Application Lifecycle Management** (ALM). And in the low-code world, it's often an afterthought.
+
+---
+
+## The ALM Maturity Curve
+
+Where is your organization?
+
+```
+Level 0: "It's just a demo"
+         → No version control, no documentation, no backups
+
+Level 1: "We use it in production"
+         → Working app, but no dev/test separation
+         → Changes go straight to users
+
+Level 2: "We have environments"
+         → Separate dev/test/prod environments
+         → Some change control
+
+Level 3: "We have solutions"
+         → Packaged deployments
+         → Version tracking
+         → Rollback capability
+
+Level 4: "We have pipelines"
+         → Automated deployment
+         → Source control integration
+         → Automated testing
+
+Level 5: "Full DevOps"
+         → CI/CD pipelines
+         → Infrastructure as code
+         → Monitoring and alerting
+```
+
+Most citizen-developed apps are stuck at Level 0 or 1.
+
+---
+
+## Why ALM Matters for Low-Code
+
+"But it's low-code! We don't need all that enterprise stuff!"
+
+Here's what happens without ALM:
+
+### The Breaking Change
+
+You make a "small update" to a flow. 
+It breaks something unexpected.
+Production users are affected.
+There's no way to roll back.
+
+### The Lost Version
+
+Someone made changes two weeks ago.
+Now there's a bug.
+Which version was working?
+Nobody knows. There's no history.
+
+### The Environment Collision
+
+You're testing new features in production.
+A test goes wrong.
+Real data is corrupted.
+Users are affected.
+
+### The Knowledge Loss
+
+The person who built the app left.
+Nobody knows how it works.
+There's no documentation.
+You're reverse-engineering your own system.
+
+---
+
+## ALM in Power Platform
+
+Let's see how ALM works in our primary platform:
+
+### Environments
+
+Power Platform environments separate your work:
+
+| Environment | Purpose |
+|-------------|---------|
+| **Development** | Where you build and experiment |
+| **Test/UAT** | Where users validate changes |
+| **Production** | Where real work happens |
+
+**Best practice:** Never develop directly in production.
+
+### Solutions
+
+Solutions package your components:
+- Apps
+- Flows
+- Tables
+- Connections
+- Environment variables
+
+Export a solution from dev. Import it to test. Test it. Import it to production.
+
+### Version Control
+
+Power Platform supports Git integration:
+- Export solutions to Git repositories
+- Track changes over time
+- Branch for features
+- Merge with review
+
+**Reality check:** This requires discipline. Most citizen developers don't use it.
+
+### Power Platform Pipelines
+
+Microsoft's built-in deployment automation:
+- Define stages (dev → test → prod)
+- Automate solution deployment
+- Approval gates between stages
+
+Requires some setup but reduces manual effort.
+
+---
+
+## The Practical Minimum
+
+Not ready for full DevOps? Here's the minimum you should do:
+
+### 1. Separate Environments
+
+At minimum, have:
+- **Development environment:** Where you make changes
+- **Production environment:** Where users work
+
+Test in dev. Deploy to prod.
+
+### 2. Solution Packaging
+
+Keep your apps in solutions:
+- Solutions are portable
+- Solutions have version numbers
+- Solutions can be exported/imported
+
+### 3. Manual Backups
+
+Before major changes:
+- Export the solution
+- Save it somewhere (SharePoint, Git, anywhere)
+- Label it with date and version
+
+If something breaks, you can restore.
+
+### 4. Change Log
+
+Keep a simple log:
+- What changed
+- When
+- Who made the change
+- Why
+
+A SharePoint list or Excel file is fine. Just document.
+
+---
+
+## Moving Up the Maturity Curve
+
+### From Level 0 to Level 2
+
+1. Create a development environment
+2. Move your apps into solutions
+3. Establish a change request process
+4. Start keeping a change log
+
+**Time investment:** A few hours
+
+### From Level 2 to Level 4
+
+1. Set up Azure DevOps or GitHub
+2. Connect Power Platform to source control
+3. Create deployment pipelines
+4. Add approval gates
+
+**Time investment:** Days to weeks
+
+### From Level 4 to Level 5
+
+1. Add automated testing
+2. Implement monitoring
+3. Create alerting
+4. Document everything as code
+
+**Time investment:** Ongoing
+
+---
+
+## The Governance Factor
+
+ALM isn't just technical. It requires governance:
+
+**Who can deploy to production?**
+Not everyone. Define roles.
+
+**What approvals are needed?**
+For business-critical apps, require sign-off.
+
+**How are changes communicated?**
+Users need to know what's changing.
+
+**Who is accountable?**
+Every app needs an owner.
+
+---
+
+## The Coming Crisis
+
+Here's why this matters urgently:
+
+Your organization has dozens (maybe hundreds) of low-code apps. Most were built quickly, with no ALM discipline.
+
+**What happens in 3 years?**
+- Platforms update (breaking changes)
+- Builders leave (knowledge loss)
+- Requirements change (feature requests)
+- Regulations tighten (compliance needs)
+
+Without ALM, you're building technical debt. Every app without proper lifecycle management is a future crisis.
+
+---
+
+## Next Episode
+
+Speaking of future crises: Episode 12 tackles the scariest scenario of all — **The Bus Factor**. What happens when Lars, who built 47 apps, retires?
+
+---
+
+*Where is your organization on the ALM maturity curve? What's preventing you from moving up?*

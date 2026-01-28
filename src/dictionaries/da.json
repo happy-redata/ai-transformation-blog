@@ -1,0 +1,44 @@
+{
+    "home": {
+        "title": "Voice of Happy Mates",
+        "subtitle": "En serie af artikler om AI, digital transformation og moderne softwareudvikling",
+        "today": "I dag",
+        "yesterday": "I går",
+        "listen": "Lyt",
+        "readMore": "Læs mere",
+        "minutes": "minutter"
+    },
+    "nav": {
+        "signIn": "Log ind",
+        "signOut": "Log ud",
+        "hi": "Hej",
+        "findStories": "Find historier"
+    },
+    "footer": {
+        "copyright": "Alle rettigheder forbeholdes."
+    },
+    "dates": {
+        "dateFormat": "en-US"
+    },
+    "success": {
+        "title": "Tak for din bestilling!",
+        "description": "Din betaling er gået igennem, og dit medlemskab er nu aktivt.",
+        "confirmation": "En bekræftelse er sendt til",
+        "whatNext": "Hvad sker der nu?",
+        "nextStep1": "Du har nu adgang til PRO indhold.",
+        "nextStep2": "Login med din email for at se dine fordele.",
+        "nextStep3": "Tjek din inbox for velkomstmail.",
+        "homeButton": "Gå til Forsiden",
+        "loginButton": "Log ind"
+    },
+    "values": {
+        "title1": "Vi er vores medlemmer",
+        "desc1": "Vi er drevet af lysten til at gøre en forskel. Vi er en forening, ikke en forretning. Vi fokuserer 100% på at skabe de bedste rammer for vores Mates.",
+        "title2": "Vi forener Tech og Trivsel",
+        "desc2": "Vi nøjes ikke med overfladen. Vi dykker ned i koden og teknologien, men vi husker altid mennesket bag skærmen gennem fysisk aktivitet og fællesskab.",
+        "title3": "Vi gør viden tilgængelig",
+        "desc3": "Alle vores blogindlæg og opdateringer er indlæst som lyd, så du kan lytte med på farten – uanset om du er til tekst eller tale.",
+        "title4": "Vi bygger fællesskab",
+        "desc4": "Vi bygger mere end bare kode. Vi skaber et unikt fællesskab, hvor 'nørderi' er en superkraft. Gennem events, Padel og projekter møder du ligesindede."
+    }
+}

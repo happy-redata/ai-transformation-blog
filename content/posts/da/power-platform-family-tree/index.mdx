@@ -1,0 +1,243 @@
+---
+title: "Power Platform 101: Stamtræet"
+excerpt: "Power Apps, Power Automate, Copilot Studio, Power Pages — og en historie om rebrands. Her er hvordan Microsofts low-code økosystem faktisk hænger sammen."
+date: 2025-10-31
+tags: ["Low Code", "Power Platform", "Power Apps", "Power Automate", "Copilot Studio"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep3-familytree.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 3
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+Hvis du har prøvet at forstå Microsofts Power Platform, har du sandsynligvis oplevet dette: Du søger efter en tutorial, finder en fra 2018, og den taler om noget der hedder "PowerApps" og "Microsoft Flow." Du søger efter en anden fra 2022, og pludselig er der "Power Virtual Agents" og "Common Data Service."
+
+**Hvad skete der?**
+
+Velkommen til Microsofts rebrand-tidslinje — hvor hvert produkt er blevet omdøbt mindst én gang.
+
+---
+
+## Power Platform i dag
+
+Før vi dykker ned i historien, lad os etablere hvad der eksisterer lige nu (2025):
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     POWER PLATFORM                          │
+├──────────────┬──────────────┬───────────────┬──────────────┤
+│  Power Apps  │    Power     │   Copilot     │    Power     │
+│              │   Automate   │    Studio     │    Pages     │
+├──────────────┼──────────────┼───────────────┼──────────────┤
+│  Canvas      │  Cloud Flows │   Chatbots    │  Websites    │
+│  Model-Driven│  Desktop RPA │   AI Agents   │  Portals     │
+└──────────────┴──────────────┴───────────────┴──────────────┘
+                           ▼
+              ┌────────────────────────┐
+              │      DATAVERSE         │
+              │   (Den fælles database)│
+              └────────────────────────┘
+```
+
+---
+
+## Rebrand-tidslinjen
+
+Hvert produkt du ser i dag er blevet omdøbt. Her er den fulde historie:
+
+| Produkt | Originalt navn | Introduceret | Rebranded | Nuværende navn |
+|---------|----------------|--------------|-----------|----------------|
+| **Power Apps** | PowerApps | Nov 2016 | Okt 2019 | Power Apps |
+| **Power Automate** | Microsoft Flow | Nov 2016 | Okt 2019 | Power Automate |
+| **Copilot Studio** | Power Virtual Agents | Maj 2019 | Nov 2023 | Copilot Studio |
+| **Power Pages** | Power Apps Portals | Apr 2017 | Okt 2022 | Power Pages |
+| **Dataverse** | Common Data Service | Nov 2016 | Nov 2020 | Dataverse |
+
+### Det store rebrand: Oktober 2019
+
+I oktober 2019 samlede Microsoft alt under "Power Platform"-banneret:
+
+- "PowerApps" (ét ord) blev til "Power Apps" (to ord)
+- "Microsoft Flow" blev til "Power Automate"
+- Budskabet skiftede fra individuelle værktøjer til en samlet platform
+
+**Hvorfor dette er vigtigt:** Hvis du følger en tutorial der siger "Microsoft Flow," læser du indhold fra før 2019. Koncepterne gælder stadig, men UI'en har ændret sig betydeligt.
+
+### Copilot-rebrand: November 2023
+
+Dette er det mest forvirrende. "Power Virtual Agents" (PVA) var Microsofts chatbot-builder. I 2023, med AI's fremkomst, rebranded Microsoft det til "Copilot Studio" og udvidede dets omfang:
+
+- **Gammelt PVA:** Byg chatbots med beslutningstræer
+- **Nyt Copilot Studio:** Byg AI-agenter, custom Copilots, udvid Microsoft 365 Copilot
+
+**Hvorfor dette er vigtigt:** Mange tutorials refererer stadig til "Power Virtual Agents." Produktet har fundamentalt ændret sig — ikke kun omdøbt, men transformeret til noget mere ambitiøst.
+
+---
+
+## De fire søjler forklaret
+
+### Power Apps: Byg applikationer
+
+Power Apps har to fundamentalt forskellige tilgange:
+
+**Canvas Apps:**
+- Start med en blank skærm
+- Du kontrollerer hver pixel
+- Bedst til: Mobile apps, custom UI'er, dataindsamlingsformularer
+- Datakilder: SharePoint, Excel, SQL, 300+ connectorer
+- *Dataverse ikke påkrævet*
+
+**Model-Driven Apps:**
+- Start med din datamodel
+- UI'en genereres automatisk
+- Bedst til: CRM-lignende apps, sagsbehandling, komplekse datarelationer
+- Datakilder: *Dataverse påkrævet*
+- Mere enterprise governance indbygget
+
+| Funktion | Canvas | Model-Driven |
+|----------|--------|--------------|
+| Designfrihed | Komplet | Standardiseret |
+| Læringskurve | Lavere | Højere |
+| Vedligeholdelse | Mere manuel | Mere automatisk |
+| Dataverse | Valgfrit | Påkrævet |
+| Mobil | Førsteklasses | Responsiv |
+
+---
+
+### Power Automate: Automatisér workflows
+
+Power Automate er faktisk tre forskellige produkter:
+
+**Cloud Flows:**
+- Trigger-baseret automation
+- "Når en email ankommer, opret en opgave i Planner"
+- 900+ connectorer
+- Kører i Microsofts cloud
+
+**Desktop Flows (RPA):**
+- Robotic Process Automation
+- Automatisér klik, indtastning og navigation i legacy-apps
+- Kører på din Windows-maskine
+- Perfekt til systemer uden API'er
+
+**Business Process Flows:**
+- Guidede stage-gate workflows
+- "Lead → Mulighed → Tilbud → Lukket"
+- Visuel fremdriftssporing
+- Kræver Dataverse
+
+---
+
+### Copilot Studio: Byg AI-agenter
+
+Det mest transformerede produkt. Hvad der engang var en simpel chatbot-builder er nu en AI-platform:
+
+**Original Power Virtual Agents (2019-2023):**
+- Beslutningstræ-chatbots
+- "Hvis bruger siger X, svar med Y"
+- Færdigbyggede emner og entiteter
+- Begrænsede NLU-kapabiliteter
+
+**Copilot Studio (2023+):**
+- Generative AI-svar
+- Custom Copilots med dine data
+- Integration med Microsoft 365 Copilot
+- Autonome agent-kapabiliteter
+- Multi-kanal deployment (Teams, websites, apps)
+
+**Navneforvirringen:**
+
+Der er nu flere "Copilots" i Microsofts økosystem:
+
+- **Microsoft 365 Copilot:** AI-assistenten i Word, Excel, Teams
+- **Copilot Studio:** Hvor du *bygger* custom Copilots
+- **GitHub Copilot:** AI kodningsassistent (ikke relateret)
+- **Copilot i Power Platform:** AI-funktioner i Power Apps/Automate
+
+Når nogen siger "Copilot," spørg: *Hvilken?*
+
+---
+
+### Power Pages: Byg websites
+
+Det nyeste medlem af familien (som et separat brand):
+
+**Oprindelse:**
+- Startede som "Power Apps Portals" (2017)
+- Kundevendte websites forbundet til Dataverse
+- Autentificering, formularer, datavisning
+
+**I dag (Power Pages):**
+- Low-code website-builder
+- Indbyggede templates
+- Professionelle udviklerfunktioner
+- Liquid templates, JavaScript, CSS
+
+**Bedst til:**
+- Kundeserviceportaler
+- Partnerextranets
+- Community-sites
+- Formular-tunge offentlige websites
+
+---
+
+## Dataverse: Det fælles fundament
+
+Dataverse (tidligere "Common Data Service") er den delte database der forbinder alt:
+
+**Hvad det giver:**
+- Managed database-tabeller
+- Række-niveau sikkerhed
+- Forretningsregler og valideringer
+- Automatiske API'er for hver tabel
+- Audit logging
+- Backup og restore
+
+**Hvorfor det er vigtigt:**
+Model-Driven Apps kræver Dataverse. Copilot Studio fungerer bedst med Dataverse. Power Pages forventer Dataverse.
+
+**Omkostningsspørgsmålet:** Dataverse er ikke gratis. Vi dækker den fulde omkostningsvirkelighed i Episode 8.
+
+---
+
+## Hvordan de arbejder sammen
+
+Et typisk enterprise-scenarie:
+
+1. **Data lever i Dataverse** — Kunder, produkter, ordrer
+2. **Model-Driven App** — Interne medarbejdere administrerer data
+3. **Canvas App** — Feltarbejdere indsamler information på mobil
+4. **Power Automate** — Når ordrestatus ændres, giv kunden besked
+5. **Copilot Studio** — Kunde spørger "Hvor er min ordre?" via chat
+6. **Power Pages** — Kunde ser deres ordrehistorik online
+
+Alle seks komponenter deler de samme data, samme sikkerhed, samme forretningsregler.
+
+---
+
+## Licensvirkeligheden (forhåndsvisning)
+
+Vi dækker dette i dybden i Episode 8, men her er preview:
+
+| Licenstype | Hvad du får |
+|------------|-------------|
+| **Seeded** (M365) | Begrænset Power Apps, begrænset Power Automate, ingen Dataverse |
+| **Per App** (~5$/bruger/måned) | Adgang til 2 specifikke apps + Dataverse |
+| **Premium** (~20$/bruger/måned) | Ubegrænsede apps + premium connectorer + Dataverse |
+| **Pay-as-you-go** | Per-flow, per-request prissætning |
+
+---
+
+## Næste episode
+
+I Episode 4 dykker vi dybt ned i **Power Apps Canvas** — det mest populære indgangspunkt for citizen developers. Vi bygger noget rigtigt og diskuterer hvornår Canvas apps skinner, og hvornår de kæmper.
+
+---
+
+*Har den konstante rebranding forvirret dig eller din organisation? Hvordan holder du dig opdateret med Microsofts navneændringer?*

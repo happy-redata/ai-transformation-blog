@@ -1,0 +1,253 @@
+---
+contentVersion: 1.0.0
+title: "Certificates for Dummies: Software's Passport and Ingredient List"
+excerpt: "How do you know that the software you download really comes from who claims it? Here's the simple explanation of certificates, SBOM, and supply chains."
+date: 2026-01-08
+tags: ["Certificates", "SBOM", "Supply Chain", "Security", "Beginner Guide"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-certificates-for-dummies.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini", "Claude Code", "GitHub Copilot", "Azure"]
+originalSlug: "certificates-for-dummies"
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "en-US-JennyNeural"
+  backgroundMusic: "/audio/music/ambient-tech.mp3"
+  language: "en-US"
+footnotes:
+  - text: "US federal agencies were mandated to require SBOM from their vendors via Executive Order 14028 in 2021."
+    source: "The White House"
+    url: "https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/"
+  - text: "Over 90% of modern software contains open source components."
+    source: "Synopsys OSSRA Report 2024"
+    url: "https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html"
+  - text: "The Log4Shell vulnerability in 2021 affected millions of applications through one hidden library."
+    source: "CVE-2021-44228"
+    url: "https://nvd.nist.gov/vuln/detail/CVE-2021-44228"
+---
+
+<Music track="ambient-tech" action="fade-in" />
+
+<Speaker voice="narrator" name="Narrator">
+Imagine you're buying a bottle of wine from an online store. How do you know it's really from France and not a counterfeit from someone's backyard? You look at the label, the control number, and maybe an official stamp. That's exactly the same principle that protects your software.
+</Speaker>
+
+<Pause duration={1.5} />
+
+Welcome to the second part of our **trust series**. Today it's all about **certificates** and **<Voice text="S-BOM">SBOM</Voice>**.
+
+<Music track="ambient-tech" action="fade-out" />
+
+## The Passport: What Is a Certificate?
+
+When you travel abroad, you need a **passport**. The passport proves your identity, and it's issued by an authority that other countries trust.
+
+In the digital world, a **certificate** works exactly the same way.
+
+<View>
+![Digital Certificate](./diagram-digital-certificate.png)
+</View>
+
+<Speaker voice="narrator">
+A certificate says: "I am who I claim to be, and here's the proof."
+</Speaker>
+
+### The Three Key Elements
+
+| Element | Explanation | Passport Analogy |
+|---------|-------------|------------------|
+| **Identity** | Who the certificate belongs to | Your name and photo |
+| **Public Key** | A mathematical value for verification | Your passport number |
+| **Signature** | Proof from a trusted authority | The official stamp |
+
+<SoundEffect name="success-chime" />
+
+## Certificate Authorities: Who Issues the Passports?
+
+<Speaker voice="host" name="Host">
+You can't just issue your own passport. You need an authority. The same goes for certificates.
+</Speaker>
+
+A **Certificate Authority** (CA) is a trusted third party that verifies identities and issues certificates.
+
+<View>
+![Certificate Authority Hierarchy](./diagram-ca-hierarchy.png)
+</View>
+
+Your browser comes with a list of **trusted Root CAs**. When you visit a website with HTTPS, the browser checks:
+
+1. Is the certificate issued by a trusted CA?
+2. Is it still valid (not expired)?
+3. Does the domain name match?
+
+If something fails, you see the famous **"Your connection is not private"** warning.
+
+<Pause duration={1} />
+
+## Code Signing: Software's Stamp
+
+Certificates aren't just used for websites. They're also used to **sign software**.
+
+<Speaker voice="narrator">
+When you download an app, you trust that it comes from the developer. But how does your computer know?
+</Speaker>
+
+The answer is **code signing**:
+
+1. The developer gets a certificate from a trusted CA
+2. The developer signs the software with their private key
+3. When you install, your computer verifies the signature
+
+<View>
+![Code Signing Process](./diagram-code-signing-flow.png)
+</View>
+
+<SoundEffect name="keyboard-typing" />
+
+Without signing? Your computer will warn you about an "unknown developer" or block the installation entirely.
+
+## <Voice text="S-BOM">SBOM</Voice>: Software's Ingredient List
+
+<Speaker voice="host" name="Host">
+Now we're getting to something really important — and something most people have never heard of.
+</Speaker>
+
+<Pause duration={1} />
+
+Think about a ready-made meal from the supermarket. On the back of the package, you'll find an **ingredient list**:
+
+- Flour
+- Sugar
+- Eggs
+- Preservative E211
+
+If you're allergic to something, you can check the list.
+
+**<Voice text="S-BOM">SBOM</Voice>** (Software Bill of Materials) is the **ingredient list for software**.
+
+<View>
+![Software Bill of Materials (SBOM)](./diagram-sbom-ingredients.png)
+</View>
+
+### Why Is <Voice text="S-BOM">SBOM</Voice> Important?
+
+<Speaker voice="narrator">
+In December 2021, the Log4Shell vulnerability hit the world like a bomb.
+</Speaker>
+
+**Log4j** was a small logging library that almost nobody knew about. But it was hidden inside **millions** of applications:
+
+- Minecraft
+- Amazon Web Services
+- Apple iCloud
+- Tesla's systems
+
+<SoundEffect name="dramatic-reveal" />
+
+The problem? Most companies had no idea if they used Log4j. They had no ingredient list.
+
+With an <Voice text="S-BOM">SBOM</Voice>, you can:
+
+- **Check if you're vulnerable** when a new vulnerability is discovered
+- **Trace the supply chain** back to the source
+- **Prove compliance** to regulators and customers
+
+<Pause duration={1.5} />
+
+> **"You can't protect what you don't know you have."**
+
+## The Supply Chain: From Developer to You
+
+<Music track="transition-build" action="start" />
+
+<Speaker voice="narrator">
+Modern software isn't built from scratch. It's assembled from hundreds of components from around the world.
+</Speaker>
+
+Here's a typical **software supply chain**:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│              SOFTWARE SUPPLY CHAIN                          │
+│                                                             │
+│  👨‍💻 OPEN SOURCE DEVELOPER (in another country)            │
+│    ↓ uploads                                                │
+│  📦 NPM / PyPI / Maven (package repository)                │
+│    ↓ includes                                               │
+│  🏢 YOUR COMPANY'S DEVELOPER                               │
+│    ↓ builds                                                 │
+│  🔨 CI/CD PIPELINE (automated build)                       │
+│    ↓ publishes                                              │
+│  📱 APP STORE / DOWNLOAD PAGE                              │
+│    ↓ installs                                               │
+│  👤 END USER (you)                                         │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+<Music track="transition-build" action="fade-out" />
+
+Every link in this chain is a potential attack point:
+
+<View>
+![Software Supply Chain](./diagram-software-supply-chain.png)
+</View>
+
+| Link | Risk |
+|------|------|
+| Open source developer | Malicious code, hijacked account |
+| Package repository | Typosquatting, fake packages |
+| Build pipeline | Compromised CI server |
+| Distribution | Man-in-the-middle attack |
+
+## How to Protect Your Supply Chain
+
+<Speaker voice="host" name="Host">
+It sounds scary, but there are concrete things you can do.
+</Speaker>
+
+<SoundEffect name="success-chime" />
+
+### 1. 🔐 Verify Signatures
+Always check that software is signed with a valid certificate.
+
+### 2. 📋 Require <Voice text="S-BOM">SBOM</Voice>
+Ask your vendors for an ingredient list. It's now a requirement for US federal contracts.
+
+### 3. 🔍 Scan for Vulnerabilities
+Use tools like **Dependabot**, **Snyk**, or **Trivy** to scan your dependencies.
+
+### 4. 📌 Pin Your Versions
+Use specific version numbers, not "latest version."
+
+### 5. 🔒 Enable Two-Factor
+Protect your accounts on npm, GitHub, and other repositories.
+
+## Summary
+
+<Music track="conclusion" action="fade-in" />
+
+| Concept | Meaning |
+|---------|---------|
+| **Certificate** | Digital passport that proves identity |
+| **CA** | Authority that issues certificates |
+| **Code Signing** | Proof of software's origin |
+| **<Voice text="S-BOM">SBOM</Voice>** | Ingredient list for software |
+| **Supply Chain** | All links from developer to user |
+
+<Pause duration={1} />
+
+---
+
+**Bottom line:** A certificate proves who built your software. An <Voice text="S-BOM">SBOM</Voice> reveals what's inside. Together, they give you the trust to know what you're installing.
+
+<Pause duration={1.5} />
+
+<Emphasis type="question">**Do you know the ingredient list for the software you use every day?**</Emphasis>
+
+<Music track="conclusion" action="fade-out" />
+
+---
+
+*In the next article, we'll explore **network trust** — from the most locked-down, air-gapped systems to the open internet — and how to choose the right security level for your situation.*

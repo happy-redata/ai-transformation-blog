@@ -1,0 +1,90 @@
+---
+title: "The Trojan Horse: The Evil Maid (Part 2)"
+excerpt: "You leave your hotel room for 10 minutes. Your laptop is on the desk. When you return, everything looks normal. But it isn't."
+date: 2026-03-10
+tags: ["Security", "Physical Access", "Evil Maid", "Encryption", "Beginner Guide"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-evil-maid.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "en-US-JennyNeural"
+  backgroundMusic: "/audio/music/suspended-tension.mp3"
+  language: "en-US"
+footnotes:
+  - text: "The name 'Evil Maid' was popularized by security researcher Joanna Rutkowska in 2009."
+    source: "The Invisible Things Lab"
+    url: "https://theinvisiblethings.blogspot.com/2009/10/evil-maid-goes-after-truecrypt.html"
+---
+
+<Music track="suspended-tension" action="fade-in" />
+
+<Speaker voice="narrator" name="Narrator">
+You are on a business trip. You check into the hotel, drop your bags, and put your laptop on the desk. You just need to go down to the bar to meet a colleague.
+</Speaker>
+
+It only takes 30 minutes. The door is locked. You have the key card in your pocket.
+
+<Speaker voice="host" name="Host">
+But when you come back, someone has been there. Not to steal the computer. But to change it.
+</Speaker>
+
+## The Scenario: 5 Minutes Alone
+
+This is called an **Evil Maid** attack. The name comes from the idea of the hotel maid who has the key to your room. We trust her. But what if she isn't there to change the towels?
+
+When you leave your computer in a hotel room – or in an unlocked meeting room – you are giving an attacker the most valuable thing of all: **Physical access**.
+
+<Voice text="Hollywood has taught us">Hollywood has taught us</Voice> that hackers sit in dark basements, hammering away at keyboards to break through firewalls.
+
+The reality is often simpler: They plug a USB drive into your computer while you get coffee.
+
+## What happens?
+
+If your computer is just closed (in "Sleep" mode), the encryption key is still in the memory (RAM).
+
+1.  **The attacker enters.**
+2.  **She wakes the computer.**
+3.  **She inserts a special USB device.**
+4.  **The device copies the contents of the memory – including your passwords.**
+
+It takes just a few minutes. When she leaves, everything looks untouched.
+
+<Speaker voice="narrator">
+But the next time you log in, the computer sends your secrets directly to her.
+</Speaker>
+
+## The Solution: Shut It Down
+
+How do you protect yourself against the evil maid?
+
+It is about making physical access useless.
+
+### 1. Full Disk Encryption
+You must use **FileVault** (on Mac) or **BitLocker** (on Windows). This ensures your data is gibberish without the code.
+
+### 2. Shut Down
+When you leave the computer in an insecure place, do not just close the lid. You must turn it off completely.
+
+<Speaker voice="host" name="Host">
+When the power goes, the keys disappear from memory. A turned-off computer is a silent computer.
+</Speaker>
+
+### 3. Find Waldo
+If you are paranoid (or work with very sensitive data), you can use "Tamper-evident" nail polish on the screws. Then you can see if someone has opened the case.
+
+<SoundEffect name="camera-shutter" />
+
+## Trust is good, control is better
+
+We live in a world where we have to trust others. The courier, the cleaner, the receptionist. But we don't have to give them the keys to the kingdom.
+
+<Pause duration={1.5} />
+
+**The next time you leave your computer at a café to go to the restroom... will you take it with you?**
+
+---
+
+*This is part two of the series on The Trojan Horse. Next week, we dive into **Supply Chain Integrity** – how we secure the horse before it even leaves the forest.*

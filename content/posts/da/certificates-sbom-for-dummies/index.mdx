@@ -1,0 +1,209 @@
+---
+contentVersion: 1.0.0
+title: "Certifikater & SBOM: Softwarens Pas og Ingrediensliste"
+excerpt: "Hvordan ved du, at den software du bruger, virkelig er den, den udgiver sig for? Mød certifikater — digitale pas for software — og SBOM, ingredienslisten der afslører, hvad der virkelig er i din kode."
+date: 2026-01-14
+status: approved
+tags: ["Trust", "Sikkerhed", "Certifikater", "SBOM", "Zero Trust"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-certificates-sbom.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+originalSlug: "certificates-sbom-for-dummies"
+series:
+  slug: "trust-series"
+  episode: 2
+  totalEpisodes: 4
+  nextEpisodeDate: 2026-01-21
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "da-DK-ChristelNeural"
+  backgroundMusic: "/audio/music/ambient-tech.mp3"
+  language: "da-DK"
+footnotes:
+  - text: "Over 80% af moderne applikationer bygger på open source-komponenter."
+    source: "Synopsys OSSRA Report 2024"
+    url: "https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html"
+  - text: "Log4Shell-sårbarheden blev fundet i december 2021 og påvirkede millioner af systemer verden over."
+    source: "CISA"
+    url: "https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance"
+  - text: "Executive Order 14028 kræver SBOM for al software solgt til den amerikanske regering."
+    source: "White House"
+    url: "https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/"
+---
+
+<Music track="ambient-tech" action="fade-in" />
+
+<Speaker voice="narrator" name="Fortæller">
+Forestil dig, at du køber en sandwich. Du læser ingredienslisten: brød, kylling, salat, dressing. Men hvad hvis listen bare sagde "sandwich-indhold"? Ville du stadig spise den?
+</Speaker>
+
+<Pause duration={1.5} />
+
+Velkommen til episode 2 i vores serie om **tillid i den digitale verden**. I dag handler det om de dokumenter, der beviser, hvem software er — og hvad den indeholder.
+
+<Music track="ambient-tech" action="fade-out" />
+
+## Det Usynlige Netværk af Tillid
+
+Hver gang du åbner en app, downloader en opdatering eller besøger en hjemmeside, stoler du på et usynligt netværk af **digitale certifikater**.
+
+<View>Se illustrationen nedenfor — fra dig til serveren går data gennem mange lag af tillid:</View>
+
+![Tillidsnetværket — fra bruger til server gennem certifikat-verificerede forbindelser](/images/trust-chain-diagram.png)
+
+Certifikater er softwarens **pas**. De beviser:
+- **Hvem** der har lavet softwaren
+- **At** softwaren ikke er blevet ændret undervejs
+- **Hvornår** certifikatet udløber
+
+## Hvad Er et Certifikat?
+
+<Speaker voice="narrator">
+Et digitalt certifikat er som et notarbekræftet dokument. En betroet tredjepart — en <Voice text="Certificate Authority">Certificate Authority</Voice> eller <Voice text="C.A.">CA</Voice> — bekræfter, at ejeren er den, de siger, de er.
+</Speaker>
+
+<Pause duration={1} />
+
+| Element | Funktion |
+|---------|----------|
+| **Ejerens identitet** | Hvem certifikatet tilhører (virksomhed, domæne, person) |
+| **Offentlig nøgle** | Bruges til at verificere signaturer |
+| **Udsteders signatur** | <Voice text="C.A.">CA</Voice> bekræfter gyldigheden |
+| **Udløbsdato** | Certifikater er kun gyldige i en begrænset periode |
+
+<SoundEffect name="keyboard-typing" />
+
+Når du besøger et sikkert website og ser hængelåsen i browserlinjen, har browseren verificeret websitets certifikat mod en liste af betroede <Voice text="C.A.">CA</Voice>'er.
+
+## Tillidskæden i Certifikater
+
+Certifikater danner en **kæde** — ligesom de tillidskæder, vi diskuterede i episode 1.
+
+<View>Her er hvordan tillidskæden fungerer:</View>
+
+1. **Rod-<Voice text="C.A.">CA</Voice>** — Den øverste autoritet, bygget ind i dit operativsystem
+2. **Mellem-<Voice text="C.A.">CA</Voice>** — Udsteder certifikater på vegne af rod-<Voice text="C.A.">CA</Voice>
+3. **Server-certifikat** — Det specifikke certifikat for hjemmesiden eller softwaren
+
+> **"Hvis bare ét led i kæden er kompromitteret, bryder hele tilliden sammen."**
+
+<Pause duration={1} />
+
+## Når Certifikater Svigter
+
+<Speaker voice="host" name="Vært">
+Certifikater er ikke ufejlbarlige. Her er hvad der kan gå galt:
+</Speaker>
+
+<SoundEffect name="dramatic-reveal" />
+
+| Problem | Konsekvens |
+|---------|------------|
+| **Udløbet certifikat** | Browsere viser advarsel, brugere kan ikke tilgå tjenesten |
+| **Stjålet privat nøgle** | Angribere kan udgive sig for at være den legitime ejer |
+| **Kompromitteret <Voice text="C.A.">CA</Voice>** | Alle certifikater fra den <Voice text="C.A.">CA</Voice> er upålidelige |
+| **Selv-signeret certifikat** | Ingen tredjepart har verificeret identiteten |
+
+I 2011 blev den hollandske <Voice text="C.A.">CA</Voice> **DigiNotar** kompromitteret. Hackere udstedte falske certifikater til Gmail, Yahoo og andre. Resultatet? Hele virksomheden lukkede.
+
+## <Voice text="S-BOM">SBOM</Voice>: Softwarens Ingrediensliste
+
+Nu til den anden halvdel af ligningen: **<Voice text="S-BOM">SBOM</Voice>** — Software Bill of Materials.
+
+<Speaker voice="narrator">
+Moderne software er som en sandwich. Du ser det færdige produkt, men indeni er der hundredvis af ingredienser — <Voice text="open source">open source</Voice>-biblioteker, <Voice text="frameworks">frameworks</Voice> og komponenter fra hele verden.
+</Speaker>
+
+<Pause duration={1.5} />
+
+En <Voice text="S-BOM">SBOM</Voice> er en komplet liste over alle disse ingredienser.
+
+<View>Her er et forenklet eksempel på, hvad en SBOM indeholder:</View>
+
+| Komponent | Version | Licens | Sårbarhed? |
+|-----------|---------|--------|------------|
+| react | 18.2.0 | MIT | Ingen |
+| lodash | 4.17.20 | MIT | ⚠️ CVE-2021-23337 |
+| express | 4.18.2 | MIT | Ingen |
+| log4j | 2.14.1 | Apache 2.0 | 🚨 CVE-2021-44228 |
+
+<SoundEffect name="alert-warning" />
+
+## <Voice text="Log 4 Shell">Log4Shell</Voice>: Hvorfor <Voice text="S-BOM">SBOM</Voice> Betyder Noget
+
+I december 2021 blev verden ramt af **<Voice text="Log 4 Shell">Log4Shell</Voice>** — en katastrofal sårbarhed i <Voice text="Log Four J">Log4j</Voice>, et populært <Voice text="Java">Java</Voice>-bibliotek til logging.
+
+<Speaker voice="narrator">
+Millioner af systemer var pludselig sårbare. Men her var problemet: De fleste virksomheder vidste ikke engang, at de brugte <Voice text="Log Four J">Log4j</Voice>.
+</Speaker>
+
+Biblioteket var begravet dybt i afhængighedstræet — en afhængighed af en afhængighed af en afhængighed.
+
+<View>Se hvordan afhængigheder kan skjule sig:</View>
+
+```
+Din App
+  └── Framework A (v3.2.1)
+        └── Utility B (v1.4.0)
+              └── log4j (v2.14.1) ← 🚨 SÅRBAR!
+```
+
+<Pause duration={1} />
+
+**Med en <Voice text="S-BOM">SBOM</Voice>** kunne man øjeblikkeligt søge og finde alle systemer med <Voice text="Log Four J">Log4j</Voice>. Uden den? Uger af manuel søgning.
+
+## Hvorfor Skal Du Bekymre Dig?
+
+| Hvis du er... | <Voice text="S-BOM">SBOM</Voice> hjælper dig med... |
+|--------------|-------------------------------------|
+| **Udvikler** | At kende dine afhængigheder og deres sårbarheder |
+| **<Voice text="I.T.">IT</Voice>-chef** | At reagere hurtigt på nye sikkerhedstrusler |
+| **Compliance-ansvarlig** | At dokumentere softwaresammensætning for myndigheder |
+| **Slutbruger** | At vide, at leverandøren tager sikkerhed alvorligt |
+
+## Certifikater + <Voice text="S-BOM">SBOM</Voice> = Komplet Tillid
+
+<Music track="conclusion" action="fade-in" />
+
+Certifikater beviser **hvem** der har lavet softwaren.
+<Voice text="S-BOM">SBOM</Voice> afslører **hvad** der er i softwaren.
+
+<View>Her er hvordan de to arbejder sammen:</View>
+
+| Spørgsmål | Svar fra |
+|-----------|----------|
+| Hvem lavede denne software? | Certifikat |
+| Er softwaren uændret? | Certifikat-signatur |
+| Hvad indeholder softwaren? | <Voice text="S-BOM">SBOM</Voice> |
+| Er der kendte sårbarheder? | <Voice text="S-BOM">SBOM</Voice> + CVE-database |
+
+Sammen giver de et **komplet billede** af din softwares tillidsprofil.
+
+<Pause duration={1} />
+
+## Opsummering
+
+| Koncept | Betydning |
+|---------|-----------|
+| **Certifikat** | Digitalt pas der beviser identitet |
+| **<Voice text="C.A.">CA</Voice>** | Betroet myndighed der udsteder certifikater |
+| **<Voice text="S-BOM">SBOM</Voice>** | Komplet ingrediensliste for software |
+| **Tillidskæde** | Sekvens af verificerede forbindelser |
+
+---
+
+<Pause duration={1.5} />
+
+**Bundlinje:** Du kan ikke beskytte dig mod trusler, du ikke kender. Certifikater og <Voice text="S-BOM">SBOM</Voice>'er giver dig synlighed — og synlighed er det første skridt mod sikkerhed.
+
+<Pause duration={1} />
+
+<Emphasis type="question">**Ved du, hvad der er i din software?**</Emphasis>
+
+<Music track="conclusion" action="fade-out" />
+
+---
+
+*I næste episode går vi fra teori til praksis: Hvordan implementerer du <Voice text="Zero Trust">Zero Trust</Voice> i din organisation — uden at gøre alles hverdag til et mareridt?*

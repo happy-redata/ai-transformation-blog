@@ -1,0 +1,86 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: happy-mates/happymates-blob
+  CLUSTER_NAME: aks-happy-mates-sweden1
+  RESOURCE_GROUP: rg-happy-mates-sweden1
+  NAMESPACE: happymates-blob
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          build-args: |
+            AZURE_CLIENT_ID=${{ secrets.AZURE_CLIENT_ID }}
+            AZURE_CLIENT_SECRET=${{ secrets.AZURE_CLIENT_SECRET }}
+            AZURE_TENANT_ID=${{ secrets.AZURE_TENANT_ID }}
+            STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}
+            BASE_URL=${{ secrets.BASE_URL }}
+            NEXT_PUBLIC_AZURE_CLIENT_ID=${{ secrets.AZURE_CLIENT_ID }}
+            NEXT_PUBLIC_AZURE_TENANT_ID=${{ secrets.AZURE_TENANT_ID }}
+            NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_51SeHa02HFjrOMhtoVc6XB1K1bLevRnHRkhURqegnPTopJ5ZogcsmqOkSfDHhEZYgQwlP2AEZQd6YUrIAU4TX4WrW00wrQIW1G3
+
+      # ==========================================================
+      # Deployment Phase
+      # ==========================================================
+      
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Install kubelogin
+        uses: azure/use-kubelogin@v1
+        with:
+          kubelogin-version: 'v0.1.1'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set AKS Context
+        uses: azure/aks-set-context@v3
+        with:
+          resource-group: ${{ env.RESOURCE_GROUP }}
+          cluster-name: ${{ env.CLUSTER_NAME }}
+          use-kubelogin: 'true'
+
+      - name: Configure kubelogin for AAD
+        run: kubelogin convert-kubeconfig -l azurecli
+
+      - name: Deploy Application
+        run: |
+          echo "Deploying application..."
+          
+          # Apply manifests from k8s/ directory
+          kubectl apply -k k8s/
+          
+          # Patch deployment to ensure it uses the specific SHA (rolling update)
+          kubectl set image deployment/happymates-blob happymates-blob=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} -n ${{ env.NAMESPACE }}
+          
+          # Verify rollout
+          kubectl rollout status deployment/happymates-blob -n ${{ env.NAMESPACE }} --timeout=120s

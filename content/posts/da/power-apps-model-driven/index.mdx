@@ -1,0 +1,279 @@
+---
+title: "Power Apps Model-Driven: Enterprise-graden"
+excerpt: "Start med data, ikke design. Lad platformen generere din UI. Model-Driven Apps bytter kreativ frihed for governance og skalerbarhed."
+date: 2025-11-28
+tags: ["Low Code", "Power Apps", "Model-Driven", "Enterprise", "Dataverse"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep5-modeldriven.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 5
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+Glem det blanke lærred.
+
+Model-Driven Apps starter ikke med skærme. De starter med et spørgsmål: **Hvilke data har din virksomhed brug for at tracke?**
+
+Definer dine tabeller. Definer dine relationer. Definer dine forretningsregler.
+
+Og så? **Appen bygger sig selv.**
+
+---
+
+## Filosofiskiftet
+
+Hvis Canvas Apps er for designere, er Model-Driven Apps for arkitekter.
+
+| Canvas Apps | Model-Driven Apps |
+|-------------|-------------------|
+| "Hvordan skal det se ud?" | "Hvilke data har jeg brug for?" |
+| Du designer hver skærm | Platformen genererer skærme |
+| Enhver datakilde | Dataverse påkrævet |
+| Pixel-perfekt kontrol | Standardiserede komponenter |
+| Hurtige prototyper | Langsigtede enterprise-apps |
+
+Det her er ikke bedre eller værre. Det er en fundamentalt anderledes tilgang.
+
+---
+
+## Ét krav: Dataverse
+
+Her er det første du skal vide: **Model-Driven Apps kræver Dataverse.**
+
+Der er ingen forbindelse til en SharePoint-liste. Ingen peging på en Excel-fil. Model-Driven Apps bygges oven på Dataverse — Microsofts managed database til Power Platform.
+
+**Hvorfor dette er vigtigt:**
+- Dataverse har licensomkostninger (se Episode 8)
+- Dataverse giver enterprise-funktioner (sikkerhed, audit, backup)
+- Din datamodel bliver fundamentet for alt
+
+Hvis du ikke er klar til at committe til Dataverse, bliv ved Canvas Apps.
+
+---
+
+## Data først: Design din model
+
+Før du rører appdesigneren, bygger du din datastruktur.
+
+### Eksempel: Kundeservicesystem
+
+**Tabeller (Entities):**
+- Kunder
+- Sager
+- Produkter
+- Vidensartikler
+
+**Relationer:**
+- En Kunde har mange Sager (1:N)
+- En Sag relaterer til ét Produkt (N:1)
+- En Sag kan linke til mange Vidensartikler (N:N)
+
+**Kolonner (Felter):**
+Hver tabel får kolonner med typer:
+- Tekst (enkelt linje, flere linjer)
+- Tal (heltal, decimal, valuta)
+- Dato/Tid
+- Valg (dropdown)
+- Opslag (reference til en anden tabel)
+
+Når din datamodel eksisterer, kan du bygge appen.
+
+---
+
+## App Designer-oplevelsen
+
+Model-Driven Apps bygges gennem en visuel designer — men du placerer ikke knapper. Du komponerer:
+
+### Sitemap (Navigation)
+Definer menustrukturen:
+```
+Service
+├── Dashboard
+├── Sager
+├── Kunder
+└── Vidensbase
+```
+
+### Formularer
+Hver tabel kan have flere formularer:
+- **Hovedformular:** Fuld redigeringsoplevelse
+- **Hurtig opret:** Pop-up til hurtig dataindtastning
+- **Hurtig visning:** Oversigtskort til relaterede poster
+
+### Visninger
+Præfiltrerede lister af poster:
+- "Mine aktive sager"
+- "Højprioritets-sager"
+- "Sager åbnet denne uge"
+
+### Business Process Flows
+Visuel vejledning gennem faser:
+```
+Ny sag → Undersøg → Løs → Luk
+```
+
+---
+
+## Hvad du kontrollerer (og hvad du ikke gør)
+
+### Du kontrollerer:
+- Hvilke tabeller der vises i navigation
+- Hvilke kolonner der vises på formularer
+- Rækkefølge og gruppering af felter
+- Forretningsregler (feltsynlighed, validering)
+- Visninger og deres filtre
+- Sikkerhedsroller
+
+### Du kontrollerer ikke:
+- Det overordnede layout-framework
+- Kernenavigationsadfærd
+- Formulargengivelsesmotor
+- Mobiloplevelse (den er responsiv som standard)
+
+Det er afvejningen. Du mister designfrihed. Du får konsistens og vedligeholdbarhed.
+
+---
+
+## Indbyggede enterprise-funktioner
+
+Model-Driven Apps kommer med kapabiliteter som Canvas Apps kræver manuel implementering for:
+
+### Automatisk mobilsupport
+Hver Model-Driven App har en mobiloplevelse. Platformen tilpasser dine formularer og visninger automatisk.
+
+### Sikkerhedsmodel
+Dataverse giver række-niveau sikkerhed:
+- Brugere ser kun poster de ejer
+- Teams deler adgang
+- Hierarkier ruller tilladelser op
+- Felt-niveau sikkerhed til følsomme data
+
+### Auditspor
+Hver postændring logges:
+- Hvem ændrede det
+- Hvornår
+- Hvad ændrede sig
+- Tidligere værdier
+
+### Forretningsregler
+Deklarativ logik uden formler:
+- Vis/skjul felter baseret på værdier
+- Sæt standardværdier
+- Gør felter påkrævede
+- Lås felter baseret på betingelser
+
+---
+
+## Virkelige use cases
+
+Model-Driven Apps skinner for:
+
+**CRM-lignende applikationer:**
+- Kundestyring
+- Mulighedssporing
+- Kontostyring
+
+**Sagsstyring:**
+- Support-ticketing
+- Hændelseshåndtering
+- Serviceanmodninger
+
+**Aktivsporing:**
+- Udstyrsstyring
+- Lagerkontrol
+- Flådestyring
+
+**Komplekse datarelationer:**
+- Produktkataloger med varianter
+- Hierarkiske organisationer
+- Multi-parts transaktioner
+
+---
+
+## Hvornår Model-Driven kæmper
+
+Der er tilfælde hvor Canvas Apps er bedre:
+
+**Højt tilpassede UI'er:**
+Hvis du har brug for et specifikt visuelt design der ikke passer i standardformularlayoutet, vinder Canvas.
+
+**Simpel dataindsamling:**
+Til en hurtig undersøgelse eller inspektionsformular er Model-Driven overkill.
+
+**Eksterne brugere:**
+Model-Driven Apps er designet til licenserede interne brugere. Til offentlighedsvendte apps, brug Power Pages eller Canvas.
+
+**Begrænset budget:**
+Dataverse koster penge. Hvis budgettet er stramt, kan SharePoint + Canvas være tilstrækkeligt.
+
+---
+
+## Hybridtilgangen
+
+Her er en hemmelighed: Du kan indlejre Canvas Apps inde i Model-Driven Apps.
+
+**Hvorfor dette er vigtigt:**
+- Brug Model-Driven for struktur og governance
+- Indlejr Canvas-komponenter til custom visuals
+- Få det bedste fra begge verdener
+
+Eksempel: En Model-Driven sagsstyringsapp med en indlejret Canvas-kortkomponent der viser kundeplaceringer.
+
+---
+
+## Byg din første Model-Driven App
+
+### Trin 1: Opret en Dataverse-tabel
+- Gå til make.powerapps.com
+- Opret en ny tabel (f.eks. "Sager")
+- Tilføj kolonner: Titel, Beskrivelse, Status, Prioritet
+
+### Trin 2: Opret en Model-Driven App
+- Vælg "Model-driven app"
+- Brug den moderne designer
+- Tilføj din tabel til sitemap
+
+### Trin 3: Tilpas formularer og visninger
+- Træk kolonner ind på formularen
+- Opret visninger som "Mine aktive sager"
+- Tilføj et business process flow
+
+### Trin 4: Sæt sikkerhed
+- Opret sikkerhedsroller
+- Tildel adgangsniveauer per tabel
+- Tilføj brugere til roller
+
+### Trin 5: Publicer og del
+- Tryk Publish
+- Del appen med dine sikkerhedsroller
+- Brugere tilgår via web eller mobil
+
+---
+
+## Migrationssti: Canvas til Model-Driven
+
+Hvis du er vokset ud af din Canvas App:
+
+1. **Eksporter din datamodel** — Dokumentér alle dine datakilder
+2. **Opret Dataverse-tabeller** — Migrer dine SharePoint-lister til Dataverse
+3. **Byg formularer i Model-Driven** — Genskab dine nøgleskærme som formularer
+4. **Migrer forretningslogik** — Konverter Power Fx til forretningsregler
+5. **Genuddann brugere** — UX'en er anderledes
+
+Det er ikke trivielt. Planlæg uger, ikke dage.
+
+---
+
+## Næste episode
+
+I Episode 6 udforsker vi **Power Automate** — automationsmotoren der forbinder alt. Cloud Flows, Desktop Flows, Business Process Flows — og de skjulte fælder der fanger alle.
+
+---
+
+*Har du brugt Model-Driven Apps? Hvordan føles den reducerede designfrihed sammenlignet med Canvas?*

@@ -1,0 +1,90 @@
+---
+title: "Den Trojanske Hest: Den Onde Stuepige (Del 2)"
+excerpt: "Du forlader dit hotelværelse i 10 minutter. Computeren står på bordet. Da du kommer tilbage, ser alt normalt ud. Men det er det ikke."
+date: 2026-03-10
+tags: ["Sikkerhed", "Fysisk Adgang", "Evil Maid", "Kryptering", "Begynderguide"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-evil-maid.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "da-DK-ChristelNeural"
+  backgroundMusic: "/audio/music/suspended-tension.mp3"
+  language: "da-DK"
+footnotes:
+  - text: "Navnet 'Evil Maid' blev populariseret af sikkerhedsforskeren Joanna Rutkowska i 2009."
+    source: "The Invisible Things Lab"
+    url: "https://theinvisiblethings.blogspot.com/2009/10/evil-maid-goes-after-truecrypt.html"
+---
+
+<Music track="suspended-tension" action="fade-in" />
+
+<Speaker voice="narrator" name="Fortæller">
+Du er på forretningsrejse. Du tjekker ind på hotellet, smider taskerne og stiller din laptop på skrivebordet. Du skal lige ned i baren og møde en kollega.
+</Speaker>
+
+Det tager kun 30 minutter. Døren er låst. Du har nøglekortet i lommen.
+
+<Speaker voice="host" name="Vært">
+Men da du kommer tilbage, har nogen været der. Ikke for at stjæle computeren. Men for at ændre den.
+</Speaker>
+
+## Scenariet: De 5 minutter alene
+
+Dette kaldes et **Evil Maid** angreb. Navnet kommer fra ideen om stuepigen, der har nøglen til dit værelse. Vi stoler på hende. Men hvad nu, hvis hun ikke er der for at skifte håndklæder?
+
+Når du efterlader din computer på hotelværelset – eller i et ulåst mødelokale – så giver du en angriber det mest værdifulde af alt: **Fysisk adgang**.
+
+<Voice text="Hollywood har lært os">Hollywood har lært os</Voice>, at hackere sidder i mørke kældre og hamrer løs på tastaturet for at bryde gennem firewalls. 
+
+Virkeligheden er ofte mere simpel: De sætter et USB-stik i din computer, mens du henter kaffe.
+
+## Hvad sker der?
+
+Hvis din computer bare er klappet sammen (i "Sleep" mode), ligger krypteringsnøglen stadig i hukommelsen (RAM).
+
+1.  **Angriberen kommer ind.**
+2.  **Hun vækker computeren.**
+3.  **Hun indsætter en speciel USB-enhed.**
+4.  **Enheden kopierer indholdet af hukommelsen – inklusiv dine kodeord.**
+
+Det tager få minutter. Når hun går igen, ser alt urørt ud.
+
+<Speaker voice="narrator">
+Men næste gang du logger ind, sender computeren dine hemmeligheder direkte til hende.
+</Speaker>
+
+## Løsningen: Sluk den helt
+
+Hvordan beskytter man sig mod den onde stuepige?
+
+Det handler om at gøre fysisk adgang ubrugelig.
+
+### 1. Fuld Disk Kryptering
+Du skal bruge **FileVault** (på Mac) eller **BitLocker** (på Windows). Dette sikrer, at dine data er volapyk uden koden.
+
+### 2. Luk den ned (Shut Down)
+Når du forlader computeren et usikkert sted, må du ikke bare lukke låget. Du skal slukke den helt.
+
+<Speaker voice="host" name="Vært">
+Når strømmen går, forsvinder nøglerne fra hukommelsen. En slukket computer er en stum computer.
+</Speaker>
+
+### 3. Find Holger
+Hvis du er paranoid (eller arbejder med meget følsomme data), kan du bruge "Tamper-evident" neglelak på skruerne. Så kan du se, hvis nogen har åbnet kabinettet.
+
+<SoundEffect name="camera-shutter" />
+
+## Tillid er godt, kontrol er bedre
+
+Vi lever i en verden, hvor vi er nødt til at stole på andre. Kureren, rengøringen, receptionisten. Men vi behøver ikke at give dem nøglerne til kongeriget.
+
+<Pause duration={1.5} />
+
+**Næste gang du går fra din computer på en café for at gå på toilettet... tager du den så med?**
+
+---
+
+*Dette var anden del af serien om Den Trojanske Hest. I næste uge dykker vi ned i **Supply Chain Integrity** – hvordan vi sikrer hesten, før den overhovedet forlader skoven.*

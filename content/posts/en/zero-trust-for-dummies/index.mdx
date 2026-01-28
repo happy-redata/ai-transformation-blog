@@ -1,0 +1,86 @@
+---
+contentVersion: 1.0.0
+title: "Zero Trust for Dummies: When Software Carries Its Own Passport"
+excerpt: "I don't trust anyone. Not even my own software. Here's the simple explanation of how a small manifest makes all the difference."
+date: 2026-01-06
+tags: ["AI", "Zero Trust", "Software Control", "Security"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-zero-trust-dummies.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Claude Code", "GitHub Copilot", "Azure"]
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "narrator"
+  backgroundMusic: "/audio/music/ambient-tech.mp3"
+  language: "en-US"
+---
+
+<Music track="ambient-tech" action="fade-in" />
+
+<Speaker voice="narrator" name="Narrator">
+We live in a world where we download apps and extensions all the time. But do you actually know what you're letting in? I don't. That's why I have one simple rule: Trust no one.
+</Speaker>
+
+<Pause duration={1.5} />
+
+It's called **<Voice text="Zero Trust">Zero Trust</Voice>**. It sounds complicated, but it's actually childishly simple.
+
+<Music track="ambient-tech" action="fade-out" />
+
+## Why is my software suddenly suspicious?
+
+<Speaker voice="narrator">
+In the old days, we trusted everything that was \"inside the walls.\" If it was on the office network, it was safe. But today, walls no longer exist.
+</Speaker>
+
+When I install an extension like \"The <Voice text="Magic Button">Magic Button</Voice>,\" I have no idea if it starts peeking at my passwords over my shoulder. In a <Voice text="Zero Trust">Zero Trust</Voice> world, software is always under suspicion—until it has proven otherwise.
+
+## Software's Passport: The Manifest
+
+<Speaker voice="host" name="Host">
+Just as you can't travel abroad without a passport, our software cannot run without its own. We call it a manifest.
+</Speaker>
+
+It's just a small text file (a <Voice text="Y.A.M.L.">YAML</Voice> file) that sits on the software's desk. It says exactly:
+*   **Who I am:** The identity of the app.
+*   **What I can do:** Which data and lists I'm allowed to touch.
+*   **Where I can go:** Which networks I'm allowed to talk to.
+
+<SoundEffect name="success-chime" />
+
+If the software tries to do something not listed in the passport, it gets stopped immediately. No discussion.
+
+## The Engine Room for Dummies
+
+<Speaker voice="narrator">
+The smart part is that we've automated the trust.
+</Speaker>
+
+When I change something in our <Voice text="Zero Trust">Zero Trust</Voice> app, the system looks at the old passport and the new passport. If there's a difference, the system automatically makes the necessary changes (we call these <Voice text="Migrations">Migrations</Voice>). 
+
+This means:
+1.  **No unpleasant surprises:** Software never gets access to anything we haven't explicitly approved.
+2.  **AI can help:** Because everything is described in the passport, the AI can help us check if everything is safe before we even hit \"Install.\"
+
+<SoundEffect name="keyboard-typing" />
+
+## Cut to the bone
+
+<Music track="conclusion" action="fade-in" />
+
+<Speaker voice="narrator">
+<Voice text="Zero Trust">Zero Trust</Voice> is not a technology. It's an attitude.
+</Speaker>
+
+It's about taking back control. By using a manifest, we ensure that our software always carries its passport—and that we know exactly who we're letting into our digital home.
+
+<Pause duration={1.5} />
+
+<Emphasis type="question">**Does your software have its passport today?**</Emphasis>
+
+<Music track="conclusion" action="fade-out" />
+
+---
+
+*In the next posts, we'll look at the different levels of security—from L100 for the quick installation to L400 for those who want to check every single line of code.*

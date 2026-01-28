@@ -1,0 +1,337 @@
+---
+title: "Dataverse: The Crown Jewel (and Its Price Tag)"
+excerpt: "Microsoft's low-code database is powerful. It's also expensive. Here's the real cost breakdown and when Dataverse is worth it."
+date: 2026-01-09
+tags: ["Low Code", "Dataverse", "Power Platform", "Costs", "Database"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep8-dataverse.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 8
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+"Just use Dataverse. It's the right way to do it."
+
+You'll hear this advice constantly in Power Platform circles. And it's not wrong — Dataverse is genuinely powerful. It provides features that would take months to build yourself.
+
+But there's a question that often goes unasked: **How much does "the right way" actually cost?**
+
+Let's find out.
+
+---
+
+## What is Dataverse?
+
+First, a refresher. Dataverse (formerly "Common Data Service") is:
+
+**A managed relational database** — Tables, columns, relationships  
+**With built-in security** — Row-level, field-level, role-based  
+**And business logic** — Validation rules, calculated fields, workflows  
+**Exposed via APIs** — Every table automatically gets REST endpoints  
+**With audit trails** — Every change logged  
+**And backup/restore** — Enterprise-grade reliability
+
+Dataverse is essentially "Azure SQL + security + business rules + APIs" bundled into one managed service.
+
+**Why Microsoft pushes it:** It's the foundation for Model-Driven Apps, Dynamics 365, and increasingly everything in Power Platform.
+
+---
+
+## The Cost Components
+
+Dataverse pricing has multiple dimensions:
+
+### 1. Database Capacity
+
+This is the core storage cost:
+
+| Tier | Price (approximate) |
+|------|---------------------|
+| Database storage | ~€40/GB/month |
+| File storage | ~€2/GB/month |
+| Log storage | ~€10/GB/month |
+
+**What counts as database storage:** Your actual data — rows in tables, metadata  
+**What counts as file storage:** Attachments, images, documents  
+**What counts as log storage:** Audit trails, plugin traces
+
+**The baseline:** Every tenant gets a small amount of "included" capacity (typically 1-10 GB depending on licenses). After that, you pay per GB.
+
+### 2. User Licensing
+
+Users need licenses to access Dataverse:
+
+| License Type | Approximate Cost | Dataverse Access |
+|--------------|------------------|------------------|
+| Power Apps per app | ~€5/user/month | Access via 2 specific apps |
+| Power Apps Premium | ~€20/user/month | Unlimited apps |
+| Dynamics 365 (various) | €40-200/user/month | Included |
+
+**The trap:** "Power Apps included in Microsoft 365" gives you Canvas Apps with SharePoint — **not Dataverse**.
+
+### 3. API Request Units
+
+Every API call to Dataverse consumes "request units":
+
+| License | Included Requests |
+|---------|-------------------|
+| Per app | 2,000/day per user |
+| Premium | 40,000/day per user |
+
+Hit the limit? Requests get throttled or fail.
+
+---
+
+## Real-World Cost Scenarios
+
+Let's calculate some realistic scenarios:
+
+### Scenario 1: Small Team App
+
+**Setup:**
+- 10 users
+- 1 GB data
+- Power Apps per-app licensing
+
+**Monthly cost:**
+- Licensing: 10 × €5 = €50/month
+- Storage: Included in base capacity
+- **Total: ~€50/month**
+
+Verdict: **Reasonable.** Comparable to many SaaS alternatives.
+
+### Scenario 2: Department Solution
+
+**Setup:**
+- 50 users
+- 5 GB data
+- 2 GB files
+- Power Apps Premium licensing
+
+**Monthly cost:**
+- Licensing: 50 × €20 = €1,000/month
+- Database storage: 5 GB × €40 = €200/month (if over included)
+- File storage: 2 GB × €2 = €4/month
+- **Total: ~€1,200/month**
+
+Verdict: **Significant.** That's €14,400/year for one department's app.
+
+### Scenario 3: Enterprise Deployment
+
+**Setup:**
+- 500 users
+- 50 GB data
+- 100 GB files
+- Mix of licensing
+
+**Monthly cost:**
+- Licensing: Varies (€10,000-50,000/month range)
+- Additional storage: Significant
+- **Total: Can easily exceed €100,000/year**
+
+Verdict: **Enterprise budget required.** Plan carefully.
+
+---
+
+## The Hidden Costs
+
+Beyond the obvious pricing, watch for:
+
+### 1. Storage Growth
+
+Data grows. Attachments accumulate. Logs expand.
+
+Year 1: 5 GB  
+Year 2: 15 GB  
+Year 3: 40 GB
+
+Plan for storage costs to increase 2-3x annually.
+
+### 2. Environment Sprawl
+
+Each Dataverse environment has its own capacity allocation:
+- Development environment
+- Test environment
+- Production environment
+- Sandbox environments
+
+More environments = more base costs.
+
+### 3. Migration Exit Costs
+
+If you ever want to leave Dataverse:
+- Data export is possible but not trivial
+- Business logic doesn't transfer
+- Relationships need rebuilding
+- You're essentially starting over
+
+The switching cost is high.
+
+---
+
+## When Dataverse Makes Sense
+
+Dataverse is worth the investment when:
+
+**Model-Driven Apps are needed**
+- No choice — they require Dataverse
+- The governance features justify the cost
+
+**Complex data relationships**
+- Many-to-many relationships
+- Hierarchical structures
+- Multi-entity processes
+
+**Enterprise security requirements**
+- Row-level security
+- Field-level security  
+- Comprehensive audit trails
+
+**Integration with Dynamics 365**
+- Same database, seamless integration
+- Shared security model
+
+**Long-term strategic applications**
+- Core business processes
+- Systems you'll use for 5+ years
+
+---
+
+## When to Avoid Dataverse
+
+Save your money when:
+
+**Simple data needs**
+- SharePoint lists work fine for basic apps
+- Excel files suffice for simple data
+
+**Cost sensitivity**
+- Limited budget
+- Can't justify per-user licensing
+
+**Short-term projects**
+- Proof of concepts
+- Temporary applications
+
+**External user scenarios**
+- Power Pages has its own licensing model
+- Consider alternatives for public-facing apps
+
+---
+
+## Alternatives Within Power Platform
+
+### SharePoint Lists
+
+**Cost:** Included with Microsoft 365  
+**Capacity:** 30 million items per list  
+**Best for:** Simple data, document-centric apps
+
+**Limitations:**
+- No row-level security (only list-level)
+- Limited relationship support
+- No business rules engine
+
+### SQL Server / Azure SQL
+
+**Cost:** Varies (existing infrastructure or Azure pricing)  
+**Best for:** Existing database investments, complex queries
+
+**Limitations:**
+- Requires Premium connectors
+- Security model is on you
+- No built-in business logic
+
+### Excel / OneDrive
+
+**Cost:** Included with Microsoft 365  
+**Best for:** Very simple apps, personal productivity
+
+**Limitations:**
+- Concurrent access issues
+- Limited capacity
+- No enterprise features
+
+---
+
+## The Decision Framework
+
+Use this to decide:
+
+```
+Is Model-Driven App required?
+    └── YES → Dataverse (no choice)
+    └── NO ↓
+
+Do you need row-level security?
+    └── YES → Dataverse or build custom security
+    └── NO ↓
+
+Are there complex relationships?
+    └── YES → Dataverse or Azure SQL
+    └── NO ↓
+
+Is this a strategic, long-term app?
+    └── YES → Consider Dataverse
+    └── NO ↓
+
+Budget constrained?
+    └── YES → SharePoint or existing databases
+    └── NO → Your choice
+```
+
+---
+
+## Cost Optimization Strategies
+
+If you're committed to Dataverse:
+
+### 1. Right-size licensing
+- Use per-app licenses for limited-access users
+- Reserve Premium for power users
+
+### 2. Archive old data
+- Move historical data to cheaper storage
+- Keep only active records in Dataverse
+
+### 3. Minimize environments
+- Share development environments when possible
+- Clean up unused sandboxes
+
+### 4. Monitor usage
+- Use Power Platform Admin Center analytics
+- Identify and address storage growth
+
+### 5. Consider hybrid approaches
+- Keep high-volume data in Azure SQL
+- Use Dataverse for the business layer
+
+---
+
+## The Ferrari Metaphor
+
+Here's how we think about it:
+
+> **Dataverse is a Ferrari.**  
+> It's fast. It's beautiful. It has incredible engineering.  
+> But you don't buy a Ferrari to commute to the grocery store.
+
+If your use case demands enterprise features, Dataverse delivers. If you just need to track a list of items, a Ferrari is overkill.
+
+**Choose the right vehicle for the journey.**
+
+---
+
+## Next Episode
+
+We leave the Microsoft world briefly to explore **Salesforce Lightning** — how does the CRM giant's low-code platform compare to Power Platform?
+
+---
+
+*Has Dataverse licensing surprised you? How do you manage costs in your Power Platform deployments?*

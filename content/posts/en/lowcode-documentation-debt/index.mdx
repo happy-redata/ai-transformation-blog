@@ -1,0 +1,301 @@
+---
+title: "Documentation Debt: Paying It Down Before Crisis"
+excerpt: "Every app without documentation is technical debt accumulating interest. Here's the minimum viable documentation that could save your organization."
+date: 2026-03-20
+tags: ["Low Code", "Documentation", "Technical Debt", "Knowledge Management"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep13-documentation.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 13
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+After the last episode, you might be feeling anxious about your organization's "Lars problem."
+
+Good. That anxiety can motivate action.
+
+But here's the good news: **You don't need perfect documentation. You need enough.**
+
+This episode is about practical, minimum viable documentation that could save you when the crisis hits.
+
+---
+
+## The Documentation Debt Concept
+
+**Technical debt** is a common term: Shortcuts taken during development that cost more to fix later.
+
+**Documentation debt** is similar: Every piece of knowledge that exists only in someone's head is debt accumulating interest.
+
+The interest compounds:
+- Year 1: "I should document this"
+- Year 2: "I'll do it when I have time"
+- Year 3: "I've forgotten half of why I built it this way"
+- Year 4: Budget for a complete rewrite
+
+---
+
+## The Minimum Viable Documentation
+
+You don't need 50-page technical specifications. You need the essentials:
+
+### The App Card
+
+One page (or one SharePoint item) per app:
+
+```
+APP NAME: Customer Inspection Tracker
+STATUS: Production
+OWNER: Sarah Jensen (sarah@company.com)
+BACKUP OWNER: Mike Chen (mike@company.com)
+BUILT: March 2024
+LAST UPDATED: January 2026
+
+PURPOSE:
+Field technicians record inspection results and photos.
+
+USERS:
+- Field Services team (25 people)
+- Quality Manager (view-only)
+
+DATA SOURCES:
+- SharePoint: "Inspections" list
+- SharePoint: "Customers" list
+- OneDrive: Photo storage folder
+
+CONNECTED FLOWS:
+- "Inspection Submitted" (sends email to Quality Manager)
+- "Daily Summary" (scheduled at 6 PM)
+
+KNOWN ISSUES:
+- Slow loading if more than 50 photos cached
+- GPS doesn't work offline
+
+NEXT REVIEW: July 2026
+```
+
+**Time to create:** 15 minutes  
+**Value when crisis hits:** Priceless
+
+### The Connection Map
+
+For each app, list what connects to it:
+
+```
+Customer Inspection Tracker
+├── DEPENDS ON:
+│   ├── SharePoint: Inspections list
+│   ├── SharePoint: Customers list
+│   └── OneDrive: TechPhotos folder
+│
+├── TRIGGERED BY:
+│   └── Power Apps button press
+│
+└── TRIGGERS:
+    ├── Flow: "Inspection Submitted" 
+    │   └── Sends email to quality@company.com
+    └── Flow: "Daily Summary"
+        └── Creates SharePoint list item
+```
+
+### The "Why We Did It This Way" Notes
+
+For complex logic, explain the *why*, not just the *what*:
+
+```
+DATE FILTER LOGIC:
+The 45-day lookback window exists because:
+- Customer contract SLA requires inspections within 30 days
+- 15-day buffer accounts for processing delays
+- Discussed with Legal in March 2024 (email thread attached)
+
+DO NOT change without Legal approval.
+```
+
+These notes are often more valuable than the code itself.
+
+---
+
+## The Documentation Toolkit
+
+Keep it simple. Use tools you already have:
+
+### Option 1: SharePoint List
+
+Create a "Low-Code App Registry" list:
+- App Name
+- Status (Active/Retired/In Development)
+- Owner
+- Backup Owner
+- Purpose (multiline text)
+- Data Sources (multiline text)
+- Connected Flows (multiline text)
+- Last Review Date
+
+**Pros:** Searchable, shareable, familiar  
+**Cons:** Limited space for complex documentation
+
+### Option 2: OneNote/Confluence Wiki
+
+Create a notebook with:
+- Section per department
+- Page per app
+- Structured template
+
+**Pros:** Unlimited space, rich formatting  
+**Cons:** Can become disorganized
+
+### Option 3: README Files in Solutions
+
+For Power Platform:
+- Include a README file in each solution
+- Version-controlled with the app
+- Visible during deployment
+
+**Pros:** Documentation travels with the app  
+**Cons:** Not visible to non-technical users
+
+### Option 4: In-App Documentation
+
+For Canvas Apps:
+- Add a "Help" or "About" screen
+- Document key logic in comments
+- Include contact information
+
+**Pros:** Always accessible to users  
+**Cons:** Takes development time
+
+---
+
+## The Documentation Sprint
+
+If you're starting from zero, here's a rapid approach:
+
+### Week 1: Inventory
+
+1. List every Power App, Flow, and report
+2. Identify the owner of each
+3. Flag "mystery apps" with unknown owners
+
+**Goal:** Know what you have
+
+### Week 2: Prioritize
+
+Rate each app:
+- **Critical:** Business stops if it fails
+- **Important:** Significant impact
+- **Convenience:** Nice to have
+
+**Goal:** Know what matters most
+
+### Week 3-4: Document Critical Apps
+
+For each "Critical" app:
+1. Create an App Card
+2. Map connections
+3. Document known issues
+4. Identify backup owner
+
+**Goal:** Critical apps are survivable
+
+### Month 2-3: Important Apps
+
+Repeat for "Important" apps.
+
+### Ongoing: Maintenance
+
+- Review documentation quarterly
+- Update when apps change
+- Train new team members
+
+---
+
+## The Tools That Help (With AI)
+
+In 2026, you don't have to document alone:
+
+### Power Platform Documentation Generator
+
+Microsoft's built-in tools:
+- Solution Checker: Automated code review
+- Power Platform CLI: Export solution metadata
+- CoE Starter Kit: Inventory and governance tools
+
+### AI-Assisted Documentation
+
+Tools like GitHub Copilot or Azure AI can:
+- Generate descriptions from code
+- Explain complex formulas
+- Suggest documentation improvements
+
+**Reality check:** AI helps, but human knowledge of *context* and *why* is still essential.
+
+### Copilot for Power Platform
+
+Microsoft's built-in AI can:
+- Explain what a flow does
+- Describe app components
+- Suggest improvements
+
+Use it — but verify the output.
+
+---
+
+## The Documentation Culture
+
+Tools aren't enough. You need habits:
+
+### Rule: No Deployment Without Documentation
+
+Before any app goes to production:
+- App Card exists
+- Owner is assigned
+- Data sources are listed
+
+If it's not documented, it's not ready.
+
+### Rule: Monthly Documentation Hour
+
+Block one hour monthly:
+- Review your apps
+- Update documentation
+- Archive retired apps
+
+Make it non-negotiable.
+
+### Rule: Transfer Documentation
+
+When someone leaves:
+- Mandatory documentation review
+- Handover to backup owner
+- Update all App Cards
+
+No exceptions.
+
+---
+
+## The Payoff
+
+Organizations that invest in documentation:
+- Recover faster from outages
+- Onboard new team members quickly
+- Identify redundant systems
+- Make informed decisions about upgrades
+- Avoid expensive rewrites
+
+The ROI is difficult to measure — until you need it.
+
+---
+
+## Next Episode
+
+Documentation is about survival. Episode 14 is about thriving: Building a **Governance Framework** that makes sustainable low-code development possible.
+
+---
+
+*How much documentation debt does your organization carry? What's preventing you from starting?*

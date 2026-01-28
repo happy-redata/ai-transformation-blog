@@ -1,0 +1,634 @@
+{
+  "agentic-ai-autonomous-work-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/agentic-ai-autonomous-work-da.wav",
+    "filename": "agentic-ai-autonomous-work-da.wav",
+    "size": 39414418,
+    "durationSeconds": 446.874989,
+    "durationFormatted": "7:26",
+    "uploadedAt": "2026-01-10T17:16:18.502Z"
+  },
+  "agentic-ai-autonomous-work-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/agentic-ai-autonomous-work-en.wav",
+    "filename": "agentic-ai-autonomous-work-en.wav",
+    "size": 39277708,
+    "durationSeconds": 445.324989,
+    "durationFormatted": "7:25",
+    "uploadedAt": "2026-01-10T17:16:22.355Z"
+  },
+  "ai-chat-to-copilot-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/ai-chat-to-copilot-da.wav",
+    "filename": "ai-chat-to-copilot-da.wav",
+    "size": 33512736,
+    "durationSeconds": 379.962494,
+    "durationFormatted": "6:19",
+    "uploadedAt": "2026-01-10T17:16:25.331Z"
+  },
+  "ai-chat-to-copilot-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/ai-chat-to-copilot-en.wav",
+    "filename": "ai-chat-to-copilot-en.wav",
+    "size": 33543606,
+    "durationSeconds": 380.312494,
+    "durationFormatted": "6:20",
+    "uploadedAt": "2026-01-10T17:16:28.350Z"
+  },
+  "ai-prompt-engineering-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/ai-prompt-engineering-da.wav",
+    "filename": "ai-prompt-engineering-da.wav",
+    "size": 28402648,
+    "durationSeconds": 322.024989,
+    "durationFormatted": "5:22",
+    "uploadedAt": "2026-01-10T17:16:30.403Z"
+  },
+  "ai-prompt-engineering-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/ai-prompt-engineering-en.wav",
+    "filename": "ai-prompt-engineering-en.wav",
+    "size": 28120408,
+    "durationSeconds": 318.824989,
+    "durationFormatted": "5:18",
+    "uploadedAt": "2026-01-10T17:16:32.679Z"
+  },
+  "certificates-for-dummies-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/certificates-for-dummies-da.wav",
+    "filename": "certificates-for-dummies-da.wav",
+    "size": 26343178,
+    "durationSeconds": 298.674989,
+    "durationFormatted": "4:58",
+    "uploadedAt": "2026-01-10T17:16:34.865Z"
+  },
+  "certificates-for-dummies-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/certificates-for-dummies-en.wav",
+    "filename": "certificates-for-dummies-en.wav",
+    "size": 25705934,
+    "durationSeconds": 291.45,
+    "durationFormatted": "4:51",
+    "uploadedAt": "2026-01-10T17:16:37.980Z"
+  },
+  "certificates-sbom-for-dummies-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/certificates-sbom-for-dummies-da.wav",
+    "filename": "certificates-sbom-for-dummies-da.wav",
+    "size": 35176408,
+    "durationSeconds": 398.824989,
+    "durationFormatted": "6:38",
+    "uploadedAt": "2026-01-10T17:16:41.508Z"
+  },
+  "certificates-sbom-for-dummies-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/certificates-sbom-for-dummies-en.wav",
+    "filename": "certificates-sbom-for-dummies-en.wav",
+    "size": 34527036,
+    "durationSeconds": 391.462494,
+    "durationFormatted": "6:31",
+    "uploadedAt": "2026-01-10T17:16:45.147Z"
+  },
+  "draeb-regnearket-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/draeb-regnearket-da.wav",
+    "filename": "draeb-regnearket-da.wav",
+    "size": 21031334,
+    "durationSeconds": 238.45,
+    "durationFormatted": "3:58",
+    "uploadedAt": "2026-01-10T17:16:47.470Z"
+  },
+  "everything-as-code-ai-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/everything-as-code-ai-da.wav",
+    "filename": "everything-as-code-ai-da.wav",
+    "size": 17317010,
+    "durationSeconds": 196.337483,
+    "durationFormatted": "3:16",
+    "uploadedAt": "2026-01-10T17:16:49.082Z"
+  },
+  "everything-as-code-ai-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/everything-as-code-ai-en.wav",
+    "filename": "everything-as-code-ai-en.wav",
+    "size": 16582746,
+    "durationSeconds": 188.012494,
+    "durationFormatted": "3:08",
+    "uploadedAt": "2026-01-10T17:16:50.567Z"
+  },
+  "excel-calendar-mate-example-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/excel-calendar-mate-example-da.wav",
+    "filename": "excel-calendar-mate-example-da.wav",
+    "size": 30919656,
+    "durationSeconds": 350.562494,
+    "durationFormatted": "5:50",
+    "uploadedAt": "2026-01-10T17:16:53.075Z"
+  },
+  "excel-calendar-mate-example-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/excel-calendar-mate-example-en.wav",
+    "filename": "excel-calendar-mate-example-en.wav",
+    "size": 31415780,
+    "durationSeconds": 356.187483,
+    "durationFormatted": "5:56",
+    "uploadedAt": "2026-01-10T17:16:55.944Z"
+  },
+  "fremtidsplaner-q1-2026-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/fremtidsplaner-q1-2026-da.wav",
+    "filename": "fremtidsplaner-q1-2026-da.wav",
+    "size": 15516628,
+    "durationSeconds": 175.924989,
+    "durationFormatted": "2:55",
+    "uploadedAt": "2026-01-10T17:16:57.699Z"
+  },
+  "fremtidsplaner-q1-2026-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/fremtidsplaner-q1-2026-en.wav",
+    "filename": "fremtidsplaner-q1-2026-en.wav",
+    "size": 14714008,
+    "durationSeconds": 166.824989,
+    "durationFormatted": "2:46",
+    "uploadedAt": "2026-01-10T17:16:59.415Z"
+  },
+  "future-plans-q1-2026-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/future-plans-q1-2026-en.wav",
+    "filename": "future-plans-q1-2026-en.wav",
+    "size": 14714008,
+    "durationSeconds": 166.824989,
+    "durationFormatted": "2:46",
+    "uploadedAt": "2026-01-10T17:17:01.281Z"
+  },
+  "github-collaboration-basics-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/github-collaboration-basics-da.wav",
+    "filename": "github-collaboration-basics-da.wav",
+    "size": 32947154,
+    "durationSeconds": 373.55,
+    "durationFormatted": "6:13",
+    "uploadedAt": "2026-01-10T17:17:05.492Z"
+  },
+  "github-collaboration-basics-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/github-collaboration-basics-en.wav",
+    "filename": "github-collaboration-basics-en.wav",
+    "size": 32953768,
+    "durationSeconds": 373.624989,
+    "durationFormatted": "6:13",
+    "uploadedAt": "2026-01-10T17:17:09.591Z"
+  },
+  "kill-the-spreadsheet-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/kill-the-spreadsheet-en.wav",
+    "filename": "kill-the-spreadsheet-en.wav",
+    "size": 22062170,
+    "durationSeconds": 250.137483,
+    "durationFormatted": "4:10",
+    "uploadedAt": "2026-01-10T17:17:12.180Z"
+  },
+  "kubernetes-for-dummies-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/kubernetes-for-dummies-da.wav",
+    "filename": "kubernetes-for-dummies-da.wav",
+    "size": 24511926,
+    "durationSeconds": 277.912494,
+    "durationFormatted": "4:37",
+    "uploadedAt": "2026-01-10T17:17:16.393Z"
+  },
+  "kubernetes-for-dummies-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/kubernetes-for-dummies-en.wav",
+    "filename": "kubernetes-for-dummies-en.wav",
+    "size": 24585794,
+    "durationSeconds": 278.75,
+    "durationFormatted": "4:38",
+    "uploadedAt": "2026-01-10T17:17:19.683Z"
+  },
+  "network-trust-for-dummies-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/network-trust-for-dummies-da.wav",
+    "filename": "network-trust-for-dummies-da.wav",
+    "size": 39686736,
+    "durationSeconds": 449.962494,
+    "durationFormatted": "7:29",
+    "uploadedAt": "2026-01-10T17:17:24.094Z"
+  },
+  "network-trust-for-dummies-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/network-trust-for-dummies-en.wav",
+    "filename": "network-trust-for-dummies-en.wav",
+    "size": 38390196,
+    "durationSeconds": 435.262494,
+    "durationFormatted": "7:15",
+    "uploadedAt": "2026-01-10T17:17:28.760Z"
+  },
+  "shadow-ai-tipping-point-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/shadow-ai-tipping-point-da.wav",
+    "filename": "shadow-ai-tipping-point-da.wav",
+    "size": 21676296,
+    "durationSeconds": 245.762494,
+    "durationFormatted": "4:05",
+    "uploadedAt": "2026-01-10T17:17:30.889Z"
+  },
+  "shadow-ai-tipping-point-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/shadow-ai-tipping-point-en.wav",
+    "filename": "shadow-ai-tipping-point-en.wav",
+    "size": 22067684,
+    "durationSeconds": 250.2,
+    "durationFormatted": "4:10",
+    "uploadedAt": "2026-01-10T17:17:32.991Z"
+  },
+  "success": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/success.wav",
+    "filename": "success.wav",
+    "size": 88244,
+    "durationSeconds": 1,
+    "durationFormatted": "0:01",
+    "uploadedAt": "2026-01-10T17:17:33.125Z"
+  },
+  "swoosh": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/swoosh.wav",
+    "filename": "swoosh.wav",
+    "size": 88244,
+    "durationSeconds": 1,
+    "durationFormatted": "0:01",
+    "uploadedAt": "2026-01-10T17:17:33.259Z"
+  },
+  "trust-for-dummies-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/trust-for-dummies-da.wav",
+    "filename": "trust-for-dummies-da.wav",
+    "size": 27417014,
+    "durationSeconds": 310.85,
+    "durationFormatted": "5:10",
+    "uploadedAt": "2026-01-10T17:17:35.542Z"
+  },
+  "trust-for-dummies-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/trust-for-dummies-en.wav",
+    "filename": "trust-for-dummies-en.wav",
+    "size": 26951758,
+    "durationSeconds": 305.574989,
+    "durationFormatted": "5:05",
+    "uploadedAt": "2026-01-10T17:17:38.878Z"
+  },
+  "trust-strategy-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/trust-strategy-da.wav",
+    "filename": "trust-strategy-da.wav",
+    "size": 41401124,
+    "durationSeconds": 469.4,
+    "durationFormatted": "7:49",
+    "uploadedAt": "2026-01-10T17:17:42.945Z"
+  },
+  "trust-strategy-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/trust-strategy-en.wav",
+    "filename": "trust-strategy-en.wav",
+    "size": 40976660,
+    "durationSeconds": 464.587483,
+    "durationFormatted": "7:44",
+    "uploadedAt": "2026-01-10T17:17:47.814Z"
+  },
+  "zero-trust-for-dummies-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/zero-trust-for-dummies-da.wav",
+    "filename": "zero-trust-for-dummies-da.wav",
+    "size": 12952214,
+    "durationSeconds": 146.85,
+    "durationFormatted": "2:26",
+    "uploadedAt": "2026-01-10T17:17:49.507Z"
+  },
+  "zero-trust-for-dummies-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/zero-trust-for-dummies-en.wav",
+    "filename": "zero-trust-for-dummies-en.wav",
+    "size": 13253196,
+    "durationSeconds": 150.262494,
+    "durationFormatted": "2:30",
+    "uploadedAt": "2026-01-10T17:17:51.088Z"
+  },
+  "zero-trust-practice-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/zero-trust-practice-da.wav",
+    "filename": "zero-trust-practice-da.wav",
+    "size": 47809956,
+    "durationSeconds": 542.062494,
+    "durationFormatted": "9:02",
+    "uploadedAt": "2026-01-10T17:17:56.974Z"
+  },
+  "zero-trust-practice-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/zero-trust-practice-en.wav",
+    "filename": "zero-trust-practice-en.wav",
+    "size": 47422978,
+    "durationSeconds": 537.674989,
+    "durationFormatted": "8:57",
+    "uploadedAt": "2026-01-10T17:18:04.981Z"
+  },
+  "beck-reglerne-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/beck-reglerne-da.wav",
+    "filename": "beck-reglerne-da.wav",
+    "size": 35663714,
+    "durationSeconds": 404.35,
+    "durationFormatted": "6:44",
+    "uploadedAt": "2026-01-12T05:43:34.989Z"
+  },
+  "building-your-own-metroflow-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/building-your-own-metroflow-en.wav",
+    "filename": "building-your-own-metroflow-en.wav",
+    "size": 39884084,
+    "durationSeconds": 452.2,
+    "durationFormatted": "7:32",
+    "uploadedAt": "2026-01-12T05:43:45.618Z"
+  },
+  "byg-din-egen-metroflow-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/byg-din-egen-metroflow-da.wav",
+    "filename": "byg-din-egen-metroflow-da.wav",
+    "size": 39771628,
+    "durationSeconds": 450.924989,
+    "durationFormatted": "7:30",
+    "uploadedAt": "2026-01-12T05:43:56.425Z"
+  },
+  "copilot-studio-history-guide-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/copilot-studio-history-guide-da.wav",
+    "filename": "copilot-studio-history-guide-da.wav",
+    "size": 44057046,
+    "durationSeconds": 499.512494,
+    "durationFormatted": "8:19",
+    "uploadedAt": "2026-01-12T05:44:08.688Z"
+  },
+  "copilot-studio-history-guide-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/copilot-studio-history-guide-en.wav",
+    "filename": "copilot-studio-history-guide-en.wav",
+    "size": 44238958,
+    "durationSeconds": 501.574989,
+    "durationFormatted": "8:21",
+    "uploadedAt": "2026-01-12T05:44:20.903Z"
+  },
+  "dataverse-cost-reality-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/dataverse-cost-reality-da.wav",
+    "filename": "dataverse-cost-reality-da.wav",
+    "size": 49501190,
+    "durationSeconds": 561.237483,
+    "durationFormatted": "9:21",
+    "uploadedAt": "2026-01-12T05:44:35.867Z"
+  },
+  "dataverse-cost-reality-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/dataverse-cost-reality-en.wav",
+    "filename": "dataverse-cost-reality-en.wav",
+    "size": 49779020,
+    "durationSeconds": 564.387483,
+    "durationFormatted": "9:24",
+    "uploadedAt": "2026-01-12T05:44:47.792Z"
+  },
+  "find-dine-flaskehalse-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/find-dine-flaskehalse-da.wav",
+    "filename": "find-dine-flaskehalse-da.wav",
+    "size": 39454108,
+    "durationSeconds": 447.324989,
+    "durationFormatted": "7:27",
+    "uploadedAt": "2026-01-12T05:44:55.577Z"
+  },
+  "finding-your-bottlenecks-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/finding-your-bottlenecks-en.wav",
+    "filename": "finding-your-bottlenecks-en.wav",
+    "size": 40004256,
+    "durationSeconds": 453.562494,
+    "durationFormatted": "7:33",
+    "uploadedAt": "2026-01-12T05:45:04.020Z"
+  },
+  "fra-stationer-til-forretningsprocesser-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/fra-stationer-til-forretningsprocesser-da.wav",
+    "filename": "fra-stationer-til-forretningsprocesser-da.wav",
+    "size": 33648344,
+    "durationSeconds": 381.5,
+    "durationFormatted": "6:21",
+    "uploadedAt": "2026-01-12T05:45:11.147Z"
+  },
+  "from-stations-to-business-steps-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/from-stations-to-business-steps-en.wav",
+    "filename": "from-stations-to-business-steps-en.wav",
+    "size": 33682520,
+    "durationSeconds": 381.887483,
+    "durationFormatted": "6:21",
+    "uploadedAt": "2026-01-12T05:45:18.140Z"
+  },
+  "harry-becks-revolution-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/harry-becks-revolution-da.wav",
+    "filename": "harry-becks-revolution-da.wav",
+    "size": 24428136,
+    "durationSeconds": 276.962494,
+    "durationFormatted": "4:36",
+    "uploadedAt": "2026-01-12T05:45:23.312Z"
+  },
+  "harry-becks-revolution-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/harry-becks-revolution-en.wav",
+    "filename": "harry-becks-revolution-en.wav",
+    "size": 25052150,
+    "durationSeconds": 284.037483,
+    "durationFormatted": "4:44",
+    "uploadedAt": "2026-01-12T05:45:28.330Z"
+  },
+  "lowcode-ai-independence-era-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-ai-independence-era-da.wav",
+    "filename": "lowcode-ai-independence-era-da.wav",
+    "size": 23692768,
+    "durationSeconds": 268.624989,
+    "durationFormatted": "4:28",
+    "uploadedAt": "2026-01-12T05:45:33.348Z"
+  },
+  "lowcode-ai-independence-era-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-ai-independence-era-en.wav",
+    "filename": "lowcode-ai-independence-era-en.wav",
+    "size": 48906944,
+    "durationSeconds": 554.5,
+    "durationFormatted": "9:14",
+    "uploadedAt": "2026-01-12T05:45:43.467Z"
+  },
+  "lowcode-app-lifecycle-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-app-lifecycle-da.wav",
+    "filename": "lowcode-app-lifecycle-da.wav",
+    "size": 12865116,
+    "durationSeconds": 145.862494,
+    "durationFormatted": "2:25",
+    "uploadedAt": "2026-01-12T05:45:46.281Z"
+  },
+  "lowcode-app-lifecycle-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-app-lifecycle-en.wav",
+    "filename": "lowcode-app-lifecycle-en.wav",
+    "size": 30900914,
+    "durationSeconds": 350.35,
+    "durationFormatted": "5:50",
+    "uploadedAt": "2026-01-12T05:45:53.052Z"
+  },
+  "lowcode-bus-factor-crisis-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-bus-factor-crisis-da.wav",
+    "filename": "lowcode-bus-factor-crisis-da.wav",
+    "size": 22332284,
+    "durationSeconds": 253.2,
+    "durationFormatted": "4:13",
+    "uploadedAt": "2026-01-12T05:45:57.977Z"
+  },
+  "lowcode-bus-factor-crisis-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-bus-factor-crisis-en.wav",
+    "filename": "lowcode-bus-factor-crisis-en.wav",
+    "size": 36935998,
+    "durationSeconds": 418.774989,
+    "durationFormatted": "6:58",
+    "uploadedAt": "2026-01-12T05:46:05.950Z"
+  },
+  "lowcode-documentation-debt-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-documentation-debt-da.wav",
+    "filename": "lowcode-documentation-debt-da.wav",
+    "size": 10592864,
+    "durationSeconds": 120.1,
+    "durationFormatted": "2:00",
+    "uploadedAt": "2026-01-12T05:46:08.767Z"
+  },
+  "lowcode-documentation-debt-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-documentation-debt-en.wav",
+    "filename": "lowcode-documentation-debt-en.wav",
+    "size": 30255950,
+    "durationSeconds": 343.037483,
+    "durationFormatted": "5:43",
+    "uploadedAt": "2026-01-12T05:46:15.251Z"
+  },
+  "lowcode-governance-framework-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-governance-framework-da.wav",
+    "filename": "lowcode-governance-framework-da.wav",
+    "size": 11166164,
+    "durationSeconds": 126.6,
+    "durationFormatted": "2:06",
+    "uploadedAt": "2026-01-12T05:46:18.113Z"
+  },
+  "lowcode-governance-framework-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-governance-framework-en.wav",
+    "filename": "lowcode-governance-framework-en.wav",
+    "size": 39114538,
+    "durationSeconds": 443.474989,
+    "durationFormatted": "7:23",
+    "uploadedAt": "2026-01-12T05:46:25.687Z"
+  },
+  "lowcode-magic-of-fast-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-magic-of-fast-da.wav",
+    "filename": "lowcode-magic-of-fast-da.wav",
+    "size": 33133476,
+    "durationSeconds": 375.662494,
+    "durationFormatted": "6:15",
+    "uploadedAt": "2026-01-12T05:46:32.201Z"
+  },
+  "lowcode-magic-of-fast-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-magic-of-fast-en.wav",
+    "filename": "lowcode-magic-of-fast-en.wav",
+    "size": 33711186,
+    "durationSeconds": 382.212494,
+    "durationFormatted": "6:22",
+    "uploadedAt": "2026-01-12T05:46:39.066Z"
+  },
+  "lowcode-platform-landscape-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-platform-landscape-da.wav",
+    "filename": "lowcode-platform-landscape-da.wav",
+    "size": 41436404,
+    "durationSeconds": 469.8,
+    "durationFormatted": "7:49",
+    "uploadedAt": "2026-01-12T05:46:47.430Z"
+  },
+  "lowcode-platform-landscape-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-platform-landscape-en.wav",
+    "filename": "lowcode-platform-landscape-en.wav",
+    "size": 41874096,
+    "durationSeconds": 474.762494,
+    "durationFormatted": "7:54",
+    "uploadedAt": "2026-01-12T05:46:55.835Z"
+  },
+  "lowcode-to-procode-migration-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-to-procode-migration-da.wav",
+    "filename": "lowcode-to-procode-migration-da.wav",
+    "size": 9547694,
+    "durationSeconds": 108.25,
+    "durationFormatted": "1:48",
+    "uploadedAt": "2026-01-12T05:46:57.986Z"
+  },
+  "lowcode-to-procode-migration-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/lowcode-to-procode-migration-en.wav",
+    "filename": "lowcode-to-procode-migration-en.wav",
+    "size": 41791408,
+    "durationSeconds": 473.824989,
+    "durationFormatted": "7:53",
+    "uploadedAt": "2026-01-12T05:47:06.446Z"
+  },
+  "power-apps-canvas-deep-dive-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-apps-canvas-deep-dive-da.wav",
+    "filename": "power-apps-canvas-deep-dive-da.wav",
+    "size": 34931654,
+    "durationSeconds": 396.05,
+    "durationFormatted": "6:36",
+    "uploadedAt": "2026-01-12T05:47:14.303Z"
+  },
+  "power-apps-canvas-deep-dive-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-apps-canvas-deep-dive-en.wav",
+    "filename": "power-apps-canvas-deep-dive-en.wav",
+    "size": 34996700,
+    "durationSeconds": 396.787483,
+    "durationFormatted": "6:36",
+    "uploadedAt": "2026-01-12T05:47:21.080Z"
+  },
+  "power-apps-model-driven-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-apps-model-driven-da.wav",
+    "filename": "power-apps-model-driven-da.wav",
+    "size": 39722016,
+    "durationSeconds": 450.362494,
+    "durationFormatted": "7:30",
+    "uploadedAt": "2026-01-12T05:47:29.405Z"
+  },
+  "power-apps-model-driven-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-apps-model-driven-en.wav",
+    "filename": "power-apps-model-driven-en.wav",
+    "size": 40274368,
+    "durationSeconds": 456.624989,
+    "durationFormatted": "7:36",
+    "uploadedAt": "2026-01-12T05:47:37.904Z"
+  },
+  "power-automate-deep-dive-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-automate-deep-dive-da.wav",
+    "filename": "power-automate-deep-dive-da.wav",
+    "size": 42248946,
+    "durationSeconds": 479.012494,
+    "durationFormatted": "7:59",
+    "uploadedAt": "2026-01-12T05:47:46.910Z"
+  },
+  "power-automate-deep-dive-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-automate-deep-dive-en.wav",
+    "filename": "power-automate-deep-dive-en.wav",
+    "size": 41935836,
+    "durationSeconds": 475.462494,
+    "durationFormatted": "7:55",
+    "uploadedAt": "2026-01-12T05:47:54.866Z"
+  },
+  "power-platform-family-tree-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-platform-family-tree-da.wav",
+    "filename": "power-platform-family-tree-da.wav",
+    "size": 50014956,
+    "durationSeconds": 567.062494,
+    "durationFormatted": "9:27",
+    "uploadedAt": "2026-01-12T05:48:04.495Z"
+  },
+  "power-platform-family-tree-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/power-platform-family-tree-en.wav",
+    "filename": "power-platform-family-tree-en.wav",
+    "size": 48646752,
+    "durationSeconds": 551.549977,
+    "durationFormatted": "9:11",
+    "uploadedAt": "2026-01-12T05:48:14.406Z"
+  },
+  "salesforce-lightning-overview-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/salesforce-lightning-overview-da.wav",
+    "filename": "salesforce-lightning-overview-da.wav",
+    "size": 32066256,
+    "durationSeconds": 363.562494,
+    "durationFormatted": "6:03",
+    "uploadedAt": "2026-01-12T05:48:21.177Z"
+  },
+  "salesforce-lightning-overview-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/salesforce-lightning-overview-en.wav",
+    "filename": "salesforce-lightning-overview-en.wav",
+    "size": 38681256,
+    "durationSeconds": 438.562494,
+    "durationFormatted": "7:18",
+    "uploadedAt": "2026-01-12T05:48:30.412Z"
+  },
+  "servicenow-app-engine-overview-da": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/servicenow-app-engine-overview-da.wav",
+    "filename": "servicenow-app-engine-overview-da.wav",
+    "size": 15612546,
+    "durationSeconds": 177.012494,
+    "durationFormatted": "2:57",
+    "uploadedAt": "2026-01-12T05:48:35.795Z"
+  },
+  "servicenow-app-engine-overview-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/servicenow-app-engine-overview-en.wav",
+    "filename": "servicenow-app-engine-overview-en.wav",
+    "size": 36253550,
+    "durationSeconds": 411.037483,
+    "durationFormatted": "6:51",
+    "uploadedAt": "2026-01-12T05:48:46.081Z"
+  },
+  "the-beck-constraints-en": {
+    "url": "https://sthappymatesauthsweden.blob.core.windows.net/audio/the-beck-constraints-en.wav",
+    "filename": "the-beck-constraints-en.wav",
+    "size": 36547918,
+    "durationSeconds": 414.374989,
+    "durationFormatted": "6:54",
+    "uploadedAt": "2026-01-12T05:48:55.604Z"
+  }
+}

@@ -1,0 +1,178 @@
+---
+title: "The Low-Code Landscape: Choosing Your Platform"
+excerpt: "Power Platform, Salesforce, ServiceNow, AppSheet — the market is crowded. Here's how to navigate the options without getting trapped."
+date: 2025-10-17
+tags: ["Low Code", "Power Platform", "Salesforce", "ServiceNow", "Strategy"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep2-landscape.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 2
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+You've decided low-code is worth exploring. Now comes the hard question: **Which platform?**
+
+Walk into any enterprise IT discussion and you'll hear fierce loyalty to different camps. Microsoft shops swear by Power Platform. Salesforce customers extend with Lightning. ServiceNow devotees automate everything through their platform.
+
+But here's the thing: **There is no "best" platform. Only the best platform for your context.**
+
+---
+
+## The Big Three (Enterprise)
+
+These are the platforms you'll encounter in most large organizations:
+
+### Microsoft Power Platform
+
+**What it is:** A suite of low-code tools (Power Apps, Power Automate, Power BI, Copilot Studio) deeply integrated with Microsoft 365 and Azure.
+
+**Best for:** Organizations already using Microsoft 365 and Azure. If your company lives in Teams, SharePoint, and Outlook, Power Platform is the natural extension.
+
+| Strength | Weakness |
+|----------|----------|
+| Deep M365 integration | Licensing complexity |
+| Huge connector library | Dataverse costs escalate |
+| Strong community | Canvas app performance limits |
+| Regular innovation | Frequent UI changes confuse users |
+
+**The licensing reality:** "Power Apps is included with Office 365" is technically true — but that gets you 2,000 API calls per day and no Dataverse. Real usage requires Premium licenses (~$20/user/month) or per-app licenses.
+
+---
+
+### Salesforce Lightning
+
+**What it is:** Salesforce's declarative development platform, built on top of the world's most successful CRM.
+
+**Best for:** Organizations with Salesforce as their customer data hub. If your CRM is Salesforce, extending it with Lightning makes obvious sense.
+
+| Strength | Weakness |
+|----------|----------|
+| Mature, battle-tested | Expensive outside CRM use cases |
+| Strong declarative automation (Flow) | Steep learning curve |
+| Massive AppExchange ecosystem | Heavy vendor lock-in |
+| Enterprise governance built-in | "Salesforce skills" are specialized |
+
+**The licensing reality:** Lightning is part of Salesforce editions, but advanced features (Flow orchestrations, OmniStudio) require expensive add-ons. And if you're not already a Salesforce customer, the entry price is substantial.
+
+---
+
+### ServiceNow App Engine
+
+**What it is:** Low-code development on top of ServiceNow's workflow platform, originally designed for IT Service Management.
+
+**Best for:** IT departments, HR departments, and facilities management. If your IT team already lives in ServiceNow, App Engine is a natural extension.
+
+| Strength | Weakness |
+|----------|----------|
+| Native ITSM integration | Feels "IT-centric" to business users |
+| Strong workflow capabilities | Expensive licensing |
+| Built-in governance and compliance | Smaller talent pool |
+| Enterprise-grade reliability | Less flexible for creative apps |
+
+**The licensing reality:** ServiceNow is not cheap. App Engine requires additional licensing on top of your base ServiceNow subscription. But for IT-centric workflows, the integration is unmatched.
+
+---
+
+## The Challengers
+
+Beyond the Big Three, several platforms serve specific niches:
+
+### Google AppSheet
+- **Best for:** Google Workspace organizations needing simple apps
+- **Standout feature:** Deeply integrated with Google Sheets
+- **Limitation:** Less enterprise-grade than Microsoft/Salesforce
+
+### Mendix & OutSystems
+- **Best for:** Organizations wanting low-code with pro-code escape hatches
+- **Standout feature:** Generate actual deployable code
+- **Limitation:** Steeper learning curve, closer to traditional development
+
+### Retool & Budibase
+- **Best for:** Developer-led teams building internal tools
+- **Standout feature:** SQL-native, developer-friendly
+- **Limitation:** Requires technical users
+
+### Airtable
+- **Best for:** Teams outgrowing spreadsheets
+- **Standout feature:** Beautiful interface, excellent for content workflows
+- **Limitation:** Hits limits quickly for enterprise use
+
+---
+
+## The Selection Framework
+
+When choosing a platform, ask these questions:
+
+### 1. Where does your data already live?
+
+| Your Data Hub | Natural Platform |
+|---------------|------------------|
+| SharePoint / Microsoft 365 | Power Platform |
+| Salesforce CRM | Salesforce Lightning |
+| ServiceNow CMDB | ServiceNow App Engine |
+| Google Workspace | AppSheet |
+| Custom databases | Mendix / Retool |
+
+### 2. Who will build the apps?
+
+| Builder Profile | Best Fit |
+|-----------------|----------|
+| Business analysts | Power Apps Canvas, AppSheet |
+| IT professionals | Power Apps Model-Driven, ServiceNow |
+| Developers wanting acceleration | Mendix, OutSystems, Retool |
+
+### 3. What's your integration complexity?
+
+If you need to connect 5+ systems, prioritize platforms with strong connector ecosystems. Power Platform leads here with 900+ connectors.
+
+### 4. What's your governance appetite?
+
+Some platforms (ServiceNow, Salesforce) have governance built into their DNA. Others (Power Platform, AppSheet) require deliberate governance setup.
+
+---
+
+## The Trap: Multi-Platform Sprawl
+
+Here's what often happens:
+
+1. Marketing buys AppSheet because it's "easy"
+2. IT builds in ServiceNow because that's their stack
+3. Finance builds in Power Apps because they know Excel
+4. Sales extends in Salesforce because that's their CRM
+
+Result: **Four low-code platforms, four skill sets to maintain, four governance frameworks to enforce.**
+
+This is worse than having one platform with limitations.
+
+**Recommendation:** Pick one *primary* platform. Allow exceptions only with strong justification. The switching costs of platform sprawl are brutal.
+
+---
+
+## Our Focus: Power Platform
+
+For the rest of this series, we'll focus primarily on **Microsoft Power Platform**.
+
+Why?
+- **Market share:** It's the most widely adopted enterprise low-code platform
+- **Ecosystem breadth:** Power Apps, Power Automate, Copilot Studio, Power BI, Dataverse
+- **Representative challenges:** The governance, licensing, and sustainability issues we'll discuss apply (with variations) to all platforms
+
+We'll also cover Salesforce and ServiceNow in dedicated episodes — but Power Platform will be our reference architecture.
+
+---
+
+## Next Episode
+
+In Episode 3, we dive deep into the Power Platform family tree. Power Apps isn't just one thing — it's Canvas, Model-Driven, Pages, and more. Power Automate isn't just cloud flows — it's desktop automation, business process flows, and AI processing.
+
+And we'll trace the rebrand history: Why was it called "Microsoft Flow"? What happened to "Power Virtual Agents"? And why does everyone get confused by "Common Data Service" vs. "Dataverse"?
+
+---
+
+*Which platform does your organization use? Is it a deliberate choice or historical accident? Share your experience.*

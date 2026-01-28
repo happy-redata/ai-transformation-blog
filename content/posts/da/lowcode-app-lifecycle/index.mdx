@@ -1,0 +1,130 @@
+---
+title: "App-livscyklussen: Når apps bliver voksne"
+excerpt: "Din app er live. Brugerne elsker den. Hvad nu? Udvikling er bare begyndelsen. Her er hvad ingen fortalte dig om at vedligeholde low-code applikationer."
+date: 2026-02-20
+tags: ["Low Code", "ALM", "Application Lifecycle", "DevOps", "Governance"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep11-lifecycle.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 11
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+Du byggede appen. Den virker. Folk bruger den.
+
+**Tillykke. Nu begynder det rigtige arbejde.**
+
+I de næste 5-10 år skal du:
+- Fikse bugs som brugere opdager
+- Tilføje funktioner som brugere anmoder om
+- Opdatere når platforme ændrer sig
+- Vedligeholde sikkerhed
+- Træne nye brugere
+- Dokumentere alt
+- Til sidst pensionere den elegant
+
+Dette er **Application Lifecycle Management** (ALM). Og i low-code verdenen er det ofte en eftertanke.
+
+---
+
+## ALM-modenheds kurven
+
+Hvor er din organisation?
+
+```
+Niveau 0: "Det er bare en demo"
+          → Ingen versionskontrol, ingen dokumentation, ingen backups
+
+Niveau 1: "Vi bruger det i produktion"
+          → Fungerende app, men ingen dev/test separation
+          → Ændringer går direkte til brugere
+
+Niveau 2: "Vi har environments"
+          → Separate dev/test/prod environments
+          → Noget ændringskontrol
+
+Niveau 3: "Vi har solutions"
+          → Pakkede deployments
+          → Versionssporing
+          → Rollback-kapabilitet
+
+Niveau 4: "Vi har pipelines"
+          → Automatiseret deployment
+          → Kildekode-integration
+          → Automatiseret test
+
+Niveau 5: "Fuld DevOps"
+          → CI/CD pipelines
+          → Infrastructure as code
+          → Monitoring og alerting
+```
+
+De fleste citizen-udviklede apps sidder fast på Niveau 0 eller 1.
+
+---
+
+## Det praktiske minimum
+
+Ikke klar til fuld DevOps? Her er minimum du bør gøre:
+
+### 1. Separate environments
+
+Som minimum, hav:
+- **Udviklingsmiljø:** Hvor du laver ændringer
+- **Produktionsmiljø:** Hvor brugere arbejder
+
+Test i dev. Deploy til prod.
+
+### 2. Solution-pakning
+
+Hold dine apps i solutions:
+- Solutions er bærbare
+- Solutions har versionsnumre
+- Solutions kan eksporteres/importeres
+
+### 3. Manuelle backups
+
+Før større ændringer:
+- Eksporter solution
+- Gem den et sted (SharePoint, Git, hvor som helst)
+- Mærk den med dato og version
+
+### 4. Ændringslog
+
+Hold en simpel log:
+- Hvad ændrede sig
+- Hvornår
+- Hvem lavede ændringen
+- Hvorfor
+
+---
+
+## Den kommende krise
+
+Her er hvorfor det haster:
+
+Din organisation har dusinvis (måske hundredvis) af low-code apps. De fleste blev bygget hurtigt, uden ALM-disciplin.
+
+**Hvad sker der om 3 år?**
+- Platforme opdaterer (breaking changes)
+- Byggere forlader (videnstab)
+- Krav ændrer sig (feature requests)
+- Regler strammes (compliance-behov)
+
+Uden ALM bygger du teknisk gæld. Hver app uden ordentlig lifecycle management er en fremtidig krise.
+
+---
+
+## Næste episode
+
+Apropos fremtidige kriser: Episode 12 tackler det mest skræmmende scenarie — **Bus-faktoren**. Hvad sker der når Lars, der byggede 47 apps, går på pension?
+
+---
+
+*Hvor er din organisation på ALM-modenheds kurven? Hvad forhindrer jer i at bevæge jer opad?*

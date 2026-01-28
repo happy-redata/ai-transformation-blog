@@ -1,0 +1,88 @@
+---
+title: "The Trojan Horse: The Spy in Your Living Room (Part 1)"
+excerpt: "You bought it online. It was cheap. But do you know what hides beneath the keyboard? The story of why even a sealed Mac needs quarantine."
+date: 2026-03-03
+tags: ["Security", "Supply Chain", "Hardware", "Faraday", "Beginner Guide"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-trojan-horse-mac.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Imagen 3"]
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "en-US-JennyNeural"
+  backgroundMusic: "/audio/music/ambient-tech.mp3"
+  language: "en-US"
+footnotes:
+  - text: "The NSA has historically used 'interdiction' to plant hardware in equipment before it reached the target."
+    source: "The Guardian"
+    url: "https://www.theguardian.com/books/2014/may/12/no-place-to-hide-glenn-greenwald-nsa-snowden"
+---
+
+<Music track="ambient-tech" action="fade-in" />
+
+<Speaker voice="narrator" name="Narrator">
+It is a classic story. The Greeks could not enter the city of Troy by force. So they left a gift. A beautiful wooden horse. The Trojans dragged it inside the walls themselves.
+</Speaker>
+
+<Pause duration={1.5} />
+
+At night, the soldiers crawled out. And the rest is history.
+
+<Speaker voice="host" name="Host">
+Today, the horse is not made of wood. It is made of aluminum, glass, and silicon.
+</Speaker>
+
+We have all heard of viruses *on* the computer. But what if the virus *is* the computer?
+
+## The Scenario: The Fake Mac
+
+Imagine this:
+Your company orders 10 new MacBooks for management. They arrive in nice white boxes, wrapped in plastic. Everything looks perfect.
+
+But one of them has taken a detour.
+
+Between the factory and your office, it has been in the hands of a "modern Trojan". They opened it up, and under the battery, they soldered a tiny extra chip onto the motherboard. A 4G modem no bigger than a fingernail.
+
+The <Voice text="Zero Trust">Zero Trust</Voice> team sets up the machine. They install antivirus. They disable Wi-Fi. They isolate it on a secure network. They think they are safe.
+
+<Speaker voice="narrator">
+But the horse is already inside.
+</Speaker>
+
+While the CEO reads secret documents on the screen, that little chip is sending screenshots directly out via the 4G network. Bypassing your firewall. Bypassing your security. The machine is literally phoning home.
+
+## The Solution: The Faraday Cage
+
+How do you protect against a spy living inside the hardware itself? You cannot use software to find it.
+
+You must use physics.
+
+We call it a **Faraday Cage**. It is a room lined with copper mesh that blocks all radio signals. No Wi-Fi, no Bluetooth, and most importantly: **No 4G/5G**.
+
+<SoundEffect name="success-chime" />
+
+If you work with state secrets or patent blueprints, this is where you sit.
+
+1.  **No signals out:** The spy chip screams into the void. It cannot send data home.
+2.  **No signals in:** No one can remote control the machine from outside.
+
+## Did you check the teeth?
+
+<Speaker voice="host" name="Host">
+Most of us do not need a copper-lined room. But the principle applies anyway:
+</Speaker>
+
+**Never blindly trust hardware just because the box was sealed.**
+
+When we talk about **Supply Chain Security**, it is about knowing exactly where your devices have been. Did they sit in a warehouse in an insecure port? Was the courier reliable?
+
+In a world of global trade, your computer has traveled further than you ever will. And who knows who it met on the way?
+
+<Pause duration={1.5} />
+
+<Emphasis type="question">**Do you really know what hides inside your corporate "gifts"?**</Emphasis>
+
+---
+
+*This is part one of the series on Hardware Secrets. In the next part, we look at "Evil Maid" attacks – when the spy is not a chip, but the cleaning staff.*

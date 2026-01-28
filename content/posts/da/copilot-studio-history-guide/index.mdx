@@ -1,0 +1,284 @@
+---
+title: "Copilot Studio: Fra Power Virtual Agents til AI-agentfabrik"
+excerpt: "Det mest rebrandede produkt i Microsofts historie. Her er den fulde rejse fra simple chatbots til autonome AI-agenter."
+date: 2025-12-26
+tags: ["Low Code", "Copilot Studio", "AI", "Power Virtual Agents", "Chatbots"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep7-copilot.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 7
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+"Har du prøvet vores nye Power Virtual Agent?"
+
+Hvis nogen sagde dette til dig i 2020, mente de en simpel chatbot med beslutningstræer.
+
+"Har du prøvet vores nye Copilot?"
+
+Hvis nogen siger dette i 2025, har du brug for at spørge: **Hvilken Copilot?**
+
+Velkommen til det mest rebrandede produkt i Microsofts historie — og det mest transformerede.
+
+---
+
+## Den komplette tidslinje
+
+Lad os spore hvert trin af denne udvikling:
+
+### Maj 2019: Power Virtual Agents lanceres
+
+Microsoft træder ind på no-code chatbot-markedet.
+
+**Hvad det gjorde:**
+- Byg bots uden kode
+- Beslutningstræ-samtaler
+- "Hvis bruger siger X, svar med Y"
+- Deploy til websites og Teams
+
+**Virkeligheden:** Simple FAQ-bots. Gode til IT-helpdesks der svarer på "Hvordan nulstiller jeg mit password?" Ikke gode til komplekse samtaler.
+
+### 2020-2022: Gradvise forbedringer
+
+PVA blev klogere:
+- Bedre naturlig sprogforståelse
+- Integration med Power Automate
+- Bot-bygning direkte i Teams
+- Flere kanaler (Facebook, websites, custom)
+
+Men fundamentalt var det stadig beslutningstræer. Hvis brugeren gik "off script," blev botten forvirret.
+
+### November 2023: Det store rebrand
+
+Microsoft annoncerer: Power Virtual Agents er nu **Copilot Studio**.
+
+**Hvad ændrede sig:**
+- Generativ AI-integration (GPT-drevne svar)
+- Byg custom Copilots, ikke bare bots
+- Forbind til dine enterprise-data
+- Udvid Microsoft 365 Copilot med plugins
+
+**Budskabsskiftet:**
+- **Før:** "Byg chatbots"
+- **Efter:** "Byg AI-agenter og custom Copilots"
+
+### 2024: AI-agenter bliver mainstream
+
+Copilot Studio bliver hubben for enterprise AI-agenter:
+- Autonom opgavefuldførelse
+- Multi-turn reasoning
+- Integration med Graph API, SharePoint, Dataverse
+- Custom GPT'er med enterprise-data
+
+### 2025: Den nuværende tilstand
+
+I dag kan Copilot Studio:
+1. **Besvare spørgsmål** fra dine dokumenter og data
+2. **Udføre handlinger** via Power Automate
+3. **Udvide Microsoft 365 Copilot** med custom færdigheder
+4. **Operere autonomt** med menneskelige godkendelsesgate
+5. **Deployes overalt** — Teams, web, mobile apps
+
+---
+
+## Navneforvirringen
+
+Her er det nuværende Microsoft Copilot-landskab:
+
+| Produkt | Hvad det er | Hvor du finder det |
+|---------|-------------|-------------------|
+| **Microsoft 365 Copilot** | AI-assistent i Word, Excel, Teams, Outlook | Inkluderet i M365 Copilot-licenser |
+| **Copilot Studio** | Platform til at *bygge* custom Copilots | make.powerapps.com |
+| **GitHub Copilot** | AI-kodningsassistent | GitHub/VS Code |
+| **Copilot i Power Platform** | AI-funktioner i Power Apps/Automate | Indbygget i værktøjerne |
+| **Windows Copilot** | OS-niveau assistent | Windows 11 |
+| **Bing Copilot** | Web chat | bing.com/chat |
+
+Når nogen siger "Copilot," **spørg altid hvilken**.
+
+---
+
+## Hvad Copilot Studio faktisk gør i dag
+
+### 1. Byg custom Copilots
+
+Opret AI-assistenter til specifikke domæner:
+- **HR Copilot:** Besvar medarbejderpolitikspørgsmål
+- **IT Copilot:** Fejlfind tech-problemer
+- **Salgs Copilot:** Giv produktinformation
+
+Hver Copilot kan:
+- Tilgå dine dokumenter (SharePoint, OneDrive)
+- Forespørge dine databaser (Dataverse, SQL)
+- Udføre handlinger (Power Automate flows)
+
+### 2. Udvid Microsoft 365 Copilot
+
+Byg plugins der tilføjer kapabiliteter:
+- "Book et mødelokale" (forbinder til lokale-bookingsystem)
+- "Tjek lagerniveauer" (forbinder til ERP)
+- "Indsend udgiftsrapport" (forbinder til økonomisystem)
+
+Disse vises inde i Microsoft 365 Copilot-interfacet.
+
+### 3. Skab samtalebaserede interfaces
+
+Det "klassiske" chatbot-use case:
+- FAQ-bots
+- Servicedesk-assistenter
+- Produktanbefalingsmotorer
+- Aftalebestillingssystemer
+
+Nu drevet af generativ AI, ikke kun beslutningstræer.
+
+### 4. Deploy autonome agenter
+
+Det cutting edge:
+- Agenter der arbejder selvstændigt
+- Human-in-the-loop godkendelse for følsomme handlinger
+- Multi-trins opgavefuldførelse
+- Planlagte operationer
+
+---
+
+## Arkitekturen
+
+Forståelse af hvordan Copilot Studio virker:
+
+```
+┌─────────────────────────────────────────────────┐
+│              BRUGERINTERFACE                    │
+│    (Teams, Web Chat, Custom App, M365 Copilot) │
+└─────────────────────┬───────────────────────────┘
+                      │
+┌─────────────────────▼───────────────────────────┐
+│              COPILOT STUDIO AGENT               │
+│  ┌─────────────────────────────────────────┐   │
+│  │         SAMTALELOGIK                    │   │
+│  │   • Emner (samtaleflows)                │   │
+│  │   • Generative AI-svar                 │   │
+│  │   • Entitetsudtrækning                  │   │
+│  └─────────────────────────────────────────┘   │
+└─────────────────────┬───────────────────────────┘
+                      │
+         ┌────────────┴────────────┐
+         │                         │
+┌────────▼────────┐    ┌──────────▼──────────┐
+│  VIDEN           │    │    HANDLINGER        │
+│  • SharePoint    │    │    • Power Automate  │
+│  • Dataverse     │    │    • HTTP-kald       │
+│  • Websites      │    │    • Plugins         │
+│  • Dokumenter    │    │    • Custom API'er   │
+└──────────────────┘    └─────────────────────┘
+```
+
+### Emner
+Samtaleflows der guider interaktionen:
+- Triggerfraser: "Jeg har brug for hjælp med..."
+- Spørgsmål: "Hvad er dit medarbejder-ID?"
+- Betingelser: Hvis status = Aktiv, så...
+- Handlinger: Kald Power Automate flow
+
+### Videnskilder
+Hvor Copilot finder svar:
+- SharePoint-sites
+- Dataverse-tabeller
+- Uploadede dokumenter
+- Offentlige websites
+- Custom API'er
+
+### Handlinger
+Hvad Copilot kan gøre:
+- Sende emails
+- Oprette poster
+- Trigge workflows
+- Kalde eksterne systemer
+
+---
+
+## Byg din første Copilot
+
+### Trin 1: Definer formålet
+"En IT-helpdesk assistent der besvarer almindelige spørgsmål og kan nulstille passwords."
+
+### Trin 2: Tilføj videnskilder
+- Upload dine IT FAQ-dokumenter
+- Forbind til dit SharePoint-site med IT-politikker
+
+### Trin 3: Opret emner
+**Emne: Password-nulstilling**
+- Trigger: "nulstil password," "glemt password," "kan ikke logge ind"
+- Svar: "Jeg kan hjælpe dig med at nulstille dit password. Bekræft venligst din emailadresse."
+- Handling: Kald Password Reset flow i Power Automate
+
+### Trin 4: Konfigurer generativ AI
+- Aktiver "Boost conversations with generative AI"
+- Copilot vil besvare spørgsmål fra dine videnskilder selv uden eksplicitte emner
+
+### Trin 5: Deploy
+- Tilføj til Teams som en bot
+- Indlejr på din IT-portal
+- Del weblinket
+
+---
+
+## Prisvirkelighed
+
+Copilot Studio har kompleks prissætning:
+
+| Komponent | Prismodel |
+|-----------|-----------|
+| **Beskeder** | Per besked (tenant pools) |
+| **Sessioner** | Per session (25 beskeder = 1 session) |
+| **Premium funktioner** | Kræver ekstra kapacitet |
+
+**Virkeligheden:** Til let brug kan den inkluderede kapacitet med Power Platform-licenser være nok. Til enterprise-skala deployment, forvent betydelige omkostninger.
+
+Tjek Microsofts aktuelle prissætning — den ændrer sig hyppigt.
+
+---
+
+## Hvornår Copilot Studio giver mening
+
+**Godt til:**
+- FAQ-automation med dokument-understøttede svar
+- Simpel opgaveautomation (nulstil password, tjek status)
+- First-line support deflection
+- Guidet dataindsamling
+
+**Kæmper med:**
+- Komplekse multi-system orkestreringer
+- High-volume transaktionsbehandling
+- Scenarier der kræver 100% nøjagtighed
+- Dyb integration med legacy-systemer
+
+---
+
+## Pro-code alternativerne
+
+Hvis Copilot Studio ikke er nok:
+
+| Behov | Overvej |
+|-------|---------|
+| Kompleks dialogstyring | Azure Bot Framework |
+| Custom LLM-integration | Azure OpenAI Service |
+| High-volume agenter | Byg custom med Semantic Kernel |
+| Fuld kontrol over AI-adfærd | Custom udvikling |
+
+Copilot Studio er low-code indgangspunktet. Pro-code muligheder giver mere kontrol.
+
+---
+
+## Næste episode
+
+I Episode 8 tackler vi elefanten i rummet: **Dataverse-omkostninger**. Hvor meget koster Microsofts database virkelig? Hvornår er det det værd? Og hvornår bør du blive ved SharePoint?
+
+---
+
+*Har du bygget noget med Copilot Studio? Hvordan sammenligner generativ AI-kapabiliteten sig med den gamle Power Virtual Agents-oplevelse?*

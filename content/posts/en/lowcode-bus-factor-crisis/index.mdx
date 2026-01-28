@@ -1,0 +1,235 @@
+---
+title: "The Bus Factor: When Lars Retires"
+excerpt: "Lars built 47 Power Apps over 5 years. He understood every formula, every flow. Lars just retired. Now what?"
+date: 2026-03-06
+tags: ["Low Code", "Knowledge Management", "Risk", "Documentation", "Sustainability"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep12-busfactor.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 12
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+Let me tell you about Lars.
+
+Lars is 62. He's been with the company for 30 years. When Power Apps came out, he was enthusiastic. Excel wizard that he was, he immediately saw the potential.
+
+Over the past 5 years, Lars built:
+- 47 Power Apps (Canvas and Model-Driven)
+- 94 Power Automate flows
+- 12 Power BI reports
+- Countless Dataverse customizations
+
+Every department loves Lars. He solved their problems. He built apps that actually work.
+
+**Lars just announced his retirement.**
+
+And suddenly, everyone is asking the same question:
+
+> *"Who understands Lars's apps?"*
+
+The answer: **No one.**
+
+---
+
+## The Bus Factor
+
+In software engineering, there's a metric called the **bus factor**:
+
+> *How many people would need to be hit by a bus before the project is in serious trouble?*
+
+If the answer is "one" — you have a problem.
+
+For most citizen-developed low-code apps, the bus factor is exactly one.
+
+**One person:**
+- Understands the logic
+- Knows the data sources
+- Remembers the business rules
+- Has the admin credentials
+
+When that person leaves — through retirement, new job, illness, or yes, an actual bus — the knowledge leaves with them.
+
+---
+
+## What Lars Took With Him
+
+Let's inventory what Lars's departure means:
+
+### 1. Undocumented Logic
+
+Lars knew *why* each formula was written:
+- "This filter excludes inactive customers because..."
+- "We skip this step when the amount is under 1000 because..."
+- "The complex date logic handles fiscal years differently because..."
+
+None of this is documented. The formulas work, but nobody knows why.
+
+### 2. Tribal Knowledge
+
+Lars knew the *context*:
+- "This app was built because finance needed it after the merger"
+- "Don't touch the connection to the legacy ERP — it's fragile"
+- "The CEO uses this dashboard every Monday; don't change it"
+
+This context exists only in Lars's head.
+
+### 3. Connection Secrets
+
+Lars set up the service accounts:
+- The email address for automated notifications
+- The API key for the external service
+- The shared mailbox credentials
+
+Some of these are in Lars's personal password manager. Others are in his memory.
+
+### 4. Dependency Maps
+
+Lars knows which flows trigger which apps:
+- "If you change this SharePoint list, these 7 flows break"
+- "This Canvas app uses data from that Model-Driven app"
+- "These 3 reports depend on that table being updated daily"
+
+No one else can trace these connections.
+
+---
+
+## The Day After Lars Leaves
+
+Here's what typically happens:
+
+**Week 1:**
+"Everything seems fine. Lars left notes, right?"
+(Lars left a 2-page Word document that's already outdated.)
+
+**Week 3:**
+"The finance app stopped working. Can someone look at it?"
+(Nobody knows where to start. The error message is cryptic.)
+
+**Week 6:**
+"We need to add a field to the customer form."
+(Someone makes a change. It breaks three other apps unexpectedly.)
+
+**Month 3:**
+"We should just rebuild this app."
+(The rebuild takes 6 months because nobody understood the requirements the first time.)
+
+**Year 1:**
+"We still have 30 of Lars's apps running. We're afraid to touch them."
+
+---
+
+## The Real Cost
+
+Let's quantify the Lars problem:
+
+| Impact | Cost |
+|--------|------|
+| Time spent reverse-engineering | 200+ hours over first year |
+| Production outages | Unknown — depends on app criticality |
+| Rebuilt applications | 3-6 months each |
+| Consultant fees to untangle | €50-150/hour |
+| Lost productivity during transition | Significant |
+
+For an organization with dozens of citizen-developed apps, the total cost of single-person dependency can reach **hundreds of thousands of euros**.
+
+---
+
+## The Warning Signs
+
+How do you know you have a Lars problem?
+
+**Red flags:**
+- "Only \[name\] understands that system"
+- "Don't update that app — we don't know how it works"
+- "The documentation is in \[person\]'s head"
+- "We've been meaning to have someone else learn that..."
+- "If \[person\] leaves, we're in trouble"
+
+If you're nodding, you have a bus factor problem.
+
+---
+
+## The Solutions (Before It's Too Late)
+
+### 1. Documentation Standards
+
+**Minimum for every app:**
+- What does it do? (purpose)
+- Who uses it? (users)
+- What data sources? (connections)
+- What automations? (flows)
+- Who owns it? (accountability)
+
+### 2. Pair Building
+
+Never let one person be the sole expert:
+- Two people learn every app
+- Code reviews (yes, even for low-code)
+- Handover sessions recorded
+
+### 3. Regular "Explain Your App" Sessions
+
+Quarterly: Each app owner presents to a colleague:
+- Walk through the logic
+- Explain the design decisions
+- Document questions that arise
+
+This forces documentation and spreads knowledge.
+
+### 4. The "Hit by a Bus" Test
+
+For every app, ask:
+> *If the owner disappeared tomorrow, could someone else fix this on Monday?*
+
+If no — that app is a risk. Prioritize documentation.
+
+### 5. Succession Planning
+
+Before someone leaves:
+- Formal knowledge transfer period
+- Shadow sessions
+- Updated documentation
+- Admin credential handover
+
+Don't wait until the retirement announcement.
+
+---
+
+## The "3-2-1 Rule"
+
+At Happy Mates, we enforce a simple rule for any business-critical app:
+
+- **3** people understand how it works
+- **2** people can make changes
+- **1** person is accountable for it
+
+This ensures the bus factor is never one.
+
+---
+
+## Starting the Conversation
+
+If you recognize your organization in this story, here's how to start:
+
+1. **Inventory your apps** — Who built them? Who understands them?
+2. **Identify single-person dependencies** — Which apps have a bus factor of one?
+3. **Prioritize by criticality** — Focus on business-critical apps first
+4. **Start documenting** — Even basic documentation is better than none
+5. **Plan for transitions** — Every builder should have a backup
+
+---
+
+## Next Episode
+
+The Bus Factor is about people. Episode 13 is about the *documentation debt* they leave behind — and how to pay it down before it's too late.
+
+---
+
+*Does your organization have a "Lars"? What's your plan for when they leave?*

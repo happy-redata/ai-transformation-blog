@@ -1,0 +1,246 @@
+---
+contentVersion: 1.0.0
+title: "GitHub for Begyndere: Issues, Pull Requests og Actions"
+excerpt: "GitHub er ikke bare et sted, hvor kode bor. Det er en hel arbejdsplads — med opgavelister, kvalitetskontrol og automatiske fabrikker. Lær byggeklodserne at kende."
+date: 2026-01-09
+tags: ["GitHub", "DevOps", "Vibe Coding", "Begynderguide", "Agentic AI"]
+author: "Happy Mates Redaktionen"
+heroImage: "/images/hero-github-collaboration-basics.png"
+heroImageCredit: "Gemini / Imagen 3"
+aiTools: ["GitHub Copilot", "Gemini", "Antigravity"]
+status: "published"
+series:
+  slug: "agentic-ai-for-dummies"
+  episode: 3
+  totalEpisodes: 4
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+footnotes:
+  - text: "GitHub har over 100 millioner udviklere og 330+ millioner repositories."
+    source: "GitHub Octoverse 2023"
+    url: "https://github.blog/news-insights/octoverse/octoverse-2023/"
+  - text: "GitHub Actions bruges af over 70% af Fortune 100-virksomheder."
+    source: "GitHub Enterprise"
+    url: "https://github.com/enterprise"
+---
+
+<Speak>Velkommen til tredje episode i serien Agentic A-I for Dummies. I dag lærer vi GitHub at kende — stedet hvor kode lever, samarbejdes om, og automatisk deployes.</Speak>
+
+Du har nu en <Voice text="A-I">AI</Voice>-assistent i din editor. Du kan formulere gode prompts. Men der mangler noget:
+
+*"Hvor gemmer jeg min kode? Hvordan samarbejder jeg med andre? Hvordan får jeg mine ændringer ud i verden?"*
+
+Svaret er **GitHub** — og det er langt mere end bare et sted at opbevare filer.
+
+---
+
+## Repositories: Dit Digitale Værksted
+
+Et **repository** (eller bare "repo") er en mappe til dit projekt — men i skyen. Tænk på det som:
+
+- **En mappe** med al din kode
+- **En tidsmaskine** der husker alle ændringer
+- **Et samarbejdsrum** hvor flere kan arbejde samtidig
+
+Hos Happy Mates har vi mange repositories:
+- `happymates-blob` — denne blog
+- `happymates-api-core` — vores <Voice text="A-P-I">API</Voice>
+- `happymates-mobile` — vores app
+
+Hvert repository er et selvstændigt projekt med sin egen historie, sine egne samarbejdspartnere, og sin egen automatisering.
+
+---
+
+## Issues: Opgaver Med Superkræfter
+
+Et **Issue** er mere end en fejlrapport. Det er en arbejdsopgave med indbygget kontekst.
+
+### Hvad kan et Issue indeholde?
+
+| Element | Formål |
+|---------|--------|
+| **Titel** | Kort beskrivelse af opgaven |
+| **Beskrivelse** | Detaljer, krav, kontekst |
+| **Labels** | Kategorisering (bug, feature, documentation) |
+| **Assignee** | Hvem arbejder på det? |
+| **Milestone** | Hvilken version/sprint? |
+| **Kommentarer** | Diskussion og opdateringer |
+
+### Issues som "Source of Truth"
+
+Det smarte ved Issues er, at de samler alt på ét sted:
+
+- Hvad skal laves?
+- Hvem laver det?
+- Hvad er status?
+- Hvad blev diskuteret?
+
+Når du lukker et Issue, har du en komplet historie af opgaven — fra idé til løsning.
+
+---
+
+## Pull Requests: Forslag Til Ændringer
+
+En **Pull Request** (eller <Voice text="P-R">PR</Voice>) er et forslag om at ændre koden. Det er som at sige:
+
+*"Hej team, jeg har lavet noget. Vil I kigge på det og godkende, at det bliver en del af projektet?"*
+
+### Anatomien af en Pull Request
+
+1. **Titel og beskrivelse** — Hvad og hvorfor
+2. **Ændringer** — Præcis hvilke filer der er redigeret
+3. **Review** — Kollegaer gennemgår koden
+4. **Diskussion** — Kommentarer på specifikke linjer
+5. **Godkendelse** — Grønt lys fra reviewere
+6. **Merge** — Ændringerne bliver en del af projektet
+
+### Hvorfor ikke bare ændre direkte?
+
+Forestil dig et team på 10 udviklere, der alle ændrer i den samme fil samtidig. Kaos!
+
+Pull Requests giver:
+- **Kvalitetskontrol** — Nogen kigger på koden før den går i produktion
+- **Dokumentation** — En historie af hvad der blev ændret og hvorfor
+- **Rollback-mulighed** — Hvis noget går galt, kan vi nemt gå tilbage
+
+---
+
+## GitHub Actions: Den Automatiske Fabrik
+
+**GitHub Actions** er automatisering. Når noget sker i dit repository, kan du udløse handlinger.
+
+### Hvad kan Actions gøre?
+
+| Trigger | Handling |
+|---------|----------|
+| Nyt commit pushes | Kør tests automatisk |
+| Pull Request oprettes | Check kode-kvalitet |
+| <Voice text="P-R">PR</Voice> merges til main | Deploy til produktion |
+| Dagligt kl. 9 | Kør database-backup |
+
+### Et simpelt eksempel
+
+Hos Happy Mates kører vi automatisk:
+- **Linting** — Checker at koden følger vores standarder
+- **Tests** — Verificerer at alt virker
+- **Build** — Bygger produktionsversionen
+- **Deploy** — Sender til serveren
+
+Alt sammen uden at vi løfter en finger.
+
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy
+```
+
+Hver gang vi pusher til `main`, bygges og deployes bloggen automatisk.
+
+---
+
+## Hvordan Det Hele Hænger Sammen
+
+Her er den typiske workflow i et professionelt projekt:
+
+### 1. Opret et Issue
+*"Tilføj dark mode til forsiden"*
+
+### 2. Opret en Branch
+En "gren" af koden, hvor du kan eksperimentere uden at ødelægge noget.
+
+### 3. Lav dine ændringer
+Skriv kode, test lokalt.
+
+### 4. Opret en Pull Request
+*"Her er min implementation af dark mode"*
+
+### 5. Code Review
+Kollegaer kigger på koden, stiller spørgsmål, foreslår forbedringer.
+
+### 6. Juster efter feedback
+Måske fanger revieweren en fejl. Du retter den.
+
+### 7. Godkend og Merge
+Revieweren godkender. Koden bliver en del af projektet.
+
+### 8. Actions køres
+Automatisk test, build, deploy.
+
+### 9. Issue lukkes
+Opgaven er færdig. Historikken er dokumenteret.
+
+<View>
+Flowet ser sådan ud:
+</View>
+
+```
+Issue → Branch → PR → Review → Merge → Action → Lukket Issue
+```
+
+---
+
+## Hvorfor Er Det Vigtigt for <Voice text="A-I">AI</Voice>-Udvikling?
+
+Her kommer koblinen til vores serie:
+
+> **GitHub er ikke bare for mennesker. Det er også for <Voice text="A-I">AI</Voice>-agenter.**
+
+I næste episode lærer du, hvordan du kan:
+- Tildele Issues til <Voice text="A-I">AI</Voice>-agenter
+- Lade <Voice text="A-I'en">AI'en</Voice> oprette Pull Requests
+- Reviewe og godkende <Voice text="A-I'ens">AI'ens</Voice> arbejde
+
+GitHub er infrastrukturen, der gør agentic <Voice text="A-I">AI</Voice> mulig i praksis.
+
+---
+
+## Kom i Gang med GitHub
+
+### 1. Opret en konto
+Gå til [github.com](https://github.com) og tilmeld dig (gratis).
+
+### 2. Opret dit første repository
+Klik "New repository", giv det et navn, og du er i gang.
+
+### 3. Prøv GitHub Desktop
+Hvis terminalen virker skræmmende, er [GitHub Desktop](https://desktop.github.com/) en visuel måde at arbejde med Git.
+
+### 4. Eksperimenter med Issues
+Opret et Issue i dit eget repository. Prøv at lukke det med en Pull Request.
+
+---
+
+## Opsummering
+
+| Koncept | Formål |
+|---------|--------|
+| **Repository** | Dit projekt i skyen |
+| **Issue** | En opgave med kontekst |
+| **Pull Request** | Et forslag om ændringer |
+| **Code Review** | Kvalitetskontrol af kollegaer |
+| **Merge** | Inkluder ændringer i projektet |
+| **Actions** | Automatiser alt |
+
+---
+
+**Bundlinje:** GitHub er ikke bare versionskontrol. Det er en komplet platform for samarbejde, kvalitet og automatisering. Og som du vil se i næste episode, er det også hjemmet for <Voice text="A-I">AI</Voice>-agenter.
+
+I næste (og sidste) episode dykker vi ned i **Agentic <Voice text="A-I">AI</Voice>** — hvordan du tildeler opgaver til <Voice text="A-I">AI</Voice>-agenter, chatter med dem undervejs, og reviewer deres arbejde som en kollega.
+
+---
+
+*Hvad ville du automatisere først, hvis du havde en robot, der aldrig sover?*

@@ -1,0 +1,243 @@
+---
+title: "Power Platform 101: The Family Tree"
+excerpt: "Power Apps, Power Automate, Copilot Studio, Power Pages — and a history of rebrands. Here's how Microsoft's low-code ecosystem actually fits together."
+date: 2025-10-31
+tags: ["Low Code", "Power Platform", "Power Apps", "Power Automate", "Copilot Studio"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep3-familytree.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 3
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+If you've tried to understand Microsoft's Power Platform, you've probably experienced this: You search for a tutorial, find one from 2018, and it talks about something called "PowerApps" and "Microsoft Flow." You search for another from 2022, and suddenly there's "Power Virtual Agents" and "Common Data Service."
+
+**What happened?**
+
+Welcome to Microsoft's rebrand timeline — where every product has been renamed at least once.
+
+---
+
+## The Power Platform Today
+
+Before we dive into history, let's establish what exists right now (2025):
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     POWER PLATFORM                          │
+├──────────────┬──────────────┬───────────────┬──────────────┤
+│  Power Apps  │    Power     │   Copilot     │    Power     │
+│              │   Automate   │    Studio     │    Pages     │
+├──────────────┼──────────────┼───────────────┼──────────────┤
+│  Canvas      │  Cloud Flows │   Chatbots    │  Websites    │
+│  Model-Driven│  Desktop RPA │   AI Agents   │  Portals     │
+└──────────────┴──────────────┴───────────────┴──────────────┘
+                           ▼
+              ┌────────────────────────┐
+              │      DATAVERSE         │
+              │   (The shared database)│
+              └────────────────────────┘
+```
+
+---
+
+## The Rebrand Timeline
+
+Every product you see today has been renamed. Here's the full history:
+
+| Product | Original Name | Introduced | Rebranded | Current Name |
+|---------|---------------|------------|-----------|--------------|
+| **Power Apps** | PowerApps | Nov 2016 | Oct 2019 | Power Apps |
+| **Power Automate** | Microsoft Flow | Nov 2016 | Oct 2019 | Power Automate |
+| **Copilot Studio** | Power Virtual Agents | May 2019 | Nov 2023 | Copilot Studio |
+| **Power Pages** | Power Apps Portals | Apr 2017 | Oct 2022 | Power Pages |
+| **Dataverse** | Common Data Service | Nov 2016 | Nov 2020 | Dataverse |
+
+### The Big Rebrand: October 2019
+
+In October 2019, Microsoft unified everything under the "Power Platform" banner:
+
+- "PowerApps" (one word) became "Power Apps" (two words)
+- "Microsoft Flow" became "Power Automate"
+- The messaging shifted from individual tools to a unified platform
+
+**Why this matters:** If you're following a tutorial that says "Microsoft Flow," you're reading pre-2019 content. The concepts still apply, but the UI has changed significantly.
+
+### The Copilot Rebrand: November 2023
+
+This is the most confusing one. "Power Virtual Agents" (PVA) was Microsoft's chatbot builder. In 2023, with the rise of AI, Microsoft rebranded it to "Copilot Studio" and expanded its scope:
+
+- **Old PVA:** Build chatbots with decision trees
+- **New Copilot Studio:** Build AI agents, custom Copilots, extend Microsoft 365 Copilot
+
+**Why this matters:** Many tutorials still reference "Power Virtual Agents." The product has fundamentally changed — not just renamed, but transformed into something more ambitious.
+
+---
+
+## The Four Pillars Explained
+
+### Power Apps: Build Applications
+
+Power Apps has two fundamentally different approaches:
+
+**Canvas Apps:**
+- Start with a blank screen
+- You control every pixel
+- Best for: Mobile apps, custom UIs, data capture forms
+- Data sources: SharePoint, Excel, SQL, 300+ connectors
+- *No Dataverse required*
+
+**Model-Driven Apps:**
+- Start with your data model
+- The UI is generated automatically
+- Best for: CRM-style apps, case management, complex data relationships
+- Data sources: *Dataverse required*
+- More enterprise governance built-in
+
+| Feature | Canvas | Model-Driven |
+|---------|--------|--------------|
+| Design freedom | Complete | Standardized |
+| Learning curve | Lower | Higher |
+| Maintenance | More manual | More automatic |
+| Dataverse | Optional | Required |
+| Mobile | First-class | Responsive |
+
+---
+
+### Power Automate: Automate Workflows
+
+Power Automate is actually three different products:
+
+**Cloud Flows:**
+- Trigger-based automation
+- "When an email arrives, create a task in Planner"
+- 900+ connectors
+- Runs in Microsoft's cloud
+
+**Desktop Flows (RPA):**
+- Robotic Process Automation
+- Automate clicking, typing, and navigating legacy apps
+- Runs on your Windows machine
+- Perfect for systems without APIs
+
+**Business Process Flows:**
+- Guided stage-gate workflows
+- "Lead → Opportunity → Quote → Close"
+- Visual progress tracking
+- Requires Dataverse
+
+---
+
+### Copilot Studio: Build AI Agents
+
+The most transformed product. What was once a simple chatbot builder is now an AI platform:
+
+**Original Power Virtual Agents (2019-2023):**
+- Decision tree chatbots
+- "If user says X, respond with Y"
+- Pre-built topics and entities
+- Limited NLU capabilities
+
+**Copilot Studio (2023+):**
+- Generative AI responses
+- Custom Copilots with your data
+- Integration with Microsoft 365 Copilot
+- Autonomous agent capabilities
+- Multi-channel deployment (Teams, websites, apps)
+
+**The Naming Confusion:**
+
+There are now multiple "Copilots" in Microsoft's ecosystem:
+
+- **Microsoft 365 Copilot:** The AI assistant in Word, Excel, Teams
+- **Copilot Studio:** Where you *build* custom Copilots
+- **GitHub Copilot:** AI coding assistant (unrelated)
+- **Copilot in Power Platform:** AI features within Power Apps/Automate
+
+When someone says "Copilot," ask: *Which one?*
+
+---
+
+### Power Pages: Build Websites
+
+The newest member of the family (as a separate brand):
+
+**Origin:**
+- Started as "Power Apps Portals" (2017)
+- Customer-facing websites connected to Dataverse
+- Authentication, forms, data display
+
+**Today (Power Pages):**
+- Low-code website builder
+- Built-in templates
+- Professional developer features
+- Liquid templates, JavaScript, CSS
+
+**Best for:**
+- Customer self-service portals
+- Partner extranets
+- Community sites
+- Forms-heavy public websites
+
+---
+
+## Dataverse: The Common Foundation
+
+Dataverse (formerly "Common Data Service") is the shared database that connects everything:
+
+**What it provides:**
+- Managed database tables
+- Row-level security
+- Business rules and validations
+- Automatic APIs for every table
+- Audit logging
+- Backup and restore
+
+**Why it matters:**
+Model-Driven Apps require Dataverse. Copilot Studio works best with Dataverse. Power Pages expects Dataverse.
+
+**The cost question:** Dataverse isn't free. We'll cover the full cost reality in Episode 8.
+
+---
+
+## How They Work Together
+
+A typical enterprise scenario:
+
+1. **Data lives in Dataverse** — Customers, products, orders
+2. **Model-Driven App** — Internal staff manage data
+3. **Canvas App** — Field workers capture information on mobile
+4. **Power Automate** — When order status changes, notify customer
+5. **Copilot Studio** — Customer asks "Where is my order?" via chat
+6. **Power Pages** — Customer views their order history online
+
+All six components share the same data, same security, same business rules.
+
+---
+
+## The Licensing Reality (Preview)
+
+We'll cover this in depth in Episode 8, but here's the preview:
+
+| License Type | What You Get |
+|--------------|--------------|
+| **Seeded** (M365) | Limited Power Apps, limited Power Automate, no Dataverse |
+| **Per App** (~$5/user/month) | Access to 2 specific apps + Dataverse |
+| **Premium** (~$20/user/month) | Unlimited apps + premium connectors + Dataverse |
+| **Pay-as-you-go** | Per-flow, per-request pricing |
+
+---
+
+## Next Episode
+
+In Episode 4, we dive deep into **Power Apps Canvas** — the most popular entry point for citizen developers. We'll build something real and discuss when Canvas apps shine and when they struggle.
+
+---
+
+*Has the constant rebranding confused you or your organization? How do you keep up with Microsoft's naming changes?*

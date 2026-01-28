@@ -1,0 +1,81 @@
+---
+title: "Den Trojanske Hest: Fra Skov til Port (Del 3)"
+excerpt: "Hvordan ved du, at hesten er lavet af græsk tømmer? Supply Chain Security handler om at kende hele historien, før du åbner porten."
+date: 2026-03-17
+tags: ["Sikkerhed", "Supply Chain", "SBOM", "Indkøb", "Begynderguide"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-supply-chain.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "da-DK-ChristelNeural"
+  backgroundMusic: "/audio/music/optimistic-future.mp3"
+  language: "da-DK"
+footnotes:
+  - text: "SBOM (Software Bill of Materials) er blevet et krav i USA for software leveret til staten."
+    source: "CISA"
+    url: "https://www.cisa.gov/sbom"
+---
+
+<Music track="optimistic-future" action="fade-in" />
+
+<Speaker voice="narrator" name="Fortæller">
+Vi har set på hesten. Vi har set på stuepigen. Men nu skal vi tilbage til starten. Tilbage til skoven, hvor træet blev fældet.
+</Speaker>
+
+I de to foregående artikler har vi behandlet symptomerne: En kompromitteret enhed. Men den virkelige løsning ligger i at forhindre hesten i overhovedet at blive bygget.
+
+<Speaker voice="host" name="Vært">
+Velkommen til finalen i vores serie om Den Trojanske Hest. I dag taler vi om Supply Chain Integrity.
+</Speaker>
+
+## Hvad består din "hest" af?
+
+Når du køber software eller hardware, køber du sjældent ét produkt. Du køber tusindvis af små dele sammensat.
+
+Forestil dig, at du bager en kage til din chef. Du køber mel, æg, sukker og chokolade.
+Hvis melet er forgiftet, hjælper det ikke, at du har vasket hænder.
+
+I IT-verdenen kalder vi ingredienslisten for en **SBOM** (<Voice text="S-Bom">SBOM</Voice>) – Software Bill of Materials.
+
+<Voice text="S-Bommen">SBOM'en</Voice> fortæller dig præcis:
+1.  Hvilket bibliotek bruges til login?
+2.  Hvem har kodet krypteringen?
+3.  Hvor gammel er databasen?
+
+Uden denne liste spiser du i blinde.
+
+## Sporbarhed: Fra skov til port
+
+At sikre sin forsyningskæde handler om at stille krav **før** man køber.
+
+### 1. Stil krav til leverandøren
+Spørg dem: "Hvor kommer jeres komponenter fra?" Hvis de ikke kan svare, er det et rødt flag.
+
+### 2. Tjek forseglingen
+På hardware skal du se efter fysiske tegn på manipulation. Er kassen brudt? Er "tamper-tape" skåret over?
+
+### 3. Kend din risiko
+Ikke alle gaver behøver en grundig inspektion. Hvis du køber kaffekapsler, er risikoen lav. Hvis du køber servere til forsvaret, er risikoen eksistentiel.
+
+<Speaker voice="host" name="Vært">
+Trojanerne fejlede ikke, fordi de var dumme. De fejlede, fordi de var taknemmelige. De tog imod en gave uden at spørge om kvitteringen.
+</Speaker>
+
+## Konklusion: Zero Trust gælder også gaver
+
+Vi har lært tre ting i denne serie:
+1.  **Hardwaren kan lyve** (Part 1).
+2.  **Fysisk adgang er konge** (Part 2).
+3.  **Du skal kende ingredienserne** (Part 3).
+
+I en verden af Zero Trust stoler vi ikke på noget – ikke engang gaver. Vi verificerer. Vi tjekker. Og nogle gange... så lader vi bare hesten stå udenfor.
+
+<SoundEffect name="success-chime" />
+
+Tak fordi du læste med. Har du styr på din <Voice text="S-Bom">SBOM</Voice>, eller spiser du i blinde?
+
+---
+*Dette var afslutningen på serien om Den Trojanske Hest. Næste serie? Det må tiden vise...*

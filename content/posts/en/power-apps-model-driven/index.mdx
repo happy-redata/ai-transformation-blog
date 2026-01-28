@@ -1,0 +1,279 @@
+---
+title: "Power Apps Model-Driven: The Enterprise Grade"
+excerpt: "Start with data, not design. Let the platform generate your UI. Model-Driven Apps trade creative freedom for governance and scalability."
+date: 2025-11-28
+tags: ["Low Code", "Power Apps", "Model-Driven", "Enterprise", "Dataverse"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep5-modeldriven.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 5
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+Forget the blank canvas.
+
+Model-Driven Apps don't start with screens. They start with a question: **What data does your business need to track?**
+
+Define your tables. Define your relationships. Define your business rules.
+
+And then? **The app builds itself.**
+
+---
+
+## The Philosophy Shift
+
+If Canvas Apps are for designers, Model-Driven Apps are for architects.
+
+| Canvas Apps | Model-Driven Apps |
+|-------------|-------------------|
+| "What should it look like?" | "What data do I need?" |
+| You design every screen | Platform generates screens |
+| Any data source | Dataverse required |
+| Pixel-perfect control | Standardized components |
+| Quick prototypes | Long-term enterprise apps |
+
+This isn't better or worse. It's a fundamentally different approach.
+
+---
+
+## One Requirement: Dataverse
+
+Here's the first thing you need to know: **Model-Driven Apps require Dataverse.**
+
+There's no connecting to a SharePoint list. No pointing at an Excel file. Model-Driven Apps are built on top of Dataverse — Microsoft's managed database for the Power Platform.
+
+**Why this matters:**
+- Dataverse has licensing costs (see Episode 8)
+- Dataverse provides enterprise features (security, audit, backup)
+- Your data model becomes the foundation of everything
+
+If you're not ready to commit to Dataverse, stick with Canvas Apps.
+
+---
+
+## Data First: Designing Your Model
+
+Before you touch the app designer, you build your data structure.
+
+### Example: Customer Service System
+
+**Tables (Entities):**
+- Customers
+- Cases
+- Products
+- Knowledge Articles
+
+**Relationships:**
+- A Customer has many Cases (1:N)
+- A Case relates to one Product (N:1)
+- A Case can link to many Knowledge Articles (N:N)
+
+**Columns (Fields):**
+Each table gets columns with types:
+- Text (single line, multiple lines)
+- Number (whole, decimal, currency)
+- Date/Time
+- Choice (dropdown)
+- Lookup (reference to another table)
+
+Once your data model exists, you can build the app.
+
+---
+
+## The App Designer Experience
+
+Model-Driven Apps are built through a visual designer — but you're not placing buttons. You're composing:
+
+### Sitemap (Navigation)
+Define the menu structure:
+```
+Service
+├── Dashboard
+├── Cases
+├── Customers
+└── Knowledge Base
+```
+
+### Forms
+Each table can have multiple forms:
+- **Main form:** Full edit experience
+- **Quick create:** Pop-up for fast data entry
+- **Quick view:** Summary card for related records
+
+### Views
+Pre-filtered lists of records:
+- "My Active Cases"
+- "High Priority Cases"
+- "Cases Opened This Week"
+
+### Business Process Flows
+Visual guidance through stages:
+```
+New Case → Investigate → Resolve → Close
+```
+
+---
+
+## What You Control (and What You Don't)
+
+### You Control:
+- Which tables appear in navigation
+- Which columns show on forms
+- The order and grouping of fields
+- Business rules (field visibility, validation)
+- Views and their filters
+- Security roles
+
+### You Don't Control:
+- The overall layout framework
+- Core navigation behavior
+- Form rendering engine
+- Mobile experience (it's responsive by default)
+
+This is the trade-off. You lose design freedom. You gain consistency and maintainability.
+
+---
+
+## Built-in Enterprise Features
+
+Model-Driven Apps come with capabilities that Canvas Apps require manual implementation:
+
+### Automatic Mobile Support
+Every Model-Driven App has a mobile experience. The platform adapts your forms and views automatically.
+
+### Security Model
+Dataverse provides row-level security:
+- Users see only records they own
+- Teams share access
+- Hierarchies roll up permissions
+- Field-level security for sensitive data
+
+### Audit Trail
+Every record change is logged:
+- Who changed it
+- When
+- What changed
+- Previous values
+
+### Business Rules
+Declarative logic without formulas:
+- Show/hide fields based on values
+- Set default values
+- Make fields required
+- Lock fields based on conditions
+
+---
+
+## Real-World Use Cases
+
+Model-Driven Apps shine for:
+
+**CRM-style applications:**
+- Customer management
+- Opportunity tracking
+- Account management
+
+**Case management:**
+- Support ticketing
+- Incident handling
+- Service requests
+
+**Asset tracking:**
+- Equipment management
+- Inventory control
+- Fleet management
+
+**Complex data relationships:**
+- Product catalogs with variants
+- Hierarchical organizations
+- Multi-party transactions
+
+---
+
+## When Model-Driven Struggles
+
+There are cases where Canvas Apps are better:
+
+**Highly custom UIs:**
+If you need a specific visual design that doesn't fit the standard form layout, Canvas wins.
+
+**Simple data collection:**
+For a quick survey or inspection form, Model-Driven is overkill.
+
+**External users:**
+Model-Driven Apps are designed for licensed internal users. For public-facing apps, use Power Pages or Canvas.
+
+**Limited budget:**
+Dataverse costs money. If budget is tight, SharePoint + Canvas might be sufficient.
+
+---
+
+## The Hybrid Approach
+
+Here's a secret: You can embed Canvas Apps inside Model-Driven Apps.
+
+**Why this matters:**
+- Use Model-Driven for the structure and governance
+- Embed Canvas components for custom visuals
+- Get the best of both worlds
+
+Example: A Model-Driven case management app with an embedded Canvas map component showing customer locations.
+
+---
+
+## Building Your First Model-Driven App
+
+### Step 1: Create a Dataverse table
+- Go to make.powerapps.com
+- Create a new table (e.g., "Cases")
+- Add columns: Title, Description, Status, Priority
+
+### Step 2: Create a Model-Driven App
+- Choose "Model-driven app"
+- Use the modern designer
+- Add your table to the sitemap
+
+### Step 3: Customize forms and views
+- Drag columns onto the form
+- Create views like "My Active Cases"
+- Add a business process flow
+
+### Step 4: Set security
+- Create security roles
+- Assign access levels per table
+- Add users to roles
+
+### Step 5: Publish and share
+- Hit Publish
+- Share the app with your security roles
+- Users access via web or mobile
+
+---
+
+## Migration Path: Canvas to Model-Driven
+
+If you've outgrown your Canvas App:
+
+1. **Export your data model** — Document all your data sources
+2. **Create Dataverse tables** — Migrate your SharePoint lists to Dataverse
+3. **Build forms in Model-Driven** — Recreate your key screens as forms
+4. **Migrate business logic** — Convert Power Fx to business rules
+5. **Re-train users** — The UX is different
+
+This is not trivial. Plan for weeks, not days.
+
+---
+
+## Next Episode
+
+In Episode 6, we explore **Power Automate** — the automation engine that connects everything. Cloud Flows, Desktop Flows, Business Process Flows — and the hidden traps that catch everyone.
+
+---
+
+*Have you used Model-Driven Apps? How does the reduced design freedom feel compared to Canvas?*

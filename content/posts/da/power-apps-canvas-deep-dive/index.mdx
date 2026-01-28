@@ -1,0 +1,290 @@
+---
+title: "Power Apps Canvas: Den pixel-perfekte legeplads"
+excerpt: "Start med en blank skærm. Kontrollér hver pixel. Byg mobile apps på dage. Canvas Apps er hvor de fleste citizen developers starter — her er hvorfor."
+date: 2025-11-14
+tags: ["Low Code", "Power Apps", "Canvas Apps", "Mobiludvikling"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep4-canvas.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 4
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+Åbn Power Apps. Vælg "Canvas app from blank." Vælg din skærmstørrelse.
+
+Og der er den: Et tomt hvidt rektangel.
+
+**Ingen færdigbyggede formularer. Ingen genererede layouts. Bare rent potentiale.**
+
+Dette er Canvas App-oplevelsen — og det er både den største styrke og den skjulte fælde i Power Platforms mest populære værktøj.
+
+---
+
+## Hvad gør Canvas Apps anderledes
+
+Canvas Apps er "design-først" tilgangen til low-code. I modsætning til Model-Driven Apps (som vi dækker næste episode), er Canvas Apps ligeglade med din datamodel. De går op i din **vision**.
+
+Tænk på det som forskellen mellem:
+- **Canvas Apps:** Du er en kunstner med et blankt lærred
+- **Model-Driven Apps:** Du er en arkitekt der følger tegninger
+
+Begge skaber bygninger. Men tankegangen er helt forskellig.
+
+---
+
+## Canvas App superkraften: Visuel kontrol
+
+I en Canvas App kontrollerer du:
+
+| Element | Dit kontrolniveau |
+|---------|-------------------|
+| Skærmlayout | Komplet — placer hvad som helst hvor som helst |
+| Komponentstørrelse | Pixel-perfekt positionering |
+| Farver & temaer | Fuld tilpasning |
+| Navigation | Design dit eget flow |
+| Datavisning | Byg præcis hvad du vil |
+
+Det er derfor forretningsbrugere elsker Canvas Apps. De kan få appen til at se ud præcis som de forestillede sig — ingen "sådan fungerer frameworket ikke" kompromiser.
+
+---
+
+## Formelsprog: Power Fx
+
+Canvas Apps bruger et formelsprog kaldet **Power Fx**. Hvis du har brugt Excel, er du allerede halvvejs.
+
+**Simple eksempler:**
+
+```
+// Vis brugerens navn
+User().FullName
+
+// Filtrer en liste
+Filter(Products, Price > 100)
+
+// Naviger til en anden skærm
+Navigate(DetailScreen, ScreenTransition.Fade)
+
+// Indsend en formular
+SubmitForm(EditForm1)
+```
+
+Power Fx er designet til at føles bekendt. Funktioner som `Sum()`, `If()`, `CountRows()` fungerer ligesom deres Excel-modstykker.
+
+**Læringskurven:**
+- Basale apps: 1-2 dage
+- Mellemkompleksitet: 1-2 uger
+- Avancerede mønstre: Måneders øvelse
+
+---
+
+## Byg din første Canvas App
+
+Lad os gennemgå et typisk første projekt: En feltinspektionsapp.
+
+### Trin 1: Definer din datakilde
+
+Canvas Apps kan forbinde til:
+- SharePoint-lister (mest almindelig starter)
+- Excel-filer i OneDrive
+- SQL Server-databaser
+- Dataverse-tabeller
+- 300+ eksterne connectorer
+
+For begyndere, start med **SharePoint**. Opret en liste med kolonner for:
+- Lokation (tekst)
+- Dato (dato)
+- Foto (billede)
+- Noter (multiline tekst)
+- Status (valg)
+
+### Trin 2: Tilføj et Gallery
+
+Galleries viser lister af elementer. Træk et ind på dit lærred:
+- Vælg din datakilde
+- Galleriet opretter automatisk kort
+- Tilpas hvad hvert kort viser
+
+### Trin 3: Byg en redigeringsformular
+
+Forbind en formular til din datakilde:
+- Træk "Edit form" ind på en ny skærm
+- Vælg din SharePoint-liste
+- Felter vises automatisk
+- Tilføj en Submit-knap med `SubmitForm(Form1)`
+
+### Trin 4: Forbind navigation
+
+```
+// Ved gallery item select
+Navigate(DetailScreen, ScreenTransition.None)
+
+// Ved tilbage-knap
+Navigate(HomeScreen, ScreenTransition.None)
+```
+
+**Resultat:** En fungerende mobilapp på under en time.
+
+---
+
+## Hvornår Canvas Apps skinner
+
+Canvas Apps er fremragende til:
+
+**Mobile-first oplevelser**
+- Feltservice apps
+- Inspektionschecklister
+- Dataindsamlingsformularer
+- Godkendelsesgrænseflader
+
+**Hurtige interne værktøjer**
+- Udgiftstrackere
+- Tidsregistreringsapps
+- Lagerbeholdningsopslag
+- Statusdashboards
+
+**Proof of concepts**
+- Validér idéer hurtigt
+- Få stakeholder buy-in
+- Iterér baseret på feedback
+
+---
+
+## Canvas App fælderne
+
+Her slutter hvedebrødsdagene:
+
+### 1. 400-tegns formelproblemet
+
+Power Fx-formler kan blive ulæselige. Overvej dette virkelige eksempel fra en produktionsapp:
+
+```
+If(
+    And(
+        !IsBlank(Dropdown1.Selected.Value),
+        Or(
+            Dropdown1.Selected.Value = "Approved",
+            And(
+                Dropdown1.Selected.Value = "Pending",
+                DateDiff(Today(), DateValue(TextInput1.Text), Days) < 7
+            )
+        ),
+        CountRows(Filter(Submissions, Status = "Open" && User = User().Email)) < 5
+    ),
+    Navigate(SubmitScreen, ScreenTransition.Fade),
+    Notify("Cannot proceed: Check your inputs", NotificationType.Error)
+)
+```
+
+Forestil dig nu 50 sådanne formler spredt over 30 skærme.
+
+**Løsningen:** Opdel kompleks logik i navngivne formler, brug variabler, dokumentér alt. Men disciplinen ligger hos dig.
+
+### 2. Performance ved skala
+
+Canvas Apps fungerer glimrende med 500 poster. Ved 5.000 poster bliver de langsomme. Ved 50.000 er de smertefulde.
+
+**Hvorfor:** Canvas Apps loader data ind i appens hukommelse. Store datasæt rammer performancemure.
+
+**Løsningerne:**
+- Brug delegation (lad datakilden filtrere)
+- Implementér paginering
+- Overvej Model-Driven Apps til store datasæt
+
+### 3. Vedligeholdelsesbyrden
+
+Hver skærm, hver kontrol, hver formel er custom. Når noget går i stykker:
+- Du debugger det selv
+- Ingen automatiske opdateringer
+- Ændringer kræver manuel propagering
+
+**Løsningen:** Komponentbiblioteker, navngivningskonventioner og dokumentation. Men igen — disciplinen ligger hos dig.
+
+### 4. "Spaghetti Canvas" anti-mønstret
+
+Det er nemt at skabe rod:
+- Overlappende kontroller
+- Inkonsistent navngivning (Button1, Button2, Button1_1)
+- Copy-pastede formler overalt
+- Ingen klar struktur
+
+Efter 6 måneder kæmper selv skaberen med at forstå deres egen app.
+
+---
+
+## Best practices for bæredygtige Canvas Apps
+
+### Navngivningskonventioner
+
+Dårligt:
+```
+Button1, Button2, TextInput1, Label3
+```
+
+Godt:
+```
+btnSubmit, btnCancel, txtCustomerName, lblTotal
+```
+
+### Skærmorganisering
+
+```
+HomeScreen
+├── galCustomers (gallery)
+├── btnAddNew
+└── btnRefresh
+
+DetailScreen
+├── frmCustomer (form)
+├── btnSave
+└── btnBack
+```
+
+### Variabelhygiejne
+
+Brug context-variabler til skærm-specifik data:
+```
+UpdateContext({locSelectedItem: ThisItem})
+```
+
+Brug globale variabler sparsomt:
+```
+Set(gblUserDepartment, User().Department)
+```
+
+### Komponentbiblioteker
+
+Byg genbrugelige komponenter til:
+- Headers og footers
+- Standardknapper
+- Almindelige formularmønstre
+- Navigationselementer
+
+---
+
+## Hvornår du skal graduere fra Canvas
+
+Overvej Model-Driven Apps eller pro-code når:
+
+| Signal | Overvej at skifte til |
+|--------|----------------------|
+| 10+ skærme | Model-Driven eller omstrukturér |
+| 20+ dataentiteter | Model-Driven med Dataverse |
+| Komplekse relationer | Model-Driven |
+| Enterprise-udrulning | Model-Driven for governance |
+| Formelkompleksitet overvældende | Pro-code |
+
+---
+
+## Næste episode
+
+I Episode 5 udforsker vi **Model-Driven Apps** — det enterprise-grade alternativ hvor du starter med data, ikke design. Mindre kreativ frihed, men indbygget struktur og skalerbarhed.
+
+---
+
+*Hvad er den mest komplekse Canvas App du har bygget? Hvor begyndte den at ramme grænser? Del din erfaring.*

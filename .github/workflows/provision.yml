@@ -1,0 +1,55 @@
+name: Provision Infrastructure
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "yes" to confirm provisioning'
+        required: true
+        default: 'no'
+
+env:
+  # Organization Level Variables (with fallbacks)
+  CLUSTER_NAME: ${{ vars.AKS_CLUSTER_NAME || 'aks-happy-mates-sweden1' }}
+  RESOURCE_GROUP: ${{ vars.RESOURCE_GROUP || 'rg-happy-mates-sweden1' }}
+  KEY_VAULT: ${{ vars.KEY_VAULT_NAME || 'kv-happy-mates-sweden1' }}
+
+  # Repository Context
+  NAMESPACE: happymates-blob
+
+jobs:
+  provision:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'yes'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Install kubelogin
+        uses: azure/use-kubelogin@v1
+        with:
+          kubelogin-version: 'v0.1.1'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set AKS Context
+        uses: azure/aks-set-context@v3
+        with:
+          resource-group: ${{ env.RESOURCE_GROUP }}
+          cluster-name: ${{ env.CLUSTER_NAME }}
+          use-kubelogin: 'true'
+
+      - name: Configure kubelogin for AAD
+        run: kubelogin convert-kubeconfig -l azurecli
+
+      # 1. Create Namespace
+      - name: Ensure Namespace Exists
+        timeout-minutes: 2
+        run: |
+          echo "→ Checking namespace: ${{ env.NAMESPACE }}"
+          kubectl create namespace ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -

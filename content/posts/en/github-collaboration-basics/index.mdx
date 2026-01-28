@@ -1,0 +1,246 @@
+---
+contentVersion: 1.0.0
+title: "GitHub for Beginners: Issues, Pull Requests, and Actions"
+excerpt: "GitHub isn't just a place where code lives. It's an entire workplace — with task lists, quality control, and automated factories. Learn the building blocks."
+date: 2026-01-09
+tags: ["GitHub", "DevOps", "Vibe Coding", "Beginner Guide", "Agentic AI"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-github-collaboration-basics.png"
+heroImageCredit: "Gemini / Imagen 3"
+aiTools: ["GitHub Copilot", "Gemini", "Antigravity"]
+status: "published"
+series:
+  slug: "agentic-ai-for-dummies"
+  episode: 3
+  totalEpisodes: 4
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+footnotes:
+  - text: "GitHub has over 100 million developers and 330+ million repositories."
+    source: "GitHub Octoverse 2023"
+    url: "https://github.blog/news-insights/octoverse/octoverse-2023/"
+  - text: "GitHub Actions is used by over 70% of Fortune 100 companies."
+    source: "GitHub Enterprise"
+    url: "https://github.com/enterprise"
+---
+
+<Speak>Welcome to the third episode in the Agentic A-I for Dummies series. Today we learn about GitHub — the place where code lives, is collaborated on, and automatically deployed.</Speak>
+
+You now have an <Voice text="A-I">AI</Voice> assistant in your editor. You can formulate good prompts. But something is missing:
+
+*"Where do I save my code? How do I collaborate with others? How do I get my changes out into the world?"*
+
+The answer is **GitHub** — and it's far more than just a place to store files.
+
+---
+
+## Repositories: Your Digital Workshop
+
+A **repository** (or just "repo") is a folder for your project — but in the cloud. Think of it as:
+
+- **A folder** with all your code
+- **A time machine** that remembers all changes
+- **A collaboration space** where multiple people can work simultaneously
+
+At Happy Mates, we have many repositories:
+- `happymates-blob` — this blog
+- `happymates-api-core` — our <Voice text="A-P-I">API</Voice>
+- `happymates-mobile` — our app
+
+Each repository is an independent project with its own history, its own collaborators, and its own automation.
+
+---
+
+## Issues: Tasks With Superpowers
+
+An **Issue** is more than a bug report. It's a work task with built-in context.
+
+### What can an Issue contain?
+
+| Element | Purpose |
+|---------|---------|
+| **Title** | Short description of the task |
+| **Description** | Details, requirements, context |
+| **Labels** | Categorization (bug, feature, documentation) |
+| **Assignee** | Who is working on it? |
+| **Milestone** | Which version/sprint? |
+| **Comments** | Discussion and updates |
+
+### Issues as "Source of Truth"
+
+The clever thing about Issues is that they gather everything in one place:
+
+- What needs to be done?
+- Who is doing it?
+- What's the status?
+- What was discussed?
+
+When you close an Issue, you have a complete history of the task — from idea to solution.
+
+---
+
+## Pull Requests: Proposals for Changes
+
+A **Pull Request** (or <Voice text="P-R">PR</Voice>) is a proposal to change the code. It's like saying:
+
+*"Hey team, I've made something. Would you look at it and approve it becoming part of the project?"*
+
+### The Anatomy of a Pull Request
+
+1. **Title and description** — What and why
+2. **Changes** — Exactly which files were edited
+3. **Review** — Colleagues review the code
+4. **Discussion** — Comments on specific lines
+5. **Approval** — Green light from reviewers
+6. **Merge** — The changes become part of the project
+
+### Why not just change directly?
+
+Imagine a team of 10 developers all changing the same file at the same time. Chaos!
+
+Pull Requests provide:
+- **Quality control** — Someone looks at the code before it goes to production
+- **Documentation** — A history of what was changed and why
+- **Rollback capability** — If something goes wrong, we can easily go back
+
+---
+
+## GitHub Actions: The Automated Factory
+
+**GitHub Actions** is automation. When something happens in your repository, you can trigger actions.
+
+### What can Actions do?
+
+| Trigger | Action |
+|---------|--------|
+| New commit pushed | Run tests automatically |
+| Pull Request created | Check code quality |
+| <Voice text="P-R">PR</Voice> merged to main | Deploy to production |
+| Daily at 9 AM | Run database backup |
+
+### A simple example
+
+At Happy Mates, we automatically run:
+- **Linting** — Checks that the code follows our standards
+- **Tests** — Verifies that everything works
+- **Build** — Builds the production version
+- **Deploy** — Sends to the server
+
+All without us lifting a finger.
+
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy
+```
+
+Every time we push to `main`, the blog is automatically built and deployed.
+
+---
+
+## How It All Fits Together
+
+Here's the typical workflow in a professional project:
+
+### 1. Create an Issue
+*"Add dark mode to the front page"*
+
+### 2. Create a Branch
+A "branch" of the code where you can experiment without breaking anything.
+
+### 3. Make your changes
+Write code, test locally.
+
+### 4. Create a Pull Request
+*"Here's my implementation of dark mode"*
+
+### 5. Code Review
+Colleagues look at the code, ask questions, suggest improvements.
+
+### 6. Adjust based on feedback
+Maybe the reviewer catches a bug. You fix it.
+
+### 7. Approve and Merge
+The reviewer approves. The code becomes part of the project.
+
+### 8. Actions run
+Automatic test, build, deploy.
+
+### 9. Issue closed
+The task is complete. The history is documented.
+
+<View>
+The flow looks like this:
+</View>
+
+```
+Issue → Branch → PR → Review → Merge → Action → Closed Issue
+```
+
+---
+
+## Why Is This Important for <Voice text="A-I">AI</Voice> Development?
+
+Here's the connection to our series:
+
+> **GitHub isn't just for humans. It's also for <Voice text="A-I">AI</Voice> agents.**
+
+In the next episode, you'll learn how to:
+- Assign Issues to <Voice text="A-I">AI</Voice> agents
+- Let the <Voice text="A-I">AI</Voice> create Pull Requests
+- Review and approve the <Voice text="A-I">AI</Voice>'s work
+
+GitHub is the infrastructure that makes agentic <Voice text="A-I">AI</Voice> possible in practice.
+
+---
+
+## Getting Started with GitHub
+
+### 1. Create an account
+Go to [github.com](https://github.com) and sign up (free).
+
+### 2. Create your first repository
+Click "New repository", give it a name, and you're started.
+
+### 3. Try GitHub Desktop
+If the terminal seems scary, [GitHub Desktop](https://desktop.github.com/) is a visual way to work with Git.
+
+### 4. Experiment with Issues
+Create an Issue in your own repository. Try closing it with a Pull Request.
+
+---
+
+## Summary
+
+| Concept | Purpose |
+|---------|---------|
+| **Repository** | Your project in the cloud |
+| **Issue** | A task with context |
+| **Pull Request** | A proposal for changes |
+| **Code Review** | Quality control by colleagues |
+| **Merge** | Include changes in the project |
+| **Actions** | Automate everything |
+
+---
+
+**Bottom line:** GitHub isn't just version control. It's a complete platform for collaboration, quality, and automation. And as you'll see in the next episode, it's also home to <Voice text="A-I">AI</Voice> agents.
+
+In the next (and final) episode, we dive into **Agentic <Voice text="A-I">AI</Voice>** — how you assign tasks to <Voice text="A-I">AI</Voice> agents, chat with them along the way, and review their work like a colleague.
+
+---
+
+*What would you automate first if you had a robot that never sleeps?*

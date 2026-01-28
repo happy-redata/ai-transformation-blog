@@ -1,0 +1,241 @@
+---
+contentVersion: 1.0.0
+title: "Prompt Engineering: Let AI Write Your Prompts"
+excerpt: "The hardest thing about using AI isn't the technology. It's knowing what to ask for. Learn to let AI help you formulate the perfect instructions."
+date: 2026-01-07
+tags: ["AI", "Prompt Engineering", "Vibe Coding", "Beginner Guide", "Agentic AI"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-ai-prompt-engineering.png"
+heroImageCredit: "Gemini / Imagen 3"
+aiTools: ["GitHub Copilot", "Gemini", "Antigravity"]
+status: "published"
+series:
+  slug: "agentic-ai-for-dummies"
+  episode: 2
+  totalEpisodes: 4
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+footnotes:
+  - text: "Prompt engineering has been recognized as a critical skill in the AI era."
+    source: "MIT Technology Review"
+    url: "https://www.technologyreview.com/2023/02/21/1068893/how-prompt-engineering-can-make-you-a-better-programmer/"
+---
+
+<Speak>Welcome to the second episode in the Agentic A-I for Dummies series. Today we learn the art of talking to A-I — and how you can let the A-I write the perfect prompts for you.</Speak>
+
+You've installed <Voice text="GitHub Co-pilot">GitHub Copilot</Voice>. You're ready to build something amazing. You type:
+
+*"Make an app for me"*
+
+And the <Voice text="A-I">AI</Voice> responds with... something. Maybe a Hello World. Maybe a half-finished template. But not what you imagined.
+
+**Welcome to prompt engineering.**
+
+---
+
+## Why "Make an App" Never Works
+
+Imagine asking an architect to "build a house". The architect would naturally ask:
+
+- How many rooms?
+- What style?
+- What's the budget?
+- Who will live there?
+
+Without these details, you get... something. But probably not what you imagined.
+
+The same applies to <Voice text="A-I">AI</Voice>. The more specific your instruction, the better the result.
+
+---
+
+## The Anatomy of a Prompt
+
+A good prompt has three parts:
+
+### 1. Context — Who are you talking to?
+
+*"You are an experienced TypeScript developer building a modern React application with Next.js."*
+
+### 2. Instruction — What should happen?
+
+*"Create a component that displays a user's profile card with name, picture, and a short biography."*
+
+### 3. Constraints — What are the boundaries?
+
+*"Use Tailwind CSS for styling. The component should be responsive and accessible. No external dependencies."*
+
+<View>
+Combined, it looks like this:
+</View>
+
+```
+You are an experienced TypeScript developer building a modern 
+React application with Next.js.
+
+Create a component that displays a user's profile card with 
+name, picture, and a short biography.
+
+Use Tailwind CSS for styling. The component should be 
+responsive and accessible. No external dependencies.
+```
+
+Now the <Voice text="A-I">AI</Voice> has enough information to give a qualified answer.
+
+---
+
+## The Genius Trick: Let the <Voice text="A-I">AI</Voice> Write Your Prompts
+
+Here's the secret most people miss:
+
+> **You don't need to be good at writing prompts. You just need to ask the <Voice text="A-I">AI</Voice> to help you with that.**
+
+Try this:
+
+*"I want to build a countdown timer for an event. Help me formulate a detailed specification that a developer can use to implement it."*
+
+The <Voice text="A-I">AI</Voice> will respond with something like:
+
+```
+## Countdown Timer Specification
+
+### Overview
+A visual countdown timer that shows time until a specified 
+future event.
+
+### Functional requirements
+1. Display days, hours, minutes, and seconds
+2. Update in real-time (every second)
+3. Show a message when the event is reached
+4. Allow configuration of event date via props
+
+### Technical requirements
+- React functional component with hooks
+- TypeScript for type safety
+- Pure CSS animation (no heavy libraries)
+- Responsive design
+
+### Edge cases
+- Handling past dates
+- Timezones
+- Browser focus (pause when tab is inactive?)
+```
+
+Now you have a specification you can use. You can even give it *back* to the <Voice text="A-I">AI</Voice> and say: *"Implement this specification."*
+
+---
+
+## From Idea to Digital Product: Step-by-Step
+
+Here's the complete workflow:
+
+### Step 1: Describe your dream
+
+Start with natural language. No technical terms necessary.
+
+*"I want a website where you can keep track of which books you've read."*
+
+### Step 2: Ask the <Voice text="A-I">AI</Voice> for a specification
+
+*"Help me create a detailed technical specification for this idea. Include data model, user flow, and technology choices."*
+
+### Step 3: Review and adjust
+
+Read the specification. Add, remove, adjust. Is there something you don't understand? Ask the <Voice text="A-I">AI</Voice>:
+
+*"Explain why you chose PostgreSQL over SQLite for this project."*
+
+### Step 4: Let the <Voice text="A-I">AI</Voice> implement
+
+*"Implement step 1 from the specification: The data model in Prisma."*
+
+### Step 5: Iterate with feedback
+
+*"Add a field for 'rating' on the book model. It should be a number between 1 and 5."*
+
+Repeat steps 4 and 5 until you have a finished product.
+
+---
+
+## Practical Example: A Simple Countdown
+
+Let's go through the process from start to finish.
+
+### Idea (natural language)
+*"I want a timer that counts down to New Year's."*
+
+### Prompt for specification
+*"I want to build a New Year's countdown timer in React. Create a detailed specification."*
+
+### The <Voice text="A-I">AI</Voice>'s specification
+```
+## New Year's Countdown Specification
+
+### Component: NewYearCountdown
+
+**Props:**
+- targetYear: number (default: next year)
+
+**Display:**
+- Days, hours, minutes, seconds in separate boxes
+- Festive styling with confetti effect at New Year's
+- "Happy New Year!" message when countdown is complete
+
+**Technical details:**
+- useState for time values
+- useEffect with 1-second interval
+- Cleanup on unmount
+```
+
+### Prompt for implementation
+*"Implement the NewYearCountdown component based on this specification."*
+
+### Result
+A working React component, ready to use.
+
+---
+
+## Common Mistakes (and How to Avoid Them)
+
+| Mistake | Problem | Solution |
+|---------|---------|----------|
+| **Too vague** | "Make something cool" → random output | Be specific about features and style |
+| **Too detailed** | 2000 words → confused <Voice text="A-I">AI</Voice> | Build up in steps, not all at once |
+| **No iteration** | Accepts first suggestion | Ask for alternatives, improve continuously |
+| **No verification** | "It looks right" | Always test the code, read it through |
+
+---
+
+## Specification Templates
+
+Here are three templates you can reuse:
+
+### For new features
+*"I have an existing [type of app] in [technology]. Help me specify a new feature: [description]. Include integration with existing code."*
+
+### For refactoring
+*"Analyze this code: [insert code]. Identify improvements and suggest a refactoring plan."*
+
+### For debugging
+*"I'm getting this error: [error message]. Context: [what the code is trying to do]. Help me find and fix the problem."*
+
+---
+
+## Summary
+
+| From | To |
+|------|-----|
+| "Make an app for me" | Context + Instruction + Constraints |
+| Struggling to formulate prompts | Letting the <Voice text="A-I">AI</Voice> help with the specification |
+| Accepting first suggestion | Iterating and improving continuously |
+| Hoping it works | Always verifying and testing |
+
+---
+
+**Bottom line:** The hardest thing about using <Voice text="A-I">AI</Voice> isn't the technology — it's knowing what to ask for. But here's the secret: You can ask the <Voice text="A-I">AI</Voice> to help you with *that* too.
+
+In the next episode, we introduce **GitHub** — the platform where code lives, is collaborated on, and automatically deployed. Repositories, Issues, Pull Requests, and Actions: All the building blocks you need to work professionally with <Voice text="A-I">AI</Voice>.
+
+---
+
+*What if your next project description wasn't written by you — but by the <Voice text="A-I">AI</Voice> itself, based on your dreams?*

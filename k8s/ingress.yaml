@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: happymates-blob
+  namespace: happymates-blob
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: webapp-routing
+  tls:
+    - hosts:
+        - happymates.blog
+        - www.happymates.blog
+      secretName: happymates-blob-tls
+  rules:
+    - host: happymates.blog
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: happymates-blob
+                port:
+                  number: 80
+    - host: www.happymates.blog
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: happymates-blob
+                port:
+                  number: 80

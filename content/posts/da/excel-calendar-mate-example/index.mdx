@@ -1,0 +1,293 @@
+---
+contentVersion: 1.0.0
+title: "Fra Issue til App: Excel Calendar Mate i Praksis"
+excerpt: "Se hvordan en AI-agent bygger en komplet kulturbevidst kalendergenerator fra en enkelt Issue-beskrivelse. Fra krav til GitHub Pages på under en time."
+date: 2026-01-10
+tags: ["AI", "Agentic AI", "GitHub Copilot", "Vibe Coding", "Case Study"]
+author: "Happy Mates Redaktionen"
+heroImage: "/images/hero-excel-calendar-mate.png"
+heroImageCredit: "Gemini / Imagen 3"
+aiTools: ["GitHub Copilot", "Antigravity", "Gemini"]
+status: "published"
+originalSlug: "excel-calendar-mate-example"
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+footnotes:
+  - text: "ExcelJS er et populært bibliotek til at generere Excel-filer i JavaScript."
+    source: "ExcelJS GitHub"
+    url: "https://github.com/exceljs/exceljs"
+  - text: "Vite er en moderne build-værktøj, der er markant hurtigere end traditionelle bundlere."
+    source: "Vite Documentation"
+    url: "https://vitejs.dev/"
+---
+
+<Speak>Velkommen til denne praktiske case study. I dag viser vi, hvordan en A-I-agent bygger en hel applikation fra en enkelt Issue-beskrivelse.</Speak>
+
+I de foregående episoder har vi lært om <Voice text="A-I">AI</Voice>-assistenter, prompts, GitHub-samarbejde og agentic <Voice text="A-I">AI</Voice>. Men teori er én ting — lad os se det i praksis.
+
+**Opgaven:** Byg en webapplikation, der genererer farvelagte Excel-kalendre med kulturel bevidsthed.
+
+**Metoden:** Én Issue-beskrivelse. Én <Voice text="A-I">AI</Voice>-agent. Nul menneskeligt tastatur.
+
+---
+
+## Vores Issue-Beskrivelse
+
+Her er det præcise Issue, vi oprettede i GitHub:
+
+<View>Se den fulde Issue-beskrivelse nedenfor:</View>
+
+```markdown
+# Excel Calendar Generator
+
+Byg en Vite-baseret webapplikation, der genererer en farvelagt 
+Excel-fil med 12 kolonner (en per måned) på ét ark.
+
+## Funktionskrav
+
+### Kalenderstruktur
+- **12 kolonner** — en kolonne per måned
+- **Kolonner** — Dag-nummer, Ugedag, Ugenummer
+- **Farver** — Weekend-dage markeret med baggrundfarve
+
+### Kulturelle Indstillinger
+- **Start af uge** — Vælg mellem Mandag eller Søndag
+- **Weekend-dage** — Vælg hvilke dage der er weekend
+  - Standard (Lørdag/Søndag)
+  - Arabisk kultur (Torsdag/Fredag)
+  - Tilpasset (vælg selv)
+
+### Sprog
+- Dansk
+- Engelsk
+- Arabisk
+- Grønlandsk (hvis muligt)
+
+### År
+- Vælg hvilket år kalenderen genereres for
+
+## Tekniske Krav
+- Vite + React
+- ExcelJS til Excel-generering
+- GitHub Actions til GitHub Pages deployment
+- CNAME: excel-calendar.app.happymates.dk
+
+## Repository
+https://github.com/happy-mates/excel-calendar-mate
+```
+
+Det er alt. 47 linjer. Ingen kode. Ingen wireframes. Bare krav.
+
+---
+
+## Hvad <Voice text="A-I">AI</Voice>-Agenten Lavede
+
+<Speaker voice="narrator">Agenten modtog Issue'et og gik i gang. Her er hvad den producerede — helt autonomt.</Speaker>
+
+### 1. Projektopsætning
+
+Agenten oprettede en Excel-struktur med 12 kolonner — en for hver måned — hvor hver kolonne indeholder dagene i måneden:
+
+```bash
+npm create vite@latest ./ -- --template react-ts
+npm install exceljs file-saver
+npm install -D @types/file-saver
+```
+
+### 2. Sprogunderstøttelse
+
+Agenten oprettede oversættelsesfiler for alle fire sprog:
+
+| Sprog | Fil | Måneder | Ugedage |
+|-------|-----|---------|---------|
+| Dansk | `da.json` | Januar, Februar... | Mandag, Tirsdag... |
+| Engelsk | `en.json` | January, February... | Monday, Tuesday... |
+| Arabisk | `ar.json` | يناير, فبراير... | الاثنين, الثلاثاء... |
+| Grønlandsk | `kl.json` | Januaarip, Februaarip... | Ataasinngorneq... |
+
+<Pause duration={1} />
+
+Ja, agenten fandt faktisk grønlandske oversættelser.
+
+### 3. Kulturelle Weekend-Indstillinger
+
+Agenten implementerede tre foruddefinerede kulturprofiler:
+
+| Kultur | Weekend-dage | Start af uge |
+|--------|--------------|--------------|
+| Vestlig standard | Lørdag, Søndag | Mandag |
+| Arabisk kultur | Torsdag, Fredag | Søndag |
+| Tilpasset | Brugervalgt | Brugervalgt |
+
+### 4. Excel-Generering med Farver
+
+Agenten brugte <Voice text="Excel J.S.">ExcelJS</Voice> til at skabe farvelagte ark:
+
+```typescript
+// Weekend-dage får særlig baggrundfarve
+if (isWeekend(date, weekendDays)) {
+  row.getCell(1).fill = {
+    type: 'pattern',
+    pattern: 'solid',
+    fgColor: { argb: 'FFE6E6FA' } // Lys lavendel
+  };
+}
+```
+
+### 5. GitHub Actions Deployment
+
+Agenten oprettede en komplet CI/CD-pipeline:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npm run build
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: excel-calendar.app.happymates.dk
+```
+
+---
+
+## Det Færdige Resultat
+
+<View>Her er screenshots af den endelige applikation:</View>
+
+### Brugergrænsefladen
+
+Applikationen har en ren, enkel grænseflade:
+
+- **Årstalsvælger** — dropdown eller numerisk input
+- **Sprogvælger** — Dansk, Engelsk, Arabisk, Grønlandsk
+- **Kulturprofil** — Vestlig, Arabisk, eller Tilpasset
+- **Download-knap** — genererer og downloader Excel-filen
+
+<Pause duration={1} />
+
+![Excel Calendar Generator applikation med årsvælger, sprogvalg og kulturprofil](./app-ui-screenshot.png)
+
+### Den Genererede Excel-Fil
+
+Excel-filen indeholder:
+
+- **12 ark** — et for hver måned
+- **Farvelagte weekends** — tydeligt markerede
+- **Ugenumre** — <Voice text="I.S.O.">ISO</Voice>-standard
+- **Lokaliserede navne** — på det valgte sprog
+
+<Pause duration={1} />
+
+![Excel-output med farvelagte weekends og danske ugedage](./excel-output-screenshot.png)
+
+---
+
+## Hvad Vi Lærte
+
+### Styrker ved Agentic <Voice text="A-I">AI</Voice>
+
+| Observation | Betydning |
+|-------------|-----------|
+| **Komplet projektopsætning** | Agenten håndterede alt fra `npm create` til deployment |
+| **Korrekte biblioteksvalg** | <Voice text="Excel J.S.">ExcelJS</Voice> var det rigtige valg til Excel-generering |
+| **Kulturel bevidsthed** | Agenten forstod arabiske weekend-konventioner |
+| **Grønlandsk oversættelse** | Agenten fandt obskure, men korrekte oversættelser |
+
+### Hvor Mennesker Stadig Er Vigtige
+
+| Område | Hvorfor |
+|--------|---------|
+| **Kravspecifikation** | Vi definerede kulturfølsomheden |
+| **Verifikation** | Vi tjekkede, at grønlandsk var korrekt |
+| **Design-beslutninger** | Farvevalg og <Voice text="U-I">UI</Voice>-layout krævede godkendelse |
+| **Edge cases** | Skudår, måneder med 28/29/30/31 dage |
+
+---
+
+## Din Tur: Prøv Det Selv
+
+<Speaker voice="narrator">Du kan bruge denne tilgang på dine egne projekter. Her er opskriften.</Speaker>
+
+### Trin 1: Skriv et Godt Issue
+
+Inkluder:
+- **Funktionskrav** — hvad skal applikationen gøre?
+- **Tekniske krav** — hvilke teknologier?
+- **Begrænsninger** — hvad skal den *ikke* gøre?
+- **Succes-kriterier** — hvordan ved vi, at den virker?
+
+### Trin 2: Giv Kontekst
+
+Link til:
+- Lignende projekter
+- Design-inspiration
+- Dokumentation for valgte teknologier
+
+### Trin 3: Tildel til <Voice text="A-I">AI</Voice>
+
+I GitHub:
+1. Opret Issue med din beskrivelse
+2. Assign til `@copilot` eller din valgte agent
+3. Vent på Pull Request
+
+### Trin 4: Review og Iterér
+
+Når <Voice text="P-R">PR</Voice>'en kommer:
+1. Læs koden grundigt
+2. Test funktionaliteten
+3. Giv feedback via kommentarer
+4. Godkend eller anmod om ændringer
+
+---
+
+## Live Demo
+
+Prøv applikationen direkte her:
+
+<div style={{position: 'relative', width: '100%', marginBottom: '2rem'}}>
+  <a href="https://excel-calendar.app.happymates.dk" target="_blank" rel="noopener noreferrer" style={{position: 'absolute', top: '8px', right: '8px', zIndex: 10, display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 0.75rem', backgroundColor: 'rgba(59, 130, 246, 0.9)', color: 'white', borderRadius: '6px', textDecoration: 'none', fontSize: '0.75rem', boxShadow: '0 2px 4px rgba(0,0,0,0.1)'}}>
+    🔗 Åbn i ny fane
+  </a>
+  <iframe 
+    src="https://excel-calendar.app.happymates.dk" 
+    style={{width: '100%', height: '500px', border: '1px solid #e5e7eb', borderRadius: '8px'}}
+    title="Excel Calendar Generator"
+  />
+</div>
+
+Kildekoden er tilgængelig på:
+
+**<a href="https://github.com/happy-mates/excel-calendar-mate" target="_blank" rel="noopener noreferrer">github.com/happy-mates/excel-calendar-mate</a>**
+
+---
+
+## Opsummering
+
+| Element | Detalje |
+|---------|---------|
+| **Input** | 47 linjers Issue-beskrivelse |
+| **Output** | Komplet Vite-app med Excel-generering |
+| **Tid** | Under 1 time fra Issue til deployment |
+| **Menneskeligt arbejde** | Kravspecifikation + review |
+| **<Voice text="A-I">AI</Voice>-arbejde** | Alt andet |
+
+---
+
+**Bundlinje:** En velskrevet Issue-beskrivelse er din superkraft. Jo klarere du formulerer dine krav, jo bedre kan <Voice text="A-I">AI</Voice>-agenten levere.
+
+---
+
+*Hvad ville du bygge, hvis du kunne beskrive det i et Issue og få det leveret næste dag? Del dine idéer med os.*

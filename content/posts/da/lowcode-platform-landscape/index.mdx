@@ -1,0 +1,178 @@
+---
+title: "Low-Code Landskabet: Vælg din platform"
+excerpt: "Power Platform, Salesforce, ServiceNow, AppSheet — markedet er fyldt. Her er hvordan du navigerer mulighederne uden at blive fanget."
+date: 2025-10-17
+tags: ["Low Code", "Power Platform", "Salesforce", "ServiceNow", "Strategi"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep2-landscape.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 2
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+Du har besluttet at low-code er værd at udforske. Nu kommer det svære spørgsmål: **Hvilken platform?**
+
+Gå ind i enhver enterprise IT-diskussion, og du vil høre intens loyalitet til forskellige lejre. Microsoft-shops sværger til Power Platform. Salesforce-kunder udvider med Lightning. ServiceNow-tilhængere automatiserer alt gennem deres platform.
+
+Men her er sagen: **Der er ingen "bedste" platform. Kun den bedste platform for din kontekst.**
+
+---
+
+## De Tre Store (Enterprise)
+
+Dette er platformene du vil støde på i de fleste store organisationer:
+
+### Microsoft Power Platform
+
+**Hvad det er:** En suite af low-code værktøjer (Power Apps, Power Automate, Power BI, Copilot Studio) dybt integreret med Microsoft 365 og Azure.
+
+**Bedst for:** Organisationer der allerede bruger Microsoft 365 og Azure. Hvis din virksomhed lever i Teams, SharePoint og Outlook, er Power Platform den naturlige forlængelse.
+
+| Styrke | Svaghed |
+|--------|---------|
+| Dyb M365-integration | Licenskompleksitet |
+| Kæmpe connector-bibliotek | Dataverse-omkostninger eskalerer |
+| Stærkt community | Canvas app performance-grænser |
+| Regelmæssig innovation | Hyppige UI-ændringer forvirrer |
+
+**Licensvirkeligheden:** "Power Apps er inkluderet i Office 365" er teknisk sandt — men det giver dig 2.000 API-kald om dagen og ingen Dataverse. Reel brug kræver Premium-licenser (~20$/bruger/måned) eller per-app licenser.
+
+---
+
+### Salesforce Lightning
+
+**Hvad det er:** Salesforces deklarative udviklingsplatform, bygget oven på verdens mest succesfulde CRM.
+
+**Bedst for:** Organisationer med Salesforce som deres kundedatahub. Hvis dit CRM er Salesforce, giver det oplagt mening at udvide med Lightning.
+
+| Styrke | Svaghed |
+|--------|---------|
+| Moden, kamptestet | Dyr uden for CRM-use cases |
+| Stærk deklarativ automation (Flow) | Stejl læringskurve |
+| Massivt AppExchange-økosystem | Tung vendor lock-in |
+| Enterprise governance indbygget | "Salesforce-kompetencer" er specialiserede |
+
+**Licensvirkeligheden:** Lightning er del af Salesforce-udgaver, men avancerede funktioner (Flow orchestrations, OmniStudio) kræver dyre tilføjelser. Og hvis du ikke allerede er Salesforce-kunde, er indgangsprisen betydelig.
+
+---
+
+### ServiceNow App Engine
+
+**Hvad det er:** Low-code udvikling oven på ServiceNows workflow-platform, oprindeligt designet til IT Service Management.
+
+**Bedst for:** IT-afdelinger, HR-afdelinger og facilities management. Hvis dit IT-team allerede lever i ServiceNow, er App Engine en naturlig forlængelse.
+
+| Styrke | Svaghed |
+|--------|---------|
+| Native ITSM-integration | Føles "IT-centreret" for forretningsbrugere |
+| Stærke workflow-kapabiliteter | Dyr licensering |
+| Indbygget governance og compliance | Mindre talentpool |
+| Enterprise-grade pålidelighed | Mindre fleksibel til kreative apps |
+
+**Licensvirkeligheden:** ServiceNow er ikke billig. App Engine kræver ekstra licensering oven på din basis ServiceNow-abonnement. Men for IT-centrerede workflows er integrationen uovertruffen.
+
+---
+
+## Udfordrerne
+
+Ud over De Tre Store tjener flere platforme specifikke nicher:
+
+### Google AppSheet
+- **Bedst for:** Google Workspace-organisationer med behov for simple apps
+- **Fremragende funktion:** Dybt integreret med Google Sheets
+- **Begrænsning:** Mindre enterprise-grade end Microsoft/Salesforce
+
+### Mendix & OutSystems
+- **Bedst for:** Organisationer der vil have low-code med pro-code escape hatches
+- **Fremragende funktion:** Genererer faktisk deploybar kode
+- **Begrænsning:** Stejlere læringskurve, tættere på traditionel udvikling
+
+### Retool & Budibase
+- **Bedst for:** Udvikler-ledede teams der bygger interne værktøjer
+- **Fremragende funktion:** SQL-native, udviklervenlig
+- **Begrænsning:** Kræver tekniske brugere
+
+### Airtable
+- **Bedst for:** Teams der vokser ud af regneark
+- **Fremragende funktion:** Smukt interface, fremragende til content workflows
+- **Begrænsning:** Rammer hurtigt grænser ved enterprise-brug
+
+---
+
+## Udvælgelsesrammen
+
+Når du vælger platform, stil disse spørgsmål:
+
+### 1. Hvor lever dine data allerede?
+
+| Din datahub | Naturlig platform |
+|-------------|-------------------|
+| SharePoint / Microsoft 365 | Power Platform |
+| Salesforce CRM | Salesforce Lightning |
+| ServiceNow CMDB | ServiceNow App Engine |
+| Google Workspace | AppSheet |
+| Custom databaser | Mendix / Retool |
+
+### 2. Hvem skal bygge apps?
+
+| Byggerprofil | Bedste match |
+|--------------|--------------|
+| Forretningsanalytikere | Power Apps Canvas, AppSheet |
+| IT-professionelle | Power Apps Model-Driven, ServiceNow |
+| Udviklere der vil accelerere | Mendix, OutSystems, Retool |
+
+### 3. Hvad er din integrationskompleksitet?
+
+Hvis du skal forbinde 5+ systemer, prioritér platforme med stærke connector-økosystemer. Power Platform fører her med 900+ connectorer.
+
+### 4. Hvad er din governance-appetit?
+
+Nogle platforme (ServiceNow, Salesforce) har governance indbygget i deres DNA. Andre (Power Platform, AppSheet) kræver bevidst governance-setup.
+
+---
+
+## Fælden: Multi-platform sprawl
+
+Her er hvad der ofte sker:
+
+1. Marketing køber AppSheet fordi det er "nemt"
+2. IT bygger i ServiceNow fordi det er deres stack
+3. Økonomi bygger i Power Apps fordi de kender Excel
+4. Salg udvider i Salesforce fordi det er deres CRM
+
+Resultat: **Fire low-code platforme, fire færdighedssæt at vedligeholde, fire governance-frameworks at håndhæve.**
+
+Dette er værre end at have én platform med begrænsninger.
+
+**Anbefaling:** Vælg én *primær* platform. Tillad undtagelser kun med stærk begrundelse. Skifteomkostningerne ved platform-sprawl er brutale.
+
+---
+
+## Vores fokus: Power Platform
+
+For resten af denne serie fokuserer vi primært på **Microsoft Power Platform**.
+
+Hvorfor?
+- **Markedsandel:** Det er den mest udbredte enterprise low-code platform
+- **Økosystem-bredde:** Power Apps, Power Automate, Copilot Studio, Power BI, Dataverse
+- **Repræsentative udfordringer:** Governance-, licens- og bæredygtighedsproblemerne vi vil diskutere gælder (med variationer) for alle platforme
+
+Vi vil også dække Salesforce og ServiceNow i dedikerede episoder — men Power Platform vil være vores referencearkitektur.
+
+---
+
+## Næste episode
+
+I episode 3 dykker vi dybt ned i Power Platform-stamtræet. Power Apps er ikke bare én ting — det er Canvas, Model-Driven, Pages og mere. Power Automate er ikke bare cloud flows — det er desktop-automation, business process flows og AI-behandling.
+
+Og vi sporer rebrand-historien: Hvorfor hed det "Microsoft Flow"? Hvad skete der med "Power Virtual Agents"? Og hvorfor bliver alle forvirrede over "Common Data Service" vs. "Dataverse"?
+
+---
+
+*Hvilken platform bruger din organisation? Er det et bevidst valg eller historisk tilfælde? Del din erfaring.*

@@ -1,0 +1,88 @@
+---
+title: "Den Trojanske Hest: Spionen i Dit Eget Hjem (Del 1)"
+excerpt: "Du købte den online. Den var billig. Men ved du, hvad der gemmer sig under tastaturet? Historien om, hvorfor selv en Mac skal i karantæne."
+date: 2026-03-03
+tags: ["Sikkerhed", "Supply Chain", "Hardware", "Faraday", "Begynderguide"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-trojan-horse-mac.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Imagen 3"]
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "da-DK-ChristelNeural"
+  backgroundMusic: "/audio/music/ambient-tech.mp3"
+  language: "da-DK"
+footnotes:
+  - text: "NSA har historisk brugt 'interdiction' til at plante hardware i udstyr, før det nåede målet."
+    source: "The Guardian"
+    url: "https://www.theguardian.com/books/2014/may/12/no-place-to-hide-glenn-greenwald-nsa-snowden"
+---
+
+<Music track="ambient-tech" action="fade-in" />
+
+<Speaker voice="narrator" name="Fortæller">
+Det er en klassisk historie. Grækerne kunne ikke komme ind i byen Troja ved magt. Så de efterlod en gave. En smuk hest af træ. Trojanerne slæbte den selv indenfor murene.
+</Speaker>
+
+<Pause duration={1.5} />
+
+Om natten kravlede soldaterne ud. Og resten er historie.
+
+<Speaker voice="host" name="Vært">
+I dag består hesten ikke af træ. Den består af aluminium, glas og silicium.
+</Speaker>
+
+Vi har alle hørt om virus *på* computeren. Men hvad hvis virussen *er* computeren?
+
+## Scenariet: Den Falske Mac
+
+Forestil dig dette:
+Din virksomhed bestiller 10 nye MacBooks til ledelsen. De ankommer i pæne hvide æsker, pakket ind i plastik. Alt ser perfekt ud.
+
+Men én af dem har været på en omvej.
+
+Mellem fabrikken og dit kontor har den været i hænderne på en "moderne trojaner". De har åbnet den, og under batteriet har de loddet en lille ekstra chip på bundkortet. Et 4G-modem, der ikke fylder mere end en fingernegl.
+
+<Voice text="Zero Trust">Zero Trust</Voice> teamet sætter maskinen op. De installerer antivirus. De lukker for al Wi-Fi. De isolerer den på et sikkert netværk. De tror, de er sikre.
+
+<Speaker voice="narrator">
+Men hesten er allerede indenfor.
+</Speaker>
+
+Mens direktøren læser hemmelige dokumenter på skærmen, sender den lille chip skærmbilleder direkte ud via 4G-nettet. Udenom jeres firewall. Udenom jeres sikkerhed. Maskinen ringer bogstaveligt talt hjem.
+
+## Løsningen: Faraday-buret
+
+Hvordan beskytter man sig mod en spion, der bor inde i selve hardwaren? Man kan ikke bruge software til at finde den.
+
+Man må bruge fysik.
+
+Vi kalder det et **Faraday-bur**. Det er et rum foret med kobbernet, som blokerer alle radiosignaler. Ingen Wi-Fi, ingen Bluetooth, og vigtigst af alt: **Ingen 4G/5G**.
+
+<SoundEffect name="success-chime" />
+
+Hvis du arbejder med statshemmeligheder eller patent-tegninger, er det her, du sidder.
+
+1.  **Ingen signaler ud:** Spion-chippen skriker i tomheden. Den kan ikke sende data hjem.
+2.  **Ingen signaler ind:** Ingen kan fjernstyre maskinen udefra.
+
+## Har du tjekket tænderne?
+
+<Speaker voice="host" name="Vært">
+De fleste af os har ikke brug for et kobber-foret rum. Men princippet gælder alligevel:
+</Speaker>
+
+**Stol aldrig blindt på hardware, bare kan fordi pakken var forseglet.**
+
+Når vi taler om **Supply Chain Security**, handler det om at vide præcis, hvor dine enheder har været. Har de stået på et lager i en usikker havn? Har kureren været pålidelig?
+
+I en verden af global handel er din computer har rejst længere, end du nogensinde kommer til. Og hvem ved, hvem den har mødt på vejen?
+
+<Pause duration={1.5} />
+
+<Emphasis type="question">**Ved du egentlig, hvad der gemmer sig i din virksomheds "gaver"?**</Emphasis>
+
+---
+
+*Dette er første del af serien om Hardwarens Hemmeligheder. I næste del ser vi på "Evil Maid" angreb – når spionen ikke er en chip, men rengøringshjælpen.*

@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3001:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      # Ensure specific secrets are passed if not in .env (but env_file handles it)
+      - AZURE_CLIENT_ID
+      - AZURE_CLIENT_SECRET
+      - AZURE_TENANT_ID
+      - NEXT_PUBLIC_AZURE_CLIENT_ID
+      - NEXT_PUBLIC_AZURE_TENANT_ID
+    restart: unless-stopped

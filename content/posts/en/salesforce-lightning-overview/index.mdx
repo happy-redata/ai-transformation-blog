@@ -1,0 +1,232 @@
+---
+title: "Salesforce Lightning: The CRM Giant's Low-Code Platform"
+excerpt: "For organizations already on Salesforce, Lightning is the natural extension. Here's what makes it powerful — and where it struggles."
+date: 2026-01-23
+tags: ["Low Code", "Salesforce", "Lightning", "CRM", "Enterprise"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep9-salesforce.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 9
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+If your company runs on Salesforce, you've probably heard this pitch:
+
+"You don't need a separate low-code platform. Just extend Salesforce with Lightning."
+
+And honestly? **They're not wrong.**
+
+Salesforce Lightning is one of the most mature low-code platforms in existence. It's also deeply locked into the Salesforce ecosystem — for better and worse.
+
+---
+
+## What is Salesforce Lightning?
+
+Lightning is Salesforce's modern UI framework and low-code development platform:
+
+**Lightning Experience:** The user interface (replaced Classic in 2015)  
+**Lightning App Builder:** Drag-and-drop page design  
+**Flow Builder:** Visual workflow automation  
+**Lightning Web Components:** Pro-code components that integrate with low-code
+
+If Power Platform is Microsoft's low-code story, Lightning is Salesforce's answer.
+
+---
+
+## The Lightning Ecosystem
+
+### Lightning App Builder
+
+Build custom pages by dragging components:
+- Standard components (charts, lists, related records)
+- Custom Lightning Web Components
+- Third-party AppExchange components
+
+**What you can build:**
+- Custom record pages
+- App home pages
+- Utility bars
+- Community pages
+
+### Flow Builder
+
+Salesforce's automation engine — comparable to Power Automate:
+
+**Flow types:**
+- **Screen Flows:** Interactive, wizard-like experiences
+- **Record-Triggered Flows:** When data changes
+- **Scheduled Flows:** Time-based automation
+- **Platform Event Flows:** Real-time integrations
+
+**Strengths:**
+- Deep Salesforce data access
+- Complex branching logic
+- Sub-flows for reusability
+- Transaction control
+
+### Lightning Web Components (LWC)
+
+When declarative tools aren't enough:
+- Modern JavaScript framework
+- Reactive data binding
+- Salesforce-optimized performance
+- Reusable across pages
+
+**Who uses LWC:** Developers who need custom UI beyond what App Builder provides.
+
+---
+
+## Salesforce vs. Power Platform
+
+For organizations evaluating both:
+
+| Dimension | Salesforce Lightning | Power Platform |
+|-----------|---------------------|----------------|
+| **Best for** | CRM-centric organizations | M365/Azure shops |
+| **Database** | Salesforce objects | Dataverse or SharePoint |
+| **Automation** | Flow Builder | Power Automate |
+| **Chatbots** | Einstein Bots | Copilot Studio |
+| **Portals** | Experience Cloud | Power Pages |
+| **Reporting** | Salesforce Reports | Power BI |
+| **Ecosystem** | AppExchange | Microsoft AppSource |
+
+**The reality:** If you're a Salesforce shop, Lightning is natural. If you're a Microsoft shop, Power Platform is natural. Mixing them creates integration complexity.
+
+---
+
+## When Lightning Shines
+
+**CRM extensions:**
+Adding fields, workflows, and pages to your Salesforce org.
+
+**Sales process automation:**
+Lead routing, opportunity updates, quote generation.
+
+**Customer-facing portals:**
+Partner portals, customer communities, self-service.
+
+**AppExchange leverage:**
+Thousands of pre-built solutions available.
+
+---
+
+## The Challenges
+
+### 1. Cost Outside CRM
+
+Salesforce licensing is expensive for non-CRM use cases:
+- Platform licenses start around $25/user/month
+- Full CRM licenses: $75-300/user/month
+- Experience Cloud (portals): Additional per-login costs
+
+**The trap:** Building non-CRM apps on Salesforce often costs more than alternatives.
+
+### 2. Salesforce Skills Are Specialized
+
+The talent pool for Salesforce development is:
+- Smaller than general web development
+- More expensive (certified admins command premiums)
+- Has its own career ecosystem
+
+**Reality check:** Finding Salesforce developers is harder and costlier than finding Power Platform or general developers.
+
+### 3. The Declarative-vs-Apex Divide
+
+Salesforce has two worlds:
+- **Declarative:** Flow Builder, validation rules, formula fields
+- **Apex:** Salesforce's proprietary programming language
+
+When declarative reaches its limits, you need Apex. This requires developers — true "citizen development" has boundaries.
+
+### 4. Platform Lock-In
+
+Salesforce lock-in is severe:
+- Custom objects don't export easily
+- Flows don't transfer to other platforms
+- Apex code is Salesforce-only
+- Your data is in Salesforce's cloud
+
+**Exit cost:** High. Plan for this.
+
+---
+
+## Flow Builder Deep Dive
+
+Since automation is comparable to Power Automate, let's compare:
+
+| Feature | Salesforce Flow | Power Automate |
+|---------|----------------|----------------|
+| Trigger types | Record, scheduled, platform event | Email, SharePoint, HTTP, 900+ |
+| External connectors | Limited (use Apex for APIs) | 900+ connectors |
+| Error handling | Built-in fault paths | Configure run-after |
+| Debugging | Debug mode with step-through | Run history analysis |
+| Reusability | Sub-flows | Child flows |
+| Desktop automation | No native RPA | Desktop flows |
+
+**Summary:** Flow Builder is powerful within Salesforce. Power Automate is more versatile for cross-system automation.
+
+---
+
+## Real-World Architecture
+
+A typical Salesforce-centric organization:
+
+```
+┌─────────────────────────────────────────────┐
+│               SALESFORCE                    │
+│  ┌─────────────────────────────────────┐   │
+│  │         Sales Cloud                 │   │
+│  │   Accounts, Contacts, Opportunities │   │
+│  └─────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────┐   │
+│  │        Service Cloud                │   │
+│  │      Cases, Knowledge Base          │   │
+│  └─────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────┐   │
+│  │        Custom Apps (Lightning)      │   │
+│  │   Project Tracking, Asset Mgmt      │   │
+│  └─────────────────────────────────────┘   │
+└─────────────────────────────────────────────┘
+              │
+              ▼ (Integration platform)
+┌─────────────────────────────────────────────┐
+│    MuleSoft / External APIs                 │
+└─────────────────────────────────────────────┘
+              │
+              ▼
+┌─────────────────────────────────────────────┐
+│   ERP, Data Warehouse, Legacy Systems       │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+## Should You Choose Lightning?
+
+**Yes, if:**
+- Salesforce is your CRM
+- Your use cases are CRM-adjacent
+- You have Salesforce skills in-house
+- AppExchange has solutions you need
+
+**Probably not, if:**
+- You're not already a Salesforce customer
+- Use cases are outside CRM
+- Budget is constrained
+- You want to avoid vendor lock-in
+
+---
+
+## Next Episode
+
+In Episode 10, we explore **ServiceNow App Engine** — the IT department's favorite platform. When ITSM meets low-code.
+
+---
+
+*Is your organization a Salesforce shop? How do you decide between extending Salesforce vs. using other platforms?*

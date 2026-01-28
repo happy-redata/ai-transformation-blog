@@ -1,0 +1,149 @@
+---
+title: "Bus-faktoren: Når Lars går på pension"
+excerpt: "Lars byggede 47 Power Apps over 5 år. Han forstod hver formel, hvert flow. Lars er lige gået på pension. Hvad nu?"
+date: 2026-03-06
+tags: ["Low Code", "Videnshåndtering", "Risiko", "Dokumentation", "Bæredygtighed"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep12-busfactor.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 12
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+Lad mig fortælle dig om Lars.
+
+Lars er 62. Han har været i firmaet i 30 år. Da Power Apps udkom, var han begejstret. Excel-troldmanden han var, så han straks potentialet.
+
+Over de seneste 5 år har Lars bygget:
+- 47 Power Apps (Canvas og Model-Driven)
+- 94 Power Automate flows
+- 12 Power BI-rapporter
+- Utallige Dataverse-tilpasninger
+
+Hver afdeling elsker Lars. Han løste deres problemer. Han byggede apps der faktisk virker.
+
+**Lars har lige annonceret sin pension.**
+
+Og pludselig spørger alle det samme spørgsmål:
+
+> *"Hvem forstår Lars's apps?"*
+
+Svaret: **Ingen.**
+
+---
+
+## Bus-faktoren
+
+I softwareengineering er der en metrik kaldet **bus-faktoren**:
+
+> *Hvor mange personer skulle blive ramt af en bus før projektet er i alvorlige problemer?*
+
+Hvis svaret er "én" — har du et problem.
+
+For de fleste citizen-udviklede low-code apps er bus-faktoren præcis én.
+
+**Én person:**
+- Forstår logikken
+- Kender datakilderne
+- Husker forretningsreglerne
+- Har admin-adgangskoderne
+
+Når den person forlader — gennem pension, nyt job, sygdom, eller ja, en faktisk bus — forlader viden med dem.
+
+---
+
+## Hvad Lars tog med sig
+
+Lad os inventere hvad Lars's afgang betyder:
+
+### 1. Udokumenteret logik
+
+Lars vidste *hvorfor* hver formel var skrevet:
+- "Dette filter udelukker inaktive kunder fordi..."
+- "Vi springer dette trin over når beløbet er under 1000 fordi..."
+- "Den komplekse datologik håndterer regnskabsår anderledes fordi..."
+
+Intet af dette er dokumenteret. Formlerne virker, men ingen ved hvorfor.
+
+### 2. Stammeviden
+
+Lars kendte *konteksten*:
+- "Denne app blev bygget fordi økonomi havde brug for den efter fusionen"
+- "Rør ikke forbindelsen til det gamle ERP — den er skrøbelig"
+- "CEO'en bruger dette dashboard hver mandag; ændr det ikke"
+
+Denne kontekst eksisterer kun i Lars's hoved.
+
+### 3. Forbindelseshemmeligheder
+
+Lars satte servicekontiene op:
+- Email-adressen til automatiske notifikationer
+- API-nøglen til den eksterne service
+- Legitimationsoplysningerne til den delte postkasse
+
+Nogle af disse er i Lars's personlige password-manager. Andre er i hans hukommelse.
+
+---
+
+## Dagen efter Lars forlader
+
+Her er hvad der typisk sker:
+
+**Uge 1:**
+"Alt ser fint ud. Lars efterlod noter, ikke?"
+(Lars efterlod et 2-siders Word-dokument der allerede er forældet.)
+
+**Uge 3:**
+"Økonomi-appen stoppede med at virke. Kan nogen kigge på det?"
+(Ingen ved hvor de skal starte. Fejlmeddelelsen er kryptisk.)
+
+**Uge 6:**
+"Vi skal tilføje et felt til kundeformularen."
+(Nogen laver en ændring. Det bryder tre andre apps uventet.)
+
+**Måned 3:**
+"Vi burde bare genopbygge denne app."
+(Genopbygningen tager 6 måneder fordi ingen forstod kravene første gang.)
+
+**År 1:**
+"Vi har stadig 30 af Lars's apps kørende. Vi er bange for at røre dem."
+
+---
+
+## "3-2-1 Reglen"
+
+Hos Happy Mates håndhæver vi en simpel regel for enhver forretningskritisk app:
+
+- **3** personer forstår hvordan den virker
+- **2** personer kan lave ændringer
+- **1** person er ansvarlig for den
+
+Dette sikrer at bus-faktoren aldrig er én.
+
+---
+
+## Start samtalen
+
+Hvis du genkender din organisation i denne historie, her er hvordan du starter:
+
+1. **Inventér dine apps** — Hvem byggede dem? Hvem forstår dem?
+2. **Identificér enpersons-afhængigheder** — Hvilke apps har en bus-faktor på én?
+3. **Prioritér efter kritikalitet** — Fokusér på forretningskritiske apps først
+4. **Begynd at dokumentere** — Selv basal dokumentation er bedre end ingen
+5. **Planlæg for overgange** — Hver bygger bør have en backup
+
+---
+
+## Næste episode
+
+Bus-faktoren handler om mennesker. Episode 13 handler om den *dokumentationsgæld* de efterlader — og hvordan man betaler den ned inden det er for sent.
+
+---
+
+*Har din organisation en "Lars"? Hvad er jeres plan for når de forlader?*

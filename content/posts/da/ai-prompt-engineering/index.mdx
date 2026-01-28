@@ -1,0 +1,241 @@
+---
+contentVersion: 1.0.0
+title: "Prompt Engineering: Lad AI'en Skrive Dine Prompts"
+excerpt: "Det sværeste ved at bruge AI er ikke teknologien. Det er at vide, hvad man skal bede om. Lær at lade AI'en hjælpe dig med at formulere de perfekte instruktioner."
+date: 2026-01-07
+tags: ["AI", "Prompt Engineering", "Vibe Coding", "Begynderguide", "Agentic AI"]
+author: "Happy Mates Redaktionen"
+heroImage: "/images/hero-ai-prompt-engineering.png"
+heroImageCredit: "Gemini / Imagen 3"
+aiTools: ["GitHub Copilot", "Gemini", "Antigravity"]
+status: "published"
+series:
+  slug: "agentic-ai-for-dummies"
+  episode: 2
+  totalEpisodes: 4
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+footnotes:
+  - text: "Prompt engineering er blevet anerkendt som en kritisk færdighed i AI-æraen."
+    source: "MIT Technology Review"
+    url: "https://www.technologyreview.com/2023/02/21/1068893/how-prompt-engineering-can-make-you-a-better-programmer/"
+---
+
+<Speak>Velkommen til anden episode i serien Agentic A-I for Dummies. I dag lærer vi kunsten at tale med A-I — og hvordan du kan lade A-I'en skrive de perfekte prompts for dig.</Speak>
+
+Du har installeret <Voice text="GitHub Co-pilot">GitHub Copilot</Voice>. Du er klar til at bygge noget fantastisk. Du skriver:
+
+*"Lav en app til mig"*
+
+Og <Voice text="A-I'en">AI'en</Voice> svarer med... noget. Måske en Hello World. Måske en halvfærdig skabelon. Men ikke det, du forestillede dig.
+
+**Velkommen til prompt engineering.**
+
+---
+
+## Hvorfor "Lav en app" Aldrig Virker
+
+Forestil dig, at du beder en arkitekt om at "bygge et hus". Arkitekten ville naturligt spørge:
+
+- Hvor mange værelser?
+- Hvilken stil?
+- Hvad er budgettet?
+- Hvem skal bo der?
+
+Uden disse detaljer får du... noget. Men næppe det, du forestillede dig.
+
+Det samme gælder for <Voice text="A-I">AI</Voice>. Jo mere specifik din instruktion, jo bedre resultatet.
+
+---
+
+## Promptens Anatomi
+
+Et godt prompt har tre dele:
+
+### 1. Kontekst — Hvem taler du til?
+
+*"Du er en erfaren TypeScript-udvikler, der bygger en moderne React-applikation med Next.js."*
+
+### 2. Instruktion — Hvad skal der ske?
+
+*"Opret en komponent, der viser en brugers profilkort med navn, billede og en kort biografi."*
+
+### 3. Begrænsninger — Hvad er rammerne?
+
+*"Brug Tailwind CSS til styling. Komponenten skal være responsiv og tilgængelig. Ingen eksterne afhængigheder."*
+
+<View>
+Samlet ser det sådan ud:
+</View>
+
+```
+Du er en erfaren TypeScript-udvikler, der bygger en moderne 
+React-applikation med Next.js.
+
+Opret en komponent, der viser en brugers profilkort med 
+navn, billede og en kort biografi.
+
+Brug Tailwind CSS til styling. Komponenten skal være 
+responsiv og tilgængelig. Ingen eksterne afhængigheder.
+```
+
+Nu har <Voice text="A-I'en">AI'en</Voice> nok information til at give et kvalificeret bud.
+
+---
+
+## Det Geniale Trick: Lad <Voice text="A-I'en">AI'en</Voice> Skrive Dine Prompts
+
+Her kommer hemmeligheden, som de fleste overser:
+
+> **Du behøver ikke være god til at skrive prompts. Du skal bare bede <Voice text="A-I'en">AI'en</Voice> om at hjælpe dig med det.**
+
+Prøv dette:
+
+*"Jeg vil bygge en countdown-timer til et event. Hjælp mig med at formulere en detaljeret specifikation, som en udvikler kan bruge til at implementere det."*
+
+<Voice text="A-I'en">AI'en</Voice> vil svare med noget i stil med:
+
+```
+## Countdown Timer Specifikation
+
+### Oversigt
+En visuel countdown-timer der viser tid til et specificeret 
+fremtidigt event.
+
+### Funktionelle krav
+1. Viser dage, timer, minutter og sekunder
+2. Opdaterer i realtid (hver sekund)
+3. Viser en besked når eventet er nået
+4. Tillader konfiguration af event-dato via props
+
+### Tekniske krav
+- React funktionel komponent med hooks
+- TypeScript for type-sikkerhed
+- Pure CSS animation (ingen tunge biblioteker)
+- Responsivt design
+
+### Edge cases
+- Håndtering af fortidige datoer
+- Tidszoner
+- Browser-fokus (pause når tab er inaktiv?)
+```
+
+Nu har du en specifikation, du kan bruge. Du kan endda give den *tilbage* til <Voice text="A-I'en">AI'en</Voice> og sige: *"Implementer denne specifikation."*
+
+---
+
+## Fra Idé til Digitalt Produkt: Trin-for-Trin
+
+Her er den komplette workflow:
+
+### Trin 1: Beskriv din drøm
+
+Start med naturligt sprog. Ingen tekniske termer nødvendige.
+
+*"Jeg vil have en hjemmeside, hvor man kan holde styr på, hvilke bøger man har læst."*
+
+### Trin 2: Bed <Voice text="A-I'en">AI'en</Voice> om en specifikation
+
+*"Hjælp mig med at lave en detaljeret teknisk specifikation for denne idé. Inkluder datamodel, brugerflow og teknologivalg."*
+
+### Trin 3: Gennemgå og juster
+
+Læs specifikationen. Tilføj, fjern, juster. Er der noget, du ikke forstår? Spørg <Voice text="A-I'en">AI'en</Voice>:
+
+*"Forklar hvorfor du valgte PostgreSQL fremfor SQLite til dette projekt."*
+
+### Trin 4: Lad <Voice text="A-I'en">AI'en</Voice> implementere
+
+*"Implementer step 1 fra specifikationen: Datamodellen i Prisma."*
+
+### Trin 5: Iterér med feedback
+
+*"Tilføj et felt til 'rating' på bog-modellen. Det skal være et tal mellem 1 og 5."*
+
+Gentag trin 4 og 5, indtil du har et færdigt produkt.
+
+---
+
+## Praktisk Eksempel: En Simpel Countdown
+
+Lad os gennemgå processen fra start til slut.
+
+### Idé (naturligt sprog)
+*"Jeg vil have en timer, der tæller ned til nytår."*
+
+### Prompt til specifikation
+*"Jeg vil bygge en nytårs-countdown-timer i React. Lav en detaljeret specifikation."*
+
+### <Voice text="A-I'ens">AI'ens</Voice> specifikation
+```
+## Nytårs-Countdown Specifikation
+
+### Komponent: NewYearCountdown
+
+**Props:**
+- targetYear: number (standard: næste år)
+
+**Visning:**
+- Dage, timer, minutter, sekunder i separate bokse
+- Festlig styling med konfetti-effekt ved nytår
+- "Godt nytår!"-besked når nedtællingen er færdig
+
+**Tekniske detaljer:**
+- useState for tidsværdier
+- useEffect med 1-sekunds interval
+- Cleanup ved unmount
+```
+
+### Prompt til implementering
+*"Implementer NewYearCountdown-komponenten baseret på denne specifikation."*
+
+### Resultat
+En fungerende React-komponent, klar til brug.
+
+---
+
+## Almindelige Fejl (og Hvordan Du Undgår Dem)
+
+| Fejl | Problem | Løsning |
+|------|---------|---------|
+| **For vagt** | "Lav noget fedt" → tilfældigt output | Vær specifik om funktioner og stil |
+| **For detaljeret** | 2000 ord → forvirret <Voice text="A-I">AI</Voice> | Byg op i trin, ikke alt på én gang |
+| **Ingen iteration** | Accepterer første forslag | Bed om alternativer, forbedr løbende |
+| **Ingen verifikation** | "Det ser rigtigt ud" | Test altid koden, læs den igennem |
+
+---
+
+## Specifikations-Skabeloner
+
+Her er tre skabeloner, du kan genbruge:
+
+### Til nye features
+*"Jeg har en eksisterende [type app] i [teknologi]. Hjælp mig med at specificere en ny feature: [beskrivelse]. Inkluder integration med eksisterende kode."*
+
+### Til refaktorering
+*"Analyser denne kode: [indsæt kode]. Identificer forbedringer og foreslå en refaktoreringsplan."*
+
+### Til debugging
+*"Jeg får denne fejl: [fejlmeddelelse]. Kontekst: [hvad koden forsøger at gøre]. Hjælp mig med at finde og løse problemet."*
+
+---
+
+## Opsummering
+
+| Fra | Til |
+|-----|-----|
+| "Lav en app til mig" | Kontekst + Instruktion + Begrænsninger |
+| Kæmper med at formulere prompts | Lader <Voice text="A-I'en">AI'en</Voice> hjælpe med specifikationen |
+| Accepterer første forslag | Itererer og forbedrer løbende |
+| Håber det virker | Verificerer og tester altid |
+
+---
+
+**Bundlinje:** Det sværeste ved at bruge <Voice text="A-I">AI</Voice> er ikke teknologien — det er at vide, hvad man skal bede om. Men her er hemmeligheden: Du kan bede <Voice text="A-I'en">AI'en</Voice> om at hjælpe dig med *det* også.
+
+I næste episode introducerer vi **GitHub** — platformen, hvor kode lever, samarbejdes om, og automatisk deployes. Repositories, Issues, Pull Requests og Actions: Alle byggeklodserne, du skal bruge for at arbejde professionelt med <Voice text="A-I">AI</Voice>.
+
+---
+
+*Hvad nu hvis din næste projektbeskrivelse ikke blev skrevet af dig — men af <Voice text="A-I'en">AI'en</Voice> selv, baseret på dine drømme?*

@@ -1,0 +1,307 @@
+---
+title: "Power Automate: Den usynlige arbejdshest"
+excerpt: "Fra Microsoft Flow til Power Automate. Cloud flows, desktop RPA, forretningsprocesser. Her er automationsmotoren der forbinder alt."
+date: 2025-12-12
+tags: ["Low Code", "Power Automate", "Automation", "RPA", "Workflow"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep6-automate.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 6
+  totalEpisodes: 16
+audio:
+  defaultVoice: "da-DK-ChristelNeural"
+  language: "da-DK"
+---
+
+Hver dag kører millioner af workflows stille i baggrunden.
+
+En email ankommer. En opgave oprettes i Planner.  
+Et SharePoint-element opdateres. En Teams-besked postes.  
+En godkendelsesanmodning sendes. En chef klikker "Godkend." Dokumenter genereres.
+
+**Ingen ser dem arbejde. Alle bemærker når de bryder sammen.**
+
+Velkommen til Power Automate — Power Platforms usynlige arbejdshest.
+
+---
+
+## Udviklingen
+
+Før vi dykker ned, lad os spore historien:
+
+```
+November 2016: Microsoft Flow lanceres
+                → "IFTTT for enterprise"
+                → Simple trigger-action flows
+
+Oktober 2019:  Rebrandet til Power Automate
+                → Del af "Power Platform"-familien
+                → Desktop flows (RPA) tilføjet
+
+2020-2023:     Hurtig ekspansion
+                → Process mining integration
+                → AI Builder actions
+                → Copilot-assistance
+
+2024+:         AI-native automation
+                → Natural language flow-oprettelse
+                → Autonome agenter via Copilot Studio
+```
+
+**Hvorfor dette er vigtigt:** Gamle tutorials siger "Microsoft Flow." Nye funktioner kræver "Power Automate Premium." At forstå udviklingen hjælper dig med at navigere dokumentationskaos.
+
+---
+
+## Tre produkter, ét navn
+
+Power Automate er ikke én ting. Det er tre:
+
+### 1. Cloud Flows
+**Hvad:** Event-drevet automation i Microsofts cloud  
+**Trigger-eksempler:**
+- "Når en ny email ankommer"
+- "Når et SharePoint-element oprettes"
+- "Når en HTTP-anmodning modtages"
+
+**Brugsscenarier:**
+- Notifikationer og alerts
+- Datasynkronisering mellem systemer
+- Godkendelsesworkflows
+- Planlagte rapporter
+
+### 2. Desktop Flows (RPA)
+**Hvad:** Robotic Process Automation på din Windows-maskine  
+**Kapabilitet:** Klik knapper, skriv tekst, naviger legacy-applikationer  
+
+**Brugsscenarier:**
+- Automatisering af legacy-systemer uden API'er
+- Screen scraping fra gamle applikationer
+- Brobygning mellem moderne og legacy-systemer
+
+**Virkelighedscheck:** Desktop flows kræver en kørende maskine. De er skrøbelige — UI-ændringer bryder dem.
+
+### 3. Business Process Flows
+**Hvad:** Guidede stage-gate workflows for Dataverse  
+**Visuelt:** 
+```
+Lead → Kvalificér → Udvikl → Tilbyd → Luk
+```
+
+**Brugsscenarier:**
+- Salgspipelines
+- Sagsløsningsprocesser
+- Onboarding-workflows
+- Enhver flerfaset forretningsproces
+
+**Krav:** Dataverse (disse virker ikke med SharePoint)
+
+---
+
+## Anatomien af et Cloud Flow
+
+Hvert cloud flow har samme struktur:
+
+```
+┌─────────────┐
+│   TRIGGER   │  ← Hvad starter flowet
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│   AKTION 1  │  ← Hvad sker der
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│   AKTION 2  │
+└──────┬──────┘
+       │
+      ...
+```
+
+### Trigger-typer
+
+| Type | Beskrivelse | Eksempel |
+|------|-------------|----------|
+| **Automatiseret** | Event-drevet | Når en fil oprettes i SharePoint |
+| **Øjeblikkelig** | Knaptryk | Bruger trykker "Indsend" i Power Apps |
+| **Planlagt** | Tidsbaseret | Hver mandag kl. 9 |
+
+### Almindelige handlinger
+
+- **Send en email** (Outlook)
+- **Post en besked** (Teams)
+- **Opret element** (SharePoint, Dataverse)
+- **HTTP-anmodning** (kald enhver API)
+- **Betingelse** (if/then logik)
+- **Anvend på hver** (loop over elementer)
+- **Hent elementer** (forespørg data)
+
+---
+
+## Connector-økosystemet
+
+Power Automates virkelige kraft er dets connectorer:
+
+| Kategori | Eksempler | Antal |
+|----------|----------|-------|
+| **Microsoft** | SharePoint, Outlook, Teams, Dynamics | 50+ |
+| **Standard** | Twitter, Dropbox, Salesforce | 300+ |
+| **Premium** | SQL Server, SAP, HTTP | 200+ |
+| **Custom** | Dine egne API'er | Ubegrænset |
+
+**Hagen:** Standard-connectorer er inkluderet. Premium-connectorer kræver Premium-licensering.
+
+---
+
+## Byg dit første flow
+
+Lad os bygge et klassiker: **Chefgodkendelse af ferieanmodninger.**
+
+### Trin 1: Vælg din trigger
+"Når et nyt svar indsendes" (Microsoft Forms)
+
+### Trin 2: Hent svardetaljer
+"Hent svardetaljer" — henter de faktiske svar
+
+### Trin 3: Start godkendelse
+"Start og vent på en godkendelse"
+- Godkendelsestype: Godkend/Afvis
+- Titel: "Ferieanmodning fra [Medarbejder]"
+- Tildelt til: [Chef-email]
+
+### Trin 4: Håndter resultatet
+Betingelse: Hvis godkendelse er "Godkend"
+- **Ja:** Send bekræftelsesmail, opdater SharePoint-liste
+- **Nej:** Send afvisningsmail med kommentarer
+
+### Trin 5: Test og publicer
+Kør flowet manuelt. Indsend en testformular. Verificer at godkendelsesmailen ankommer.
+
+---
+
+## Avancerede mønstre
+
+### Mønster 1: Fejlhåndtering
+
+Flows fejler. Connectorer timer ud. API'er returnerer fejl.
+
+**Fælden:** Som standard stopper en fejlet handling hele flowet.
+
+**Løsningen:** Brug "Configure run after" til at håndtere fejl:
+```
+Handling 1
+    ↓
+Handling 2 (kør kun efter Handling 1 lykkes)
+    ↓
+Fejlhåndterer (kør kun efter Handling 2 fejler)
+```
+
+### Mønster 2: Parallelle grene
+
+Vent ikke unødvendigt:
+```
+Trigger
+   ├──→ Send email til HR
+   ├──→ Opret Planner-opgave
+   └──→ Post til Teams-kanal
+```
+
+Alle tre handlinger kører samtidigt.
+
+### Mønster 3: Forældre-barn flows
+
+Bryd kompleks logik op i genbrugelige dele:
+- **Forældre-flow:** Orkestrerer processen
+- **Barn-flows:** Håndterer specifikke opgaver
+- **Fordel:** Nemmere debugging, genbrugelige komponenter
+
+### Mønster 4: 30-dages problemet
+
+Cloud flows har en maksimal varighed: **30 dage**.
+
+Hvis din godkendelse sidder ugodkendt i 31 dage, timer flowet ud.
+
+**Workaround:** 
+- Brug "Do until" loops med manuel timeout-håndtering
+- Gem tilstand i SharePoint/Dataverse
+- Byg stateless flows der kan genoptage
+
+---
+
+## De skjulte fælder
+
+### 1. Connector-throttling
+
+Hver connector har rate limits:
+- SharePoint: 600 requests per minut
+- Dataverse: 6.000 requests per minut
+- HTTP: varierer efter mål
+
+Rammer du grænsen? Dit flow sænker fart eller fejler.
+
+**Afbødning:** Batch-operationer, tilføj delays, brug paginering.
+
+### 2. Trigger-betingelser (Filtrér først!)
+
+Uden trigger-betingelser kører flows ved *hver* event.
+
+**Dårligt:** Flow trigger når *ethvert* SharePoint-element ændres  
+**Godt:** Flow trigger kun når Status = "Indsendt"
+
+Brug trigger-betingelser til at filtrere ved kilden.
+
+### 3. Flow-ejerskab
+
+Flows kører som personen der oprettede dem.
+
+Når den person forlader virksomheden? Deres flows stopper med at virke.
+
+**Løsning:** Brug servicekonti eller flow-ejerskabsoverførsel.
+
+### 4. Spaghetti-flowet
+
+Det er nemt at skabe rod:
+- 50 handlinger i ét flow
+- Copy-pastede expressions overalt
+- Ingen dokumentation
+
+Efter 6 måneder bliver debugging til arkæologi.
+
+---
+
+## Licensvirkelighed
+
+| Licens | Hvad du får |
+|--------|-------------|
+| **Microsoft 365** | Begrænset Power Automate (standard connectorer, 2.000 kørsler/dag) |
+| **Power Automate Premium** (~15$/bruger/måned) | Ubegrænsede kørsler, premium connectorer, desktop flows |
+| **Per-flow** (~100$/flow/måned) | Ubegrænsede brugere for specifikke flows |
+
+For enterprise-automation, forvent Premium-licensering.
+
+---
+
+## Hvornår Power Automate ikke er nok
+
+Overvej alternativer når:
+
+| Signal | Overvej |
+|--------|---------|
+| Har brug for real-time, sub-sekund responser | Azure Functions/Logic Apps |
+| Komplekse datatransformationer | Azure Data Factory |
+| Langvarige orkestreringer (måneder) | Durable Functions |
+| Heavy-duty RPA i skala | UI Path, Blue Prism |
+
+Power Automate er fremragende til forretningsworkflows. For ekstrem skala eller kompleksitet, kig på pro-code muligheder.
+
+---
+
+## Næste episode
+
+I Episode 7 dykker vi ned i **Copilot Studio** — det mest rebrandede produkt i Microsofts historie. Fra Power Virtual Agents til AI-agenter: hvad ændrede sig, og hvorfor det betyder noget.
+
+---
+
+*Hvad er det mest komplekse flow du har bygget? Hvor ramte Power Automate sine grænser?*

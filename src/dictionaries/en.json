@@ -1,0 +1,44 @@
+{
+    "home": {
+        "title": "Voice of Happy Mates",
+        "subtitle": "A series of articles about AI, digital transformation, and modern software development",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "listen": "Listen",
+        "readMore": "Read more",
+        "minutes": "minutes"
+    },
+    "nav": {
+        "signIn": "Sign In",
+        "signOut": "Sign Out",
+        "hi": "Hi",
+        "findStories": "Find stories"
+    },
+    "footer": {
+        "copyright": "All rights reserved."
+    },
+    "dates": {
+        "dateFormat": "en-US"
+    },
+    "success": {
+        "title": "Thank you for your order!",
+        "description": "Your payment was successful, and your membership is now active.",
+        "confirmation": "A confirmation has been sent to",
+        "whatNext": "What happens now?",
+        "nextStep1": "You now have access to PRO content.",
+        "nextStep2": "Login with your email to see your benefits.",
+        "nextStep3": "Check your inbox for a welcome email.",
+        "homeButton": "Go to Home",
+        "loginButton": "Log in"
+    },
+    "values": {
+        "title1": "We Are Our Members",
+        "desc1": "We are driven by the desire to make a difference. We are a society, not a business. We focus 100% on creating the best environment for our Mates.",
+        "title2": "Uniting Tech & Well-being",
+        "desc2": "We don’t stop at the surface. We dive deep into code and technology, but we always remember the human behind the screen through physical activity and community.",
+        "title3": "Making Knowledge Accessible",
+        "desc3": "All our blog posts and updates are available as audio, so you can listen on the go – whether you prefer text or speech.",
+        "title4": "Building Community",
+        "desc4": "We build more than just code. We create a unique community where being a 'nerd' is a superpower. Through events, Padel, and projects, you meet like-minded people."
+    }
+}

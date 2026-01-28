@@ -1,0 +1,86 @@
+---
+contentVersion: 1.0.0
+title: "Zero Trust for Dummies: Når Software selv har sit Pas med"
+excerpt: "Jeg stoler ikke på nogen. Heller ikke min egen software. Her er den simple forklaring på, hvordan et lille manifest gør hele forskellen."
+date: 2026-01-06
+tags: ["AI", "Zero Trust", "Software Control", "Sikkerhed"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-zero-trust-dummies.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Claude Code", "GitHub Copilot", "Azure"]
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "narrator"
+  backgroundMusic: "/audio/music/ambient-tech.mp3"
+  language: "da-DK"
+---
+
+<Music track="ambient-tech" action="fade-in" />
+
+<Speaker voice="narrator" name="Fortæller">
+Vi lever i en verden, hvor vi downloader apps og udvidelser hele tiden. Men ved du egentlig, hvad du lukker ind? Jeg gør ikke. Derfor har jeg én simpel regel: Stol ikke på nogen.
+</Speaker>
+
+<Pause duration={1.5} />
+
+Det kaldes **<Voice text="Zero Trust">Zero Trust</Voice>**. Det lyder kompliceret, men det er faktisk barnlig simpelt.
+
+<Music track="ambient-tech" action="fade-out" />
+
+## Hvorfor er min software pludselig mistænkelig?
+
+<Speaker voice="narrator">
+I gamle dage stolede vi på alt, der var "indenfor murene". Hvis det var på kontorets netværk, var det sikkert. Men i dag findes der ikke længere mure.
+</Speaker>
+
+Når jeg installerer en udvidelse som "The <Voice text="Magic Button">Magic Button</Voice>", aner jeg ikke, om den begynder at kigge mine passwords over skulderen. I en <Voice text="Zero Trust">Zero Trust</Voice> verden er softwaren altid under mistanke – indtil den har bevist det modsatte.
+
+## Softwarens Pas: Manifestet
+
+<Speaker voice="host" name="Vært">
+Ligesom du ikke kan rejse til udlandet uden pas, kan vores software ikke køre uden sit eget pas. Vi kalder det et manifest.
+</Speaker>
+
+Det er bare en lille tekstfil (en <Voice text="YAML-fil">YAML-fil</Voice>), der står på softwarens skrivebord. Her står der præcis:
+*   **Hvem jeg er:** Identiteten på appen.
+*   **Hvad jeg må:** Hvilke data og lister jeg har lov til at røre.
+*   **Hvor jeg må gå hen:** Hvilke netværk jeg må tale med.
+
+<SoundEffect name="success-chime" />
+
+Hvis softwaren prøver at gøre noget, der ikke står i passet, bliver den stoppet med det samme. Ingen diskussion.
+
+## Maskinrummet for Dummies
+
+<Speaker voice="narrator">
+Det smarte er, at vi har automatiseret tilliden.
+</Speaker>
+
+Når jeg ændrer noget i vores <Voice text="Zero Trust">Zero Trust</Voice> app, kigger systemet på det gamle pas og det nye pas. Hvis der er forskel, laver systemet selv de nødvendige ændringer (vi kalder det <Voice text="Migrations">Migrations</Voice>). 
+
+Det betyder:
+1.  **Ingen ubehagelige overraskelser:** Softwaren får aldrig adgang til noget, vi ikke eksplicit har godkendt.
+2.  **<Voice text="A-I">AI</Voice> kan hjælpe:** Fordi alt er beskrevet i passet, kan <Voice text="A-I'en">AI'en</Voice> hjælpe os med at tjekke, om alt er sikkert, før vi overhovedet trykker "Installer".
+
+<SoundEffect name="keyboard-typing" />
+
+## Skåret helt ind til benet
+
+<Music track="conclusion" action="fade-in" />
+
+<Speaker voice="narrator">
+<Voice text="Zero Trust">Zero Trust</Voice> er ikke en teknologi. Det er en holdning.
+</Speaker>
+
+Det handler om at tage kontrollen tilbage. Ved at bruge et manifest sørger vi for, at vores software altid har sit pas med – og at vi ved præcis, hvem vi lukker ind i vores digitale hjem.
+
+<Pause duration={1.5} />
+
+<Emphasis type="question">**Har din software sit pas med i dag?**</Emphasis>
+
+<Music track="conclusion" action="fade-out" />
+
+---
+
+*I de næste indlæg kigger vi på de forskellige niveauer af sikkerhed – fra L100 for den hurtige installation til L400 for dem, der vil tjekke hver eneste linje kode.*

@@ -1,0 +1,307 @@
+---
+title: "Power Automate: The Invisible Workhorse"
+excerpt: "From Microsoft Flow to Power Automate. Cloud flows, desktop RPA, business processes. Here's the automation engine that connects everything."
+date: 2025-12-12
+tags: ["Low Code", "Power Automate", "Automation", "RPA", "Workflow"]
+author: "Happy Mates Editorial"
+heroImage: "/images/hero-lowcode-ep6-automate.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+series:
+  slug: lowcode-for-dummies
+  episode: 6
+  totalEpisodes: 16
+audio:
+  defaultVoice: "en-US-JennyNeural"
+  language: "en-US"
+---
+
+Every day, millions of workflows run silently in the background.
+
+An email arrives. A task is created in Planner.  
+A SharePoint item is updated. A Teams message is posted.  
+An approval request is sent. A manager clicks "Approve." Documents are generated.
+
+**Nobody sees them work. Everyone notices when they break.**
+
+Welcome to Power Automate — the invisible workhorse of the Power Platform.
+
+---
+
+## The Evolution
+
+Before we dive in, let's trace the history:
+
+```
+November 2016: Microsoft Flow launches
+                → "IFTTT for enterprise"
+                → Simple trigger-action flows
+
+October 2019:  Rebranded to Power Automate
+                → Part of the "Power Platform" family
+                → Desktop flows (RPA) added
+
+2020-2023:     Rapid expansion
+                → Process mining integration
+                → AI Builder actions
+                → Copilot assistance
+
+2024+:         AI-native automation
+                → Natural language flow creation
+                → Autonomous agents via Copilot Studio
+```
+
+**Why this matters:** Old tutorials say "Microsoft Flow." New features require "Power Automate Premium." Understanding the evolution helps you navigate the documentation chaos.
+
+---
+
+## Three Products, One Name
+
+Power Automate isn't one thing. It's three:
+
+### 1. Cloud Flows
+**What:** Event-driven automation in Microsoft's cloud  
+**Trigger examples:**
+- "When a new email arrives"
+- "When a SharePoint item is created"
+- "When an HTTP request is received"
+
+**Use cases:**
+- Notifications and alerts
+- Data synchronization between systems
+- Approval workflows
+- Scheduled reports
+
+### 2. Desktop Flows (RPA)
+**What:** Robotic Process Automation on your Windows machine  
+**Capability:** Click buttons, type text, navigate legacy applications  
+
+**Use cases:**
+- Automating legacy systems without APIs
+- Screen scraping from old applications
+- Bridging between modern and legacy systems
+
+**Reality check:** Desktop flows require a machine to be running. They're brittle — UI changes break them.
+
+### 3. Business Process Flows
+**What:** Guided stage-gate workflows for Dataverse  
+**Visual:** 
+```
+Lead → Qualify → Develop → Propose → Close
+```
+
+**Use cases:**
+- Sales pipelines
+- Case resolution processes
+- Onboarding workflows
+- Any multi-stage business process
+
+**Requirement:** Dataverse (these don't work with SharePoint)
+
+---
+
+## Anatomy of a Cloud Flow
+
+Every cloud flow has the same structure:
+
+```
+┌─────────────┐
+│   TRIGGER   │  ← What starts the flow
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│   ACTION 1  │  ← What happens
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│   ACTION 2  │
+└──────┬──────┘
+       │
+      ...
+```
+
+### Trigger Types
+
+| Type | Description | Example |
+|------|-------------|---------|
+| **Automated** | Event-driven | When a file is created in SharePoint |
+| **Instant** | Button click | User presses "Submit" in Power Apps |
+| **Scheduled** | Time-based | Every Monday at 9 AM |
+
+### Common Actions
+
+- **Send an email** (Outlook)
+- **Post a message** (Teams)
+- **Create item** (SharePoint, Dataverse)
+- **HTTP request** (call any API)
+- **Condition** (if/then logic)
+- **Apply to each** (loop over items)
+- **Get items** (query data)
+
+---
+
+## The Connector Ecosystem
+
+Power Automate's real power is its connectors:
+
+| Category | Examples | Count |
+|----------|----------|-------|
+| **Microsoft** | SharePoint, Outlook, Teams, Dynamics | 50+ |
+| **Standard** | Twitter, Dropbox, Salesforce | 300+ |
+| **Premium** | SQL Server, SAP, HTTP | 200+ |
+| **Custom** | Your own APIs | Unlimited |
+
+**The catch:** Standard connectors are included. Premium connectors require Premium licensing.
+
+---
+
+## Building Your First Flow
+
+Let's build a classic: **Manager approval for vacation requests.**
+
+### Step 1: Choose your trigger
+"When a new response is submitted" (Microsoft Forms)
+
+### Step 2: Get response details
+"Get response details" — pulls the actual answers
+
+### Step 3: Start approval
+"Start and wait for an approval"
+- Approval type: Approve/Reject
+- Title: "Vacation request from [Employee]"
+- Assigned to: [Manager email]
+
+### Step 4: Handle the outcome
+Condition: If approval is "Approve"
+- **Yes:** Send confirmation email, update SharePoint list
+- **No:** Send rejection email with comments
+
+### Step 5: Test and publish
+Run the flow manually. Submit a test form. Verify the approval email arrives.
+
+---
+
+## Advanced Patterns
+
+### Pattern 1: Error Handling
+
+Flows fail. Connectors time out. APIs return errors.
+
+**The trap:** By default, a failed action stops the entire flow.
+
+**The fix:** Use "Configure run after" to handle failures:
+```
+Action 1
+    ↓
+Action 2 (only run after Action 1 succeeds)
+    ↓
+Error Handler (only run after Action 2 fails)
+```
+
+### Pattern 2: Parallel Branches
+
+Don't wait unnecessarily:
+```
+Trigger
+   ├──→ Send email to HR
+   ├──→ Create Planner task
+   └──→ Post to Teams channel
+```
+
+All three actions run simultaneously.
+
+### Pattern 3: Parent-Child Flows
+
+Break complex logic into reusable pieces:
+- **Parent flow:** Orchestrates the process
+- **Child flows:** Handle specific tasks
+- **Benefit:** Easier debugging, reusable components
+
+### Pattern 4: The 30-Day Problem
+
+Cloud flows have a maximum duration: **30 days**.
+
+If your approval sits unapproved for 31 days, the flow times out.
+
+**The workaround:** 
+- Use "Do until" loops with manual timeout handling
+- Store state in SharePoint/Dataverse
+- Build stateless flows that can resume
+
+---
+
+## The Hidden Gotchas
+
+### 1. Connector Throttling
+
+Every connector has rate limits:
+- SharePoint: 600 requests per minute
+- Dataverse: 6,000 requests per minute
+- HTTP: varies by target
+
+Hit the limit? Your flow slows down or fails.
+
+**Mitigation:** Batch operations, add delays, use pagination.
+
+### 2. Trigger Conditions (Filter First!)
+
+Without trigger conditions, flows run on *every* event.
+
+**Bad:** Flow triggers when *any* SharePoint item changes  
+**Good:** Flow triggers only when Status = "Submitted"
+
+Use trigger conditions to filter at the source.
+
+### 3. Flow Ownership
+
+Flows run as the person who created them.
+
+When that person leaves the company? Their flows stop working.
+
+**Fix:** Use service accounts or flow ownership transfer.
+
+### 4. The Spaghetti Flow
+
+It's easy to create a mess:
+- 50 actions in one flow
+- Copy-pasted expressions everywhere
+- No documentation
+
+After 6 months, debugging becomes archaeology.
+
+---
+
+## Licensing Reality
+
+| License | What You Get |
+|---------|--------------|
+| **Microsoft 365** | Limited Power Automate (standard connectors, 2,000 runs/day) |
+| **Power Automate Premium** (~$15/user/month) | Unlimited runs, premium connectors, desktop flows |
+| **Per-flow** (~$100/flow/month) | Unlimited users for specific flows |
+
+For enterprise automation, expect Premium licensing.
+
+---
+
+## When Power Automate Isn't Enough
+
+Consider alternatives when:
+
+| Signal | Consider |
+|--------|----------|
+| Need real-time, sub-second responses | Azure Functions/Logic Apps |
+| Complex data transformations | Azure Data Factory |
+| Long-running orchestrations (months) | Durable Functions |
+| Heavy-duty RPA at scale | UI Path, Blue Prism |
+
+Power Automate is excellent for business workflows. For extreme scale or complexity, look at pro-code options.
+
+---
+
+## Next Episode
+
+In Episode 7, we dive into **Copilot Studio** — the most rebranded product in Microsoft history. From Power Virtual Agents to AI agents: what changed, and why it matters.
+
+---
+
+*What's the most complex flow you've built? Where did Power Automate hit its limits?*

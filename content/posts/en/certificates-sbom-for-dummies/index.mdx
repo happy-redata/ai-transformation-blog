@@ -1,0 +1,209 @@
+---
+title: "Certificates & SBOM: The Passport and Ingredient List of Software"
+excerpt: "How do you know that the software you use is really what it claims to be? Meet certificates — digital passports for software — and SBOM, the ingredient list that reveals what's really in your code."
+date: 2026-01-14
+status: approved
+contentVersion: 1.0.0
+tags: ["Trust", "Security", "Certificates", "SBOM", "Zero Trust"]
+author: "Niels Gregers Johansen"
+heroImage: "/images/hero-certificates-sbom.png"
+heroImageCredit: "Antigravity / Imagen 3"
+aiTools: ["Antigravity", "Gemini"]
+originalSlug: "certificates-sbom-for-dummies"
+series:
+  slug: "trust-series"
+  episode: 2
+  totalEpisodes: 4
+  nextEpisodeDate: 2026-01-21
+audio:
+  introJingle: "/audio/jingles/vibe-coding-intro.mp3"
+  outroJingle: "/audio/jingles/vibe-coding-outro.mp3"
+  defaultVoice: "en-US-JennyNeural"
+  backgroundMusic: "/audio/music/ambient-tech.mp3"
+  language: "en-US"
+footnotes:
+  - text: "Over 80% of modern applications are built on open source components."
+    source: "Synopsys OSSRA Report 2024"
+    url: "https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html"
+  - text: "The Log4Shell vulnerability was discovered in December 2021 and affected millions of systems worldwide."
+    source: "CISA"
+    url: "https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance"
+  - text: "Executive Order 14028 requires SBOM for all software sold to the US government."
+    source: "White House"
+    url: "https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/"
+---
+
+<Music track="ambient-tech" action="fade-in" />
+
+<Speaker voice="narrator" name="Narrator">
+Imagine you buy a sandwich. You read the ingredient list: bread, chicken, lettuce, dressing. But what if the list just said "sandwich content"? Would you still eat it?
+</Speaker>
+
+<Pause duration={1.5} />
+
+Welcome to episode 2 of our series on **trust in the digital world**. Today, we're talking about the documents that prove who software is — and what it contains.
+
+<Music track="ambient-tech" action="fade-out" />
+
+## The Invisible Web of Trust
+
+Every time you open an app, download an update, or visit a website, you rely on an invisible network of **digital certificates**.
+
+<View>See the illustration below — from you to the server, data passes through many layers of trust:</View>
+
+![The trust network — from user to server through certificate-verified connections](/images/trust-chain-diagram.png)
+
+Certificates are the software's **passports**. They prove:
+- **Who** made the software
+- **That** the software has not been changed during transit
+- **When** the certificate expires
+
+## What Is a Certificate?
+
+<Speaker voice="narrator">
+A digital certificate is like a notarized document. A trusted third party — a <Voice text="Certificate Authority">Certificate Authority</Voice> or <Voice text="C.A.">CA</Voice> — confirms that the owner is who they say they are.
+</Speaker>
+
+<Pause duration={1} />
+
+| Element | Function |
+|---------|----------|
+| **Owner's identity** | Who the certificate belongs to (company, domain, person) |
+| **Public key** | Used to verify signatures |
+| **Issuer's signature** | The <Voice text="C.A.">CA</Voice> confirms the validity |
+| **Expiration date** | Certificates are only valid for a limited period |
+
+<SoundEffect name="keyboard-typing" />
+
+When you visit a secure website and see the padlock in the browser bar, the browser has verified the website's certificate against a list of trusted <Voice text="C.A.">CA</Voice>s.
+
+## The Trust Chain in Certificates
+
+Certificates form a **chain** — just like the trust chains we discussed in episode 1.
+
+<View>Here's how the trust chain works:</View>
+
+1. **Root <Voice text="C.A.">CA</Voice>** — The top authority, built into your operating system
+2. **Intermediate <Voice text="C.A.">CA</Voice>** — Issues certificates on behalf of the Root <Voice text="C.A.">CA</Voice>
+3. **Server Certificate** — The specific certificate for the website or software
+
+> **"If just one link in the chain is compromised, the entire trust collapses."**
+
+<Pause duration={1} />
+
+## When Certificates Fail
+
+<Speaker voice="host" name="Host">
+Certificates are not infallible. Here's what can go wrong:
+</Speaker>
+
+<SoundEffect name="dramatic-reveal" />
+
+| Problem | Consequence |
+|---------|------------|
+| **Expired certificate** | Browsers show a warning, users cannot access the service |
+| **Stolen private key** | Attackers can impersonate the legitimate owner |
+| **Compromised <Voice text="C.A.">CA</Voice>** | All certificates from that <Voice text="C.A.">CA</Voice> are untrustworthy |
+| **Self-signed certificate** | No third party has verified the identity |
+
+In 2011, the Dutch <Voice text="C.A.">CA</Voice> **DigiNotar** was compromised. Hackers issued fake certificates for Gmail, Yahoo, and others. The result? The entire company shut down.
+
+## <Voice text="S-BOM">SBOM</Voice>: The Ingredient List of Software
+
+Now for the second half of the equation: **<Voice text="S-BOM">SBOM</Voice>** — Software Bill of Materials.
+
+<Speaker voice="narrator">
+Modern software is like a sandwich. You see the finished product, but inside there are hundreds of ingredients — <Voice text="open source">open source</Voice> libraries, <Voice text="frameworks">frameworks</Voice>, and components from all over the world.
+</Speaker>
+
+<Pause duration={1.5} />
+
+An <Voice text="S-BOM">SBOM</Voice> is a complete list of all these ingredients.
+
+<View>Here's a simplified example of what an SBOM contains:</View>
+
+| Component | Version | License | Vulnerability? |
+|-----------|---------|--------|----------------|
+| react | 18.2.0 | MIT | None |
+| lodash | 4.17.20 | MIT | ⚠️ CVE-2021-23337 |
+| express | 4.18.2 | MIT | None |
+| log4j | 2.14.1 | Apache 2.0 | 🚨 CVE-2021-44228 |
+
+<SoundEffect name="alert-warning" />
+
+## <Voice text="Log 4 Shell">Log4Shell</Voice>: Why <Voice text="S-BOM">SBOM</Voice> Matters
+
+In December 2021, the world was hit by **<Voice text="Log 4 Shell">Log4Shell</Voice>** — a catastrophic vulnerability in <Voice text="Log Four J">Log4j</Voice>, a popular <Voice text="Java">Java</Voice> library for logging.
+
+<Speaker voice="narrator">
+Millions of systems were suddenly vulnerable. But here was the problem: most companies didn't even know they were using <Voice text="Log Four J">Log4j</Voice>.
+</Speaker>
+
+The library was buried deep in the dependency tree — a dependency of a dependency of a dependency.
+
+<View>See how dependencies can hide:</View>
+
+```
+Your App
+  └── Framework A (v3.2.1)
+        └── Utility B (v1.4.0)
+              └── log4j (v2.14.1) ← 🚨 VULNERABLE!
+```
+
+<Pause duration={1} />
+
+**With an <Voice text="S-BOM">SBOM</Voice>**, you could instantly search and find all systems using <Voice text="Log Four J">Log4j</Voice>. Without it? Weeks of manual searching.
+
+## Why Should You Care?
+
+| If you are a... | <Voice text="S-BOM">SBOM</Voice> helps you... |
+|-----------------|---------------------------------|
+| **Developer** | Know your dependencies and their vulnerabilities |
+| **<Voice text="I.T.">IT</Voice> Manager** | React quickly to new security threats |
+| **Compliance Officer** | Document software composition for authorities |
+| **End User** | Know that the provider takes security seriously |
+
+## Certificates + <Voice text="S-BOM">SBOM</Voice> = Complete Trust
+
+<Music track="conclusion" action="fade-in" />
+
+Certificates prove **who** made the software.
+<Voice text="S-BOM">SBOM</Voice> reveals **what** is in the software.
+
+<View>Here’s how the two work together:</View>
+
+| Question | Answer from |
+|-----------|----------|
+| Who made this software? | Certificate |
+| Is the software unchanged? | Certificate Signature |
+| What does the software contain? | <Voice text="S-BOM">SBOM</Voice> |
+| Are there known vulnerabilities? | <Voice text="S-BOM">SBOM</Voice> + CVE Database |
+
+Together, they provide a **complete picture** of your software's trust profile.
+
+<Pause duration={1} />
+
+## Summary
+
+| Concept | Meaning |
+|---------|-----------|
+| **Certificate** | Digital passport proving identity |
+| **<Voice text="C.A.">CA</Voice>** | Trusted authority issuing certificates |
+| **<Voice text="S-BOM">SBOM</Voice>** | Complete ingredient list for software |
+| **Trust Chain** | Sequence of verified connections |
+
+---
+
+<Pause duration={1.5} />
+
+**Bottom Line:** You cannot protect yourself against threats you don't know. Certificates and <Voice text="S-BOM">SBOM</Voice>s give you visibility — and visibility is the first step toward security.
+
+<Pause duration={1} />
+
+<Emphasis type="question">**Do you know what's in your software?**</Emphasis>
+
+<Music track="conclusion" action="fade-out" />
+
+---
+
+*In the next episode, we go from theory to practice: How do you implement <Voice text="Zero Trust">Zero Trust</Voice> in your organization — without making everyone's everyday life a nightmare?*
