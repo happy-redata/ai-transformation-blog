@@ -10,7 +10,7 @@ type Principle = {
 const content: Record<Locale, { title: string; intro: string; sections: Principle[] }> = {
     da: {
         title: 'Etiske Retningslinjer',
-        intro: 'Hos Happy Mates Society tror vi på, at teknologi og softwareudvikling skal gå hånd i hånd med høj etik og gennemsigtighed. Her er de principper, vi arbejder efter.',
+        intro: 'Hos CW Red AI Transformation tror vi på, at teknologi og softwareudvikling skal gå hånd i hånd med høj etik og gennemsigtighed. Her er de principper, vi arbejder efter.',
         sections: [
             {
                 title: 'Uafhængighed',
@@ -32,7 +32,7 @@ const content: Record<Locale, { title: string; intro: string; sections: Principl
     },
     en: {
         title: 'Ethical Guidelines',
-        intro: 'At Happy Mates Society, we believe that technology and software development must go hand in hand with high ethics and transparency. Here are the principles we work by.',
+        intro: 'At CW Red AI Transformation, we believe that technology and software development must go hand in hand with high ethics and transparency. Here are the principles we work by.',
         sections: [
             {
                 title: 'Independence',

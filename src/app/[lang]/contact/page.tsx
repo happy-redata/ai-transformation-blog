@@ -20,7 +20,7 @@ const content = {
         address: {
             label: 'Adresse',
             lines: [
-                'Happy Mates Society',
+                'CW Red AI Transformation',
                 'c/o Kronborg Fonden',
                 'Danmark'
             ]
@@ -34,7 +34,7 @@ const content = {
         },
         cta: {
             title: 'Bliv en del af fællesskabet',
-            description: 'Tilmeld dig Happy Mates Society og få adgang til eksklusive artikler, AI-værktøjer og events.',
+            description: 'Tilmeld dig CW Red AI Transformation og få adgang til eksklusive artikler, AI-værktøjer og events.',
             button: 'Bliv medlem'
         },
         board: {
@@ -64,7 +64,7 @@ const content = {
         address: {
             label: 'Address',
             lines: [
-                'Happy Mates Society',
+                'CW Red AI Transformation',
                 'c/o Kronborg Fonden',
                 'Denmark'
             ]
@@ -78,7 +78,7 @@ const content = {
         },
         cta: {
             title: 'Join the community',
-            description: 'Sign up for Happy Mates Society and get access to exclusive articles, AI tools, and events.',
+            description: 'Sign up for CW Red AI Transformation and get access to exclusive articles, AI tools, and events.',
             button: 'Become a member'
         },
         board: {

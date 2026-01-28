@@ -77,12 +77,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
     if (!post) {
         return {
-            title: 'Not Found | Voice of Happy Mates'
+            title: 'Not Found | CW Red AI Transformation'
         };
     }
 
     return {
-        title: `${post.title} | Voice of Happy Mates`,
+        title: `${post.title} | CW Red AI Transformation`,
         description: post.excerpt,
         openGraph: {
             title: post.title,

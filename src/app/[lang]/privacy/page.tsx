@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const locale = isValidLocale(lang) ? lang : 'da';
 
     return {
-        title: locale === 'da' ? 'Privatlivspolitik | Happy Mates Society' : 'Privacy Policy | Happy Mates Society',
+        title: locale === 'da' ? 'Privatlivspolitik | CW Red AI Transformation' : 'Privacy Policy | CW Red AI Transformation',
         description: locale === 'da'
             ? 'Læs om hvordan vi behandler dine personoplysninger.'
             : 'Read about how we process your personal data.'
@@ -27,12 +27,12 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                     {locale === 'da' ? (
                         <>
                             <h1>Privatlivspolitik</h1>
-                            <p className="lead">Happy Mates Society tager beskyttelsen af dine personoplysninger alvorligt.</p>
+                            <p className="lead">CW Red AI Transformation tager beskyttelsen af dine personoplysninger alvorligt.</p>
 
                             <h2>1. Dataansvarlig</h2>
                             <p>Vi er dataansvarlige for behandlingen af de personoplysninger, som vi modtager om dig. Vores kontaktoplysninger er:</p>
                             <address className="not-italic">
-                                <strong>Happy Mates Society</strong><br />
+                                <strong>CW Red AI Transformation</strong><br />
                                 <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
                             </address>
 
@@ -97,12 +97,12 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                     ) : (
                         <>
                             <h1>Privacy Policy</h1>
-                            <p className="lead">Happy Mates Society takes the protection of your personal data seriously.</p>
+                            <p className="lead">CW Red AI Transformation takes the protection of your personal data seriously.</p>
 
                             <h2>1. Data Controller</h2>
                             <p>We are the data controller for the processing of personal data we receive about you. Our contact details are:</p>
                             <address className="not-italic">
-                                <strong>Happy Mates Society</strong><br />
+                                <strong>CW Red AI Transformation</strong><br />
                                 <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
                             </address>
 

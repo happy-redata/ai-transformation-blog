@@ -7,7 +7,7 @@ const content = {
     da: {
         title: 'Nyhedsbrev',
         subtitle: 'Få de seneste nyheder direkte i din indbakke',
-        description: 'Tilmeld dig vores nyhedsbrev og bliv opdateret om nye artikler, events og muligheder i Happy Mates Society. Vi sender kun relevante opdateringer – ingen spam.',
+        description: 'Tilmeld dig vores nyhedsbrev og bliv opdateret om nye artikler, events og muligheder i CW Red AI Transformation. Vi sender kun relevante opdateringer – ingen spam.',
         features: [
             {
                 icon: '📬',
@@ -34,7 +34,7 @@ const content = {
     en: {
         title: 'Newsletter',
         subtitle: 'Get the latest news delivered to your inbox',
-        description: 'Subscribe to our newsletter and stay updated on new articles, events, and opportunities in Happy Mates Society. We only send relevant updates – no spam.',
+        description: 'Subscribe to our newsletter and stay updated on new articles, events, and opportunities in CW Red AI Transformation. We only send relevant updates – no spam.',
         features: [
             {
                 icon: '📬',

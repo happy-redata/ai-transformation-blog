@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const locale = isValidLocale(lang) ? lang : 'da';
 
     return {
-        title: locale === 'da' ? 'Cookiepolitik | Happy Mates Society' : 'Cookie Policy | Happy Mates Society',
+        title: locale === 'da' ? 'Cookiepolitik | CW Red AI Transformation' : 'Cookie Policy | CW Red AI Transformation',
         description: locale === 'da'
             ? 'Læs om vores brug af cookies og hvordan vi beskytter dine data.'
             : 'Read about our use of cookies and how we protect your data.'
@@ -28,7 +28,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ lang: 
                     {locale === 'da' ? (
                         <>
                             <h1>Cookiepolitik</h1>
-                            <p className="lead">Happy Mates Society bruger cookies til at forbedre din oplevelse på vores hjemmeside.</p>
+                            <p className="lead">CW Red AI Transformation bruger cookies til at forbedre din oplevelse på vores hjemmeside.</p>
 
                             <h2>1. Hvad er cookies?</h2>
                             <p>En cookie er en lille tekstfil, som gemmes på din computer eller mobilenhed, når du besøger en hjemmeside. Cookies gør det muligt for hjemmesiden at huske dine handlinger og indstillinger (såsom login, sprog, skriftstørrelse og andre visningsindstillinger) over en periode, så du ikke behøver at foretage dem hver gang, du besøger siden.</p>
@@ -72,14 +72,14 @@ export default async function CookiesPage({ params }: { params: Promise<{ lang: 
                             <h2>5. Ejeroplysninger</h2>
                             <p>Denne hjemmeside drives og ejes af:</p>
                             <address className="not-italic">
-                                <strong>Happy Mates Society</strong><br />
+                                <strong>CW Red AI Transformation</strong><br />
                                 <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
                             </address>
                         </>
                     ) : (
                         <>
                             <h1>Cookie Policy</h1>
-                            <p className="lead">Happy Mates Society uses cookies to improve your experience on our website.</p>
+                            <p className="lead">CW Red AI Transformation uses cookies to improve your experience on our website.</p>
 
                             <h2>1. What are cookies?</h2>
                             <p>A cookie is a small text file that is stored on your computer or mobile device when you visit a website. Cookies enable the website to remember your actions and preferences (such as login, language, font size, and other display preferences) over a period of time, so you don't have to keep re-entering them whenever you come back to the site or browse from one page to another.</p>
@@ -123,7 +123,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ lang: 
                             <h2>5. Owner Information</h2>
                             <p>This website is operated and owned by:</p>
                             <address className="not-italic">
-                                <strong>Happy Mates Society</strong><br />
+                                <strong>CW Red AI Transformation</strong><br />
                                 <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
                             </address>
                         </>
