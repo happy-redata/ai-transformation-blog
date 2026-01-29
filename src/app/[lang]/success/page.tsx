@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const dict = await getDictionary(locale);
 
     return {
-        title: `${dict.success.title} | Voice of Happy Mates`,
+        title: `${dict.success.title} | CW Red AI Transformation`,
         description: dict.success.description
     };
 }

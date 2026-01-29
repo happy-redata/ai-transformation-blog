@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const locale = isValidLocale(lang) ? lang : 'da';
 
     return {
-        title: locale === 'da' ? 'Notifikationer | Happy Mates Society' : 'Notifications | Happy Mates Society',
+        title: locale === 'da' ? 'Notifikationer | CW Red AI Transformation' : 'Notifications | CW Red AI Transformation',
         description: locale === 'da'
             ? 'Administrer dine notifikationsindstillinger.'
             : 'Manage your notification settings.'
@@ -28,7 +28,7 @@ export default async function NotificationsPage({ params }: { params: Promise<{ 
                     {locale === 'da' ? (
                         <>
                             <h1>Notifikationer</h1>
-                            <p className="lead">Administrer hvordan du modtager opdateringer fra Happy Mates.</p>
+                            <p className="lead">Administrer hvordan du modtager opdateringer fra CW Red.</p>
 
                             <div className="my-8 p-6 bg-white rounded-xl shadow-sm border border-gray-200">
                                 <h2 className="text-xl font-bold mb-4">🔔 Notifikationsindstillinger</h2>
@@ -59,7 +59,7 @@ export default async function NotificationsPage({ params }: { params: Promise<{ 
                     ) : (
                         <>
                             <h1>Notifications</h1>
-                            <p className="lead">Manage how you receive updates from Happy Mates.</p>
+                            <p className="lead">Manage how you receive updates from CW Red.</p>
 
                             <div className="my-8 p-6 bg-white rounded-xl shadow-sm border border-gray-200">
                                 <h2 className="text-xl font-bold mb-4">🔔 Notification Settings</h2>

@@ -14,8 +14,8 @@ const faqs: Record<Locale, FAQItem[]> = {
             answer: 'Som Pro-medlem får du fuld adgang til alle vores dybdegående artikler, mulighed for at lytte til dem som lydfiler, adgang til vores specialiserede Help AI, og invitationer til eksklusive events og vores fællesskab.'
         },
         {
-            question: 'Hvem ejer Happy Mates?',
-            answer: 'Happy Mates Society er en forening. Det betyder, at vi er ejet af vores medlemmer og ikke af investorer. Overskuddet går til at forbedre foreningen og skabe værdi for medlemmerne.'
+            question: 'Hvem ejer CW Red?',
+            answer: 'CW Red AI Transformation er en forening. Det betyder, at vi er ejet af vores medlemmer og ikke af investorer. Overskuddet går til at forbedre foreningen og skabe værdi for medlemmerne.'
         },
         {
             question: 'Hvad går pengene til?',
@@ -40,8 +40,8 @@ const faqs: Record<Locale, FAQItem[]> = {
             answer: 'As a Pro member, you get full access to all our in-depth articles, audio versions of stories, access to our specialized Help AI, and invitations to exclusive events and our community.'
         },
         {
-            question: 'Who owns Happy Mates?',
-            answer: 'Happy Mates Society is an association (forening). This means we are owned by our members, not investors. Profits go towards improving the society and creating value for members.'
+            question: 'Who owns CW Red?',
+            answer: 'CW Red AI Transformation is an association (forening). This means we are owned by our members, not investors. Profits go towards improving the society and creating value for members.'
         },
         {
             question: 'Where does the money go?',

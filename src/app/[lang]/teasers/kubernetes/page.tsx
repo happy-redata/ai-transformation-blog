@@ -128,7 +128,7 @@ export default function KubernetesTeaser() {
                         <Image src="/logo.svg" fill alt="Logo" />
                     </div>
                     <h1 className="text-6xl font-black mb-8">K8s for Dummies</h1>
-                    <p className="text-2xl text-gray-400 mb-12 max-w-xl">Find it now under News and Guides on Happy Mates.</p>
+                    <p className="text-2xl text-gray-400 mb-12 max-w-xl">Find it now under News and Guides on CW Red.</p>
                     <div className="flex gap-4">
                         <div className="px-10 py-5 bg-zt-accent-orange rounded-full text-2xl font-bold shadow-xl">
                             READ NOW

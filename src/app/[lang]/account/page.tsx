@@ -9,10 +9,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const locale = isValidLocale(lang) ? lang : 'da';
 
     return {
-        title: locale === 'da' ? 'Min konto | Happy Mates Society' : 'My Account | Happy Mates Society',
+        title: locale === 'da' ? 'Min konto | CW Red AI Transformation' : 'My Account | CW Red AI Transformation',
         description: locale === 'da'
-            ? 'Administrer din Happy Mates konto og indstillinger.'
-            : 'Manage your Happy Mates account and settings.'
+            ? 'Administrer din CW Red konto og indstillinger.'
+            : 'Manage your CW Red account and settings.'
     };
 }
 

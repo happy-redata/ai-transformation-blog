@@ -19,7 +19,7 @@ export default async function Header({ lang }: HeaderProps) {
                     <Link href={`/${lang}`} className="hover:opacity-80 transition-opacity">
                         <Image
                             src="/logo.svg"
-                            alt="Voice of Happy Mates"
+                            alt="CW Red AI Transformation"
                             width={225}
                             height={60}
                             className="h-12 w-auto"

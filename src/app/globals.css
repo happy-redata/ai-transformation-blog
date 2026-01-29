@@ -6,7 +6,7 @@
   --zt-text-main: #1a1a1a;
   --zt-text-secondary: #666;
   --zt-text-muted: #999;
-  --zt-accent-orange: #ff5e00;
+  --zt-accent-orange: #D32F2F;
   --zt-border: #e5e5e5;
   /* Fonts are injected by Next.js */
 }
@@ -20,15 +20,15 @@
   --color-zt-accent-orange: var(--zt-accent-orange);
   --color-zt-border: var(--zt-border);
 
-  /* Zetland-style card accent colors */
-  --color-zt-card-teal: #2d8c9e;
-  --color-zt-card-navy: #1a365d;
-  --color-zt-card-azure: #3b82f6;
-  --color-zt-card-coral: #f97316;
+  /* CW Red-style card accent colors */
+  --color-zt-card-teal: #B71C1C;
+  --color-zt-card-navy: #C62828;
+  --color-zt-card-azure: #D32F2F;
+  --color-zt-card-coral: #E53935;
 
   /* Additional accent colors for UI */
-  --color-zt-accent-teal: #2d8c9e;
-  --color-zt-accent-purple: #7c3aed;
+  --color-zt-accent-teal: #C62828;
+  --color-zt-accent-purple: #B71C1C;
   --color-zt-bg-light: #f5f5f5;
   --color-zt-text-light: #888;
 
@@ -67,7 +67,7 @@ body {
   padding: 1.5rem 0 1.5rem 2rem;
   margin: 2.5rem 0;
   border-left: 4px solid var(--zt-accent-orange);
-  background: linear-gradient(90deg, rgba(255, 94, 0, 0.03) 0%, transparent 100%);
+  background: linear-gradient(90deg, rgba(211, 47, 47, 0.03) 0%, transparent 100%);
 }
 
 .prose blockquote::before {
@@ -257,7 +257,7 @@ body {
 }
 
 .prose thead {
-  background: linear-gradient(135deg, var(--zt-accent-orange), #ff8c42);
+  background: linear-gradient(135deg, var(--zt-accent-orange), #E57373);
   color: white;
 }
 
@@ -284,7 +284,7 @@ body {
 }
 
 .prose tbody tr:hover {
-  background-color: rgba(255, 94, 0, 0.05);
+  background-color: rgba(211, 47, 47, 0.05);
 }
 
 .prose tbody td {
@@ -383,11 +383,11 @@ body {
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(255, 94, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(211, 47, 47, 0.3);
 }
 
 .audio-player__play-btn:hover:not(:disabled) {
-  background: #e85500;
+  background: #B71C1C;
   transform: scale(1.05);
 }
 
@@ -490,7 +490,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--zt-accent-orange), #ff8c42);
+  background: linear-gradient(135deg, var(--zt-accent-orange), #E57373);
   color: white;
   display: flex;
   align-items: center;
@@ -646,7 +646,7 @@ body {
 
 /* Gradient text effect for special emphasis */
 .gradient-text {
-  background: linear-gradient(135deg, var(--zt-accent-orange), #ff8c42);
+  background: linear-gradient(135deg, var(--zt-accent-orange), #E57373);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -710,7 +710,7 @@ body {
   }
 
   .action-block__item:hover {
-    background: rgba(255, 94, 0, 0.1);
+    background: rgba(211, 47, 47, 0.1);
     color: var(--zt-accent-orange);
   }
 
@@ -790,7 +790,7 @@ body {
   }
 
   .action-block__item:hover {
-    background: rgba(255, 94, 0, 0.1);
+    background: rgba(211, 47, 47, 0.1);
     border-color: var(--zt-accent-orange);
     color: var(--zt-accent-orange);
   }

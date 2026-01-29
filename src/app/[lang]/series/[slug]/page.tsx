@@ -35,12 +35,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
     if (!series) {
         return {
-            title: 'Serie ikke fundet | Voice of Happy Mates'
+            title: 'Serie ikke fundet | CW Red AI Transformation'
         };
     }
 
     return {
-        title: `${series.title} | Voice of Happy Mates`,
+        title: `${series.title} | CW Red AI Transformation`,
         description: series.description,
         openGraph: {
             title: series.title,

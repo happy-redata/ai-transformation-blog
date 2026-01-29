@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const locale = isValidLocale(lang) ? lang : 'da';
 
     return {
-        title: locale === 'da' ? 'Vilkår og betingelser | Happy Mates Society' : 'Terms and Conditions | Happy Mates Society',
+        title: locale === 'da' ? 'Vilkår og betingelser | CW Red AI Transformation' : 'Terms and Conditions | CW Red AI Transformation',
         description: locale === 'da'
             ? 'Læs vores vilkår og betingelser for brug af tjenesten.'
             : 'Read our terms and conditions for using the service.'
@@ -27,13 +27,13 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                     {locale === 'da' ? (
                         <>
                             <h1>Vilkår og betingelser</h1>
-                            <p className="lead">Disse vilkår regulerer din brug af Happy Mates Society's tjenester.</p>
+                            <p className="lead">Disse vilkår regulerer din brug af CW Red AI Transformation's tjenester.</p>
 
                             <h2>1. Accept af vilkår</h2>
                             <p>Ved at tilgå eller bruge vores hjemmeside og tjenester accepterer du at være bundet af disse vilkår og betingelser. Hvis du ikke accepterer alle vilkår, må du ikke bruge vores tjenester.</p>
 
                             <h2>2. Tjenestebeskrivelse</h2>
-                            <p>Happy Mates Society er en forening, der tilbyder:</p>
+                            <p>CW Red AI Transformation er en forening, der tilbyder:</p>
                             <ul>
                                 <li>Fællesskab og netværk for medlemmer.</li>
                                 <li>Arrangementer og workshops.</li>
@@ -61,10 +61,10 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                             </ul>
 
                             <h2>5. Intellektuel ejendomsret</h2>
-                            <p>Alt indhold på hjemmesiden, herunder tekst, billeder, logoer og software, tilhører Happy Mates Society eller vores licensgivere og er beskyttet af ophavsret og andre immaterielle rettigheder.</p>
+                            <p>Alt indhold på hjemmesiden, herunder tekst, billeder, logoer og software, tilhører CW Red AI Transformation eller vores licensgivere og er beskyttet af ophavsret og andre immaterielle rettigheder.</p>
 
                             <h2>6. Ansvarsbegrænsning</h2>
-                            <p>Happy Mates Society hæfter ikke for:</p>
+                            <p>CW Red AI Transformation hæfter ikke for:</p>
                             <ul>
                                 <li>Indirekte tab eller følgeskader.</li>
                                 <li>Tab som følge af nedetid eller tekniske fejl.</li>
@@ -83,8 +83,8 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                             <h2>10. Kontakt</h2>
                             <p>Har du spørgsmål til disse vilkår, kontakt os på:</p>
                             <address className="not-italic">
-                                <strong>Happy Mates Society</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <strong>CW Red AI Transformation</strong><br />
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <p className="text-sm text-gray-500 mt-8">Sidst opdateret: Januar 2026</p>
@@ -92,13 +92,13 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                     ) : (
                         <>
                             <h1>Terms and Conditions</h1>
-                            <p className="lead">These terms govern your use of Happy Mates Society's services.</p>
+                            <p className="lead">These terms govern your use of CW Red AI Transformation's services.</p>
 
                             <h2>1. Acceptance of Terms</h2>
                             <p>By accessing or using our website and services, you agree to be bound by these terms and conditions. If you do not accept all terms, you may not use our services.</p>
 
                             <h2>2. Service Description</h2>
-                            <p>Happy Mates Society is an association that offers:</p>
+                            <p>CW Red AI Transformation is an association that offers:</p>
                             <ul>
                                 <li>Community and networking for members.</li>
                                 <li>Events and workshops.</li>
@@ -126,10 +126,10 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                             </ul>
 
                             <h2>5. Intellectual Property</h2>
-                            <p>All content on the website, including text, images, logos, and software, belongs to Happy Mates Society or our licensors and is protected by copyright and other intellectual property rights.</p>
+                            <p>All content on the website, including text, images, logos, and software, belongs to CW Red AI Transformation or our licensors and is protected by copyright and other intellectual property rights.</p>
 
                             <h2>6. Limitation of Liability</h2>
-                            <p>Happy Mates Society is not liable for:</p>
+                            <p>CW Red AI Transformation is not liable for:</p>
                             <ul>
                                 <li>Indirect losses or consequential damages.</li>
                                 <li>Losses due to downtime or technical errors.</li>
@@ -148,8 +148,8 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
                             <h2>10. Contact</h2>
                             <p>If you have questions about these terms, please contact us at:</p>
                             <address className="not-italic">
-                                <strong>Happy Mates Society</strong><br />
-                                <a href="mailto:hello@happymates.dk">hello@happymates.dk</a>
+                                <strong>CW Red AI Transformation</strong><br />
+                                <a href="mailto:info@red.dk">info@red.dk</a>
                             </address>
 
                             <p className="text-sm text-gray-500 mt-8">Last updated: January 2026</p>

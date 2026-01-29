@@ -7,8 +7,8 @@ import { Metadata } from 'next';
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     return {
-        title: lang === 'da' ? 'Medlemskab | Voice of Happy Mates' : 'Membership | Voice of Happy Mates',
-        description: lang === 'da' ? 'Bliv medlem af Happy Mates Society' : 'Join Happy Mates Society'
+        title: lang === 'da' ? 'Medlemskab | CW Red AI Transformation' : 'Membership | CW Red AI Transformation',
+        description: lang === 'da' ? 'Bliv medlem af CW Red AI Transformation' : 'Join CW Red AI Transformation'
     };
 }
 
@@ -28,7 +28,7 @@ export default async function MembershipPage({ params }: { params: Promise<{ lan
                 {/* Hero Section */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="font-serif text-4xl md:text-5xl font-bold text-zt-text-main mb-6">
-                        {isDa ? 'Bliv en del af Happy Mates' : 'Join Happy Mates'}
+                        {isDa ? 'Bliv en del af CW Red AI Transformation' : 'Join CW Red AI Transformation'}
                     </h1>
                     <p className="text-lg text-zt-text-secondary leading-relaxed">
                         {isDa

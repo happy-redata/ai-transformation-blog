@@ -8,10 +8,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const locale = isValidLocale(lang) ? lang : 'da';
 
     return {
-        title: locale === 'da' ? 'Giv et medlemskab | Happy Mates Society' : 'Gift a Membership | Happy Mates Society',
+        title: locale === 'da' ? 'Giv et medlemskab | CW Red AI Transformation' : 'Gift a Membership | CW Red AI Transformation',
         description: locale === 'da'
-            ? 'Giv et Happy Mates medlemskab i gave til en, du holder af.'
-            : 'Gift a Happy Mates membership to someone you care about.'
+            ? 'Giv et CW Red medlemskab i gave til en, du holder af.'
+            : 'Gift a CW Red membership to someone you care about.'
     };
 }
 
@@ -28,7 +28,7 @@ export default async function GiftPage({ params }: { params: Promise<{ lang: str
                     {locale === 'da' ? (
                         <>
                             <h1>Giv et medlemskab i gave</h1>
-                            <p className="lead">Del glæden ved Happy Mates med en, du holder af.</p>
+                            <p className="lead">Del glæden ved CW Red med en, du holder af.</p>
 
                             <div className="my-12 p-8 bg-white rounded-2xl shadow-lg">
                                 <div className="text-6xl mb-4">🎁</div>
@@ -45,7 +45,7 @@ export default async function GiftPage({ params }: { params: Promise<{ lang: str
                     ) : (
                         <>
                             <h1>Gift a Membership</h1>
-                            <p className="lead">Share the joy of Happy Mates with someone you care about.</p>
+                            <p className="lead">Share the joy of CW Red with someone you care about.</p>
 
                             <div className="my-12 p-8 bg-white rounded-2xl shadow-lg">
                                 <div className="text-6xl mb-4">🎁</div>
